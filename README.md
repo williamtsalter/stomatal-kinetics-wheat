@@ -99,17 +99,6 @@ The temporal response of *g*s to a single step change in PPFD is modelled with t
 function of McAusland et al. (2016), fitted **separately for the light-on (increase, `_i`) and
 light-off (decrease, `_d`) portions**, with time reset to 0 at each step:
 
-```
-gs(t) = g0 + (g1 - g0) * exp( -exp( ((lambda - t) / k) + 1 ) )
-```
-
-with parameters
-
-- **g0** — starting asymptote (light-on: minimum *g*s, reported as *g*smin);
-- **g1** — final asymptote (light-on: maximum *g*s, reported as *g*smax);
-- **k** — time constant (opening `ki`, closing `kd`);
-- **lambda (λ)** — initial lag in the response (`λi`, `λd`).
-
 ```math
 g_{sj} = \left(g_{sj} - r_{0j}\right)e^{-c\left(\frac{\lambda_j-t}{k_j}+1\right)} + r_{0j}
 ```
@@ -146,10 +135,6 @@ throughput; `porometer-li600/`) and the **LI-6800 IRGA** (validation on cv. Sunc
 
 For the LI-6800 data, *A* during the light-on portion is modelled with the same functional form
 **without a lag term** (induction shows little lag relative to *g*s):
-
-```
-A(t) = A0 + (Amax - A0) * exp( -exp( (-t / k) + 1 ) )
-```
 
 ```math
 A = (A_{\max} - A_0)e^{-e^({\frac{- t}{k_A} + 1)}} + A_0
