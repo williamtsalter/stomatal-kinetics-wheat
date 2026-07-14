@@ -60,7 +60,7 @@ Three data streams were collected:
 
 This section describes, in detail, what the code in this repository actually does — the
 processing steps, the statistical models, the quantities estimated, and the reproducibility
-engineering applied when preparing the repository. The work was carried out by the biometry team
+engineering applied when preparing the repository. The work was carried out by APPN biometry staff
 (Clayton Forknall and Chris Brien) using a reproducible, script-per-step workflow.
 
 ### 2.1 Design and measurement context
