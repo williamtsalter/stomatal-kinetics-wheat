@@ -35,8 +35,8 @@ combination of:
 
 Because there is a single room per temperature regime, Temperature is confounded with Room and is
 treated throughout as **`Room_Temperature`**. For the LI-600 porometer data, Watering is
-confounded with Operator/Device and is treated as **`Device_Watering`** (D1 = well-watered,
-D2 = water-limited). These confoundings are structural to the design and must be respected when
+confounded with Operator/Device and is treated as **`Device_Watering`** (D1 = Device 1,
+D2 = Device 2). These confoundings are structural to the design and must be respected when
 interpreting any treatment comparison.
 
 Three data streams were collected:
