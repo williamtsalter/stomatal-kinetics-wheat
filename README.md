@@ -110,6 +110,22 @@ with parameters
 - **k** — time constant (opening `ki`, closing `kd`);
 - **lambda (λ)** — initial lag in the response (`λi`, `λd`).
 
+```math
+g_{sj} = \left(g_{sj} - r_{0j}\right)e^{-c\left(\frac{\lambda_j-t}{k_j}+1\right)} + r_{0j}
+```
+
+where **_j_** corresponds to either opening (i) or closure (d) with parameters:
+
+- **r0** — minimum *g*s of the sigmlidal response to an increase in PPFD (light-on: minimum *g*s, reported as *g*smin);
+- **k** — time constant (opening `ki`, closing `kd`);
+- **lambda (λ)** — initial lag in the response (`λi`, `λd`);
+
+and where to conform with the literature, we have adopted the labelling of **G<sub>si</sub>** as **g<sub>smax</sub>** and **G<sub>sd</sub>** as **g<sub>smin</sub>** where:
+
+- **g<sub>smax</sub>** — predicted steady state g<sub>s</sub> under 1000 µmol m⁻² s⁻¹;
+- **g<sub>smin</sub>** - predicted steady state g<sub>s</sub> under 0 µmol m⁻² s⁻¹.
+
+
 Models are fitted with **`brms`** (Stan back-end). The maximal model estimates population-level
 (fixed) treatment effects for every parameter — genotype (`Line`) × water (`Device_Watering` for
 LI-600 / `Watering` for LI-6800) × `Room_Temperature` — with subject-level (random) effects on
@@ -134,6 +150,19 @@ For the LI-6800 data, *A* during the light-on portion is modelled with the same 
 ```
 A(t) = A0 + (Amax - A0) * exp( -exp( (-t / k) + 1 ) )
 ```
+
+```math
+A = (A_{\max} - A_0)e^{-e^({\frac{- t}{k_A} + 1)}} + A_0
+```
+
+with parameters:
+
+- _**A**_ — net CO<sub>2</sub> assimilation rate;
+- **_A<sub>max</sub>_** — Maximum net rate of CO<sub>2</sub> assimilation under 1000 µmol m⁻² s⁻¹;
+- **_A<sub>0</sub>_** — Minimum _A_ of the sigmoidal response of _A_ to an increase in PPFD;
+- **_k<sub>A</sub>_** — time constant for _A_ to increase to _A<sub>max</sub>_ under 1000 µmol m⁻² s⁻¹.
+
+and where _A_ is only modelled during the light on portion of the data acquisition window. During the dark phase (PPFD = 0 µmol m⁻² s⁻¹), _A_ was assumed constant and was not modelled dynamically
 
 From the chosen *A* model, **T95%A** (time to reach 0.95·Amax) is obtained by solving for *t*,
 **A95** by back-substitution, and **gslimitA** (the limitation of *A* imposed by *g*s) as in
