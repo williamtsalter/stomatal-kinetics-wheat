@@ -7,14 +7,7 @@ Analysis code accompanying the manuscript:
 > Chaplin E., Forknall C., Brien C., Merchant A., Trethowan R., Salter W.
 > *(submitted to* New Phytologist*).*
 
-This repository contains the R code used to import, model, summarise and visualise the
-physiological and anatomical data from the **wheat heat-and-drought stomatal-kinetics
-experiment**. The
-analyses quantify how heat and water limitation reshape the *dynamic* responses of stomatal
-conductance (*g*s) and photosynthesis (*A*) to step changes in irradiance in a diverse panel of
-heat-tolerant wheat, and test whether stomatal anatomy explains the observed kinetic variation.
-
-*(Suggested GitHub repository name: `stomatal-kinetics-wheat`.)*
+This repository contains the R code used to import, model, summarise and visualise the physiological and anatomical data from the **wheat heat-and-drought stomatal-kinetics experiment** outlined in the above study. The analyses quantify how heat and water limitation reshape the *dynamic* responses of stomatal conductance (*g*s) and photosynthesis (*A*) to step changes in irradiance in a diverse panel of heat-tolerant wheat, and test whether stomatal anatomy explains the observed kinetic variation.
 
 ---
 
