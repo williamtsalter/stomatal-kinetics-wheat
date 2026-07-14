@@ -207,6 +207,7 @@ README:
 .
 ├── README.md                         <- this file
 ├── .gitignore
+├── Abbreviations/                    <- Table of Abbreviations used for terms described in repository, scripts and files (manuscript Table S2)
 ├── figures/                          <- protocol / parameter schematic (manuscript Figure 1)
 ├── raw-experimental-data/            <- raw experimental data (Li-600, Li-6800 and Stomatal Anatomy)
 │
