@@ -209,6 +209,7 @@ rendered report), `.pdf` (print version) and `.log` (console log) — with plots
 Where two versions exist (`v1`, `v2`), **v2 is the later revision** and underpins the manuscript
 (for anatomy, v2 removes identified outliers) unless the stream README notes otherwise.
 
+Scripts referring to stomatal opening response are denoted with **_i**, those for the closure response with **_d**, for the _A_ response with **_A** and for the Wi response with **.iWUE**
 ---
 
 ## 4. Software requirements
