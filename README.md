@@ -62,8 +62,8 @@ The experiment ran in two phases: a glasshouse establishment phase and a control
 (DroughtSpotter) phase in which the temperature and watering treatments were imposed. The
 experimental designs for both phases were generated and randomised with the `dae` package, and
 water use was derived from the DroughtSpotter load-cell logs with `growthPheno`. Gas-exchange
-measurements followed a three-stage light protocol (1 h dark → 1 h at 1000 µmol m⁻² s⁻¹ → 1 h
-dark), captured at high throughput on the LI-600 porometer and, for validation on the check
+measurements followed a three-stage light protocol (1 h dark at 0 µmol m⁻² s⁻¹ → 1 h at 1000 µmol m⁻² s⁻¹ → 1 h
+dark at 0 µmol m⁻² s⁻¹), captured at high throughput on the LI-600 porometer and, for validation on the check
 cultivar Sunchaser, in detail on the LI-6800 IRGA. Stomatal anatomy was measured in situ from
 microscopy images analysed with a deep-learning pipeline (Chaplin et al., 2025; separate
 repository).
@@ -71,9 +71,9 @@ repository).
 ### 2.2 Stomatal anatomy — linear mixed models (`stomatal-anatomy/`)
 
 Raw microscopy-derived traits are read from the anatomy spreadsheet and joined to the
-experimental design. Seven traits are analysed: stomatal count, stomatal density (SD), stomatal
-area (SA), guard-cell width (GCW), guard-cell length (GCL), pore area, and the anatomically-
-derived maximum conductance *g*smax. Count, density and *g*smax are pot-level traits; area, width
+experimental design. Five traits are analysed: stomatal density (SD), stomatal
+area (SA), guard-cell width (GCW), guard-cell length (GCL), and the anatomically-
+derived maximum conductance *g*smax. Density and *g*smax are pot-level traits; area, width
 and length are measured on individual stomata within each pot.
 
 Each trait is analysed with a linear mixed model of the form
