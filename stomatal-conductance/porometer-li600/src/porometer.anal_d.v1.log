@@ -1,0 +1,3319 @@
+This is pdfTeX, Version 3.141592653-2.6-1.40.29 (MiKTeX 26.1) (preloaded format=pdflatex 2026.3.13)  3 JUL 2026 20:31
+entering extended mode
+ restricted \write18 enabled.
+ %&-line parsing enabled.
+**./porometer.anal_d.v1.tex
+(porometer.anal_d.v1.tex
+LaTeX2e <2025-11-01>
+L3 programming layer <2026-01-19>
+(C:\Program Files\MiKTeX\tex/latex/base\article.cls
+Document Class: article 2025/01/22 v1.4n Standard LaTeX document class
+(C:\Program Files\MiKTeX\tex/latex/base\size10.clo
+File: size10.clo 2025/01/22 v1.4n Standard LaTeX file (size option)
+)
+\c@part=\count275
+\c@section=\count276
+\c@subsection=\count277
+\c@subsubsection=\count278
+\c@paragraph=\count279
+\c@subparagraph=\count280
+\c@figure=\count281
+\c@table=\count282
+\abovecaptionskip=\skip49
+\belowcaptionskip=\skip50
+\bibindent=\dimen148
+) (C:\Program Files\MiKTeX\tex/latex/xcolor\xcolor.sty
+Package: xcolor 2024/09/29 v3.02 LaTeX color extensions (UK)
+(C:\Program Files\MiKTeX\tex/latex/graphics-cfg\color.cfg
+File: color.cfg 2016/01/02 v1.6 sample color configuration
+)
+Package xcolor Info: Driver file: pdftex.def on input line 274.
+(C:\Program Files\MiKTeX\tex/latex/graphics-def\pdftex.def
+File: pdftex.def 2025/09/29 v1.2d Graphics/color driver for pdftex
+) (C:\Program Files\MiKTeX\tex/latex/graphics\mathcolor.ltx)
+Package xcolor Info: Model `cmy' substituted by `cmy0' on input line 1349.
+Package xcolor Info: Model `hsb' substituted by `rgb' on input line 1353.
+Package xcolor Info: Model `RGB' extended on input line 1365.
+Package xcolor Info: Model `HTML' substituted by `rgb' on input line 1367.
+Package xcolor Info: Model `Hsb' substituted by `hsb' on input line 1368.
+Package xcolor Info: Model `tHsb' substituted by `hsb' on input line 1369.
+Package xcolor Info: Model `HSB' substituted by `hsb' on input line 1370.
+Package xcolor Info: Model `Gray' substituted by `gray' on input line 1371.
+Package xcolor Info: Model `wave' substituted by `hsb' on input line 1372.
+) (C:\Users\a1242176\AppData\Roaming\MiKTeX\tex/latex/geometry\geometry.sty
+Package: geometry 2020/01/02 v5.9 Page Geometry
+(C:\Program Files\MiKTeX\tex/latex/graphics\keyval.sty
+Package: keyval 2022/05/29 v1.15 key=value parser (DPC)
+\KV@toks@=\toks17
+) (C:\Program Files\MiKTeX\tex/generic/iftex\ifvtex.sty
+Package: ifvtex 2019/10/25 v1.7 ifvtex legacy package. Use iftex instead.
+(C:\Program Files\MiKTeX\tex/generic/iftex\iftex.sty
+Package: iftex 2024/12/12 v1.0g TeX engine tests
+))
+\Gm@cnth=\count283
+\Gm@cntv=\count284
+\c@Gm@tempcnt=\count285
+\Gm@bindingoffset=\dimen149
+\Gm@wd@mp=\dimen150
+\Gm@odd@mp=\dimen151
+\Gm@even@mp=\dimen152
+\Gm@layoutwidth=\dimen153
+\Gm@layoutheight=\dimen154
+\Gm@layouthoffset=\dimen155
+\Gm@layoutvoffset=\dimen156
+\Gm@dimlist=\toks18
+(C:\Users\a1242176\AppData\Roaming\MiKTeX\tex/latex/geometry\geometry.cfg)) (C:
+\Program Files\MiKTeX\tex/latex/amsmath\amsmath.sty
+Package: amsmath 2025/07/09 v2.17z AMS math features
+\@mathmargin=\skip51
+For additional information on amsmath, use the `?' option.
+(C:\Program Files\MiKTeX\tex/latex/amsmath\amstext.sty
+Package: amstext 2024/11/17 v2.01 AMS text
+(C:\Program Files\MiKTeX\tex/latex/amsmath\amsgen.sty
+File: amsgen.sty 1999/11/30 v2.0 generic functions
+\@emptytoks=\toks19
+\ex@=\dimen157
+)) (C:\Program Files\MiKTeX\tex/latex/amsmath\amsbsy.sty
+Package: amsbsy 1999/11/29 v1.2d Bold Symbols
+\pmbraise@=\dimen158
+) (C:\Program Files\MiKTeX\tex/latex/amsmath\amsopn.sty
+Package: amsopn 2022/04/08 v2.04 operator names
+)
+\inf@bad=\count286
+LaTeX Info: Redefining \frac on input line 233.
+\uproot@=\count287
+\leftroot@=\count288
+LaTeX Info: Redefining \overline on input line 398.
+LaTeX Info: Redefining \colon on input line 409.
+\classnum@=\count289
+\DOTSCASE@=\count290
+LaTeX Info: Redefining \ldots on input line 495.
+LaTeX Info: Redefining \dots on input line 498.
+LaTeX Info: Redefining \cdots on input line 619.
+\Mathstrutbox@=\box53
+\strutbox@=\box54
+LaTeX Info: Redefining \big on input line 721.
+LaTeX Info: Redefining \Big on input line 722.
+LaTeX Info: Redefining \bigg on input line 723.
+LaTeX Info: Redefining \Bigg on input line 724.
+\big@size=\dimen159
+LaTeX Font Info:    Redeclaring font encoding OML on input line 742.
+LaTeX Font Info:    Redeclaring font encoding OMS on input line 743.
+\macc@depth=\count291
+LaTeX Info: Redefining \bmod on input line 904.
+LaTeX Info: Redefining \pmod on input line 909.
+LaTeX Info: Redefining \smash on input line 939.
+LaTeX Info: Redefining \relbar on input line 969.
+LaTeX Info: Redefining \Relbar on input line 970.
+\c@MaxMatrixCols=\count292
+\dotsspace@=\muskip17
+\c@parentequation=\count293
+\dspbrk@lvl=\count294
+\tag@help=\toks20
+\row@=\count295
+\column@=\count296
+\maxfields@=\count297
+\andhelp@=\toks21
+\eqnshift@=\dimen160
+\alignsep@=\dimen161
+\tagshift@=\dimen162
+\tagwidth@=\dimen163
+\totwidth@=\dimen164
+\lineht@=\dimen165
+\@envbody=\toks22
+\multlinegap=\skip52
+\multlinetaggap=\skip53
+\mathdisplay@stack=\toks23
+LaTeX Info: Redefining \[ on input line 2950.
+LaTeX Info: Redefining \] on input line 2951.
+) (C:\Program Files\MiKTeX\tex/latex/amsfonts\amssymb.sty
+Package: amssymb 2013/01/14 v3.01 AMS font symbols
+(C:\Program Files\MiKTeX\tex/latex/amsfonts\amsfonts.sty
+Package: amsfonts 2013/01/14 v3.01 Basic AMSFonts support
+\symAMSa=\mathgroup4
+\symAMSb=\mathgroup5
+LaTeX Font Info:    Redeclaring math symbol \hbar on input line 98.
+LaTeX Font Info:    Overwriting math alphabet `\mathfrak' in version `bold'
+(Font)                  U/euf/m/n --> U/euf/b/n on input line 106.
+)) (C:\Program Files\MiKTeX\tex/latex/base\fontenc.sty
+Package: fontenc 2025/07/18 v2.1d Standard LaTeX package
+) (C:\Program Files\MiKTeX\tex/latex/base\inputenc.sty
+Package: inputenc 2024/02/08 v1.3d Input encoding file
+\inpenc@prehook=\toks24
+\inpenc@posthook=\toks25
+) (C:\Program Files\MiKTeX\tex/latex/base\textcomp.sty
+Package: textcomp 2024/04/24 v2.1b Standard LaTeX package
+) (C:\Program Files\MiKTeX\tex/latex/lm\lmodern.sty
+Package: lmodern 2015/05/01 v1.6.1 Latin Modern Fonts
+LaTeX Font Info:    Overwriting symbol font `operators' in version `normal'
+(Font)                  OT1/cmr/m/n --> OT1/lmr/m/n on input line 22.
+LaTeX Font Info:    Overwriting symbol font `letters' in version `normal'
+(Font)                  OML/cmm/m/it --> OML/lmm/m/it on input line 23.
+LaTeX Font Info:    Overwriting symbol font `symbols' in version `normal'
+(Font)                  OMS/cmsy/m/n --> OMS/lmsy/m/n on input line 24.
+LaTeX Font Info:    Overwriting symbol font `largesymbols' in version `normal'
+(Font)                  OMX/cmex/m/n --> OMX/lmex/m/n on input line 25.
+LaTeX Font Info:    Overwriting symbol font `operators' in version `bold'
+(Font)                  OT1/cmr/bx/n --> OT1/lmr/bx/n on input line 26.
+LaTeX Font Info:    Overwriting symbol font `letters' in version `bold'
+(Font)                  OML/cmm/b/it --> OML/lmm/b/it on input line 27.
+LaTeX Font Info:    Overwriting symbol font `symbols' in version `bold'
+(Font)                  OMS/cmsy/b/n --> OMS/lmsy/b/n on input line 28.
+LaTeX Font Info:    Overwriting symbol font `largesymbols' in version `bold'
+(Font)                  OMX/cmex/m/n --> OMX/lmex/m/n on input line 29.
+LaTeX Font Info:    Overwriting math alphabet `\mathbf' in version `normal'
+(Font)                  OT1/cmr/bx/n --> OT1/lmr/bx/n on input line 31.
+LaTeX Font Info:    Overwriting math alphabet `\mathsf' in version `normal'
+(Font)                  OT1/cmss/m/n --> OT1/lmss/m/n on input line 32.
+LaTeX Font Info:    Overwriting math alphabet `\mathit' in version `normal'
+(Font)                  OT1/cmr/m/it --> OT1/lmr/m/it on input line 33.
+LaTeX Font Info:    Overwriting math alphabet `\mathtt' in version `normal'
+(Font)                  OT1/cmtt/m/n --> OT1/lmtt/m/n on input line 34.
+LaTeX Font Info:    Overwriting math alphabet `\mathbf' in version `bold'
+(Font)                  OT1/cmr/bx/n --> OT1/lmr/bx/n on input line 35.
+LaTeX Font Info:    Overwriting math alphabet `\mathsf' in version `bold'
+(Font)                  OT1/cmss/bx/n --> OT1/lmss/bx/n on input line 36.
+LaTeX Font Info:    Overwriting math alphabet `\mathit' in version `bold'
+(Font)                  OT1/cmr/bx/it --> OT1/lmr/bx/it on input line 37.
+LaTeX Font Info:    Overwriting math alphabet `\mathtt' in version `bold'
+(Font)                  OT1/cmtt/m/n --> OT1/lmtt/m/n on input line 38.
+) (C:\Users\a1242176\AppData\Roaming\MiKTeX\tex/latex/upquote\upquote.sty
+Package: upquote 2012/04/19 v1.3 upright-quote and grave-accent glyphs in verba
+tim
+) (C:\Users\a1242176\AppData\Roaming\MiKTeX\tex/latex/microtype\microtype.sty
+Package: microtype 2025/07/09 v3.2b Micro-typographical refinements (RS)
+(C:\Program Files\MiKTeX\tex/latex/etoolbox\etoolbox.sty
+Package: etoolbox 2025/10/02 v2.5m e-TeX tools for LaTeX (JAW)
+\etb@tempcnta=\count298
+)
+\MT@toks=\toks26
+\MT@tempbox=\box55
+\MT@count=\count299
+LaTeX Info: Redefining \noprotrusionifhmode on input line 1087.
+LaTeX Info: Redefining \leftprotrusion on input line 1088.
+\MT@prot@toks=\toks27
+LaTeX Info: Redefining \rightprotrusion on input line 1107.
+LaTeX Info: Redefining \textls on input line 1449.
+\MT@outer@kern=\dimen166
+LaTeX Info: Redefining \microtypecontext on input line 2053.
+LaTeX Info: Redefining \textmicrotypecontext on input line 2070.
+\MT@listname@count=\count300
+
+(C:\Users\a1242176\AppData\Roaming\MiKTeX\tex/latex/microtype\microtype-pdftex.
+def
+File: microtype-pdftex.def 2025/07/09 v3.2b Definitions specific to pdftex (RS)
+
+LaTeX Info: Redefining \lsstyle on input line 944.
+LaTeX Info: Redefining \lslig on input line 944.
+\MT@outer@space=\skip54
+)
+Package microtype Info: Loading configuration file microtype.cfg.
+(C:\Users\a1242176\AppData\Roaming\MiKTeX\tex/latex/microtype\microtype.cfg
+File: microtype.cfg 2025/07/09 v3.2b microtype main configuration file (RS)
+)
+LaTeX Info: Redefining \microtypesetup on input line 3065.
+) (C:\Users\a1242176\AppData\Roaming\MiKTeX\tex/latex/parskip\parskip.sty
+Package: parskip 2021-03-14 v2.0h non-zero parskip adjustments
+(C:\Users\a1242176\AppData\Roaming\MiKTeX\tex/latex/kvoptions\kvoptions.sty
+Package: kvoptions 2022-06-15 v3.15 Key value format for package options (HO)
+(C:\Users\a1242176\AppData\Roaming\MiKTeX\tex/generic/ltxcmds\ltxcmds.sty
+Package: ltxcmds 2023-12-04 v1.26 LaTeX kernel commands for general use (HO)
+) (C:\Users\a1242176\AppData\Roaming\MiKTeX\tex/latex/kvsetkeys\kvsetkeys.sty
+Package: kvsetkeys 2022-10-05 v1.19 Key value parser (HO)
+))) (C:\Users\a1242176\AppData\Roaming\MiKTeX\tex/latex/fancyvrb\fancyvrb.sty
+Package: fancyvrb 2025/07/28 4.6 verbatim text (tvz,hv)
+\FV@CodeLineNo=\count301
+\FV@InFile=\read2
+\FV@TabBox=\box56
+\c@FancyVerbLine=\count302
+\FV@StepNumber=\count303
+\FV@OutFile=\write3
+) (C:\Users\a1242176\AppData\Roaming\MiKTeX\tex/latex/framed\framed.sty
+Package: framed 2011/10/22 v 0.96: framed or shaded text with page breaks
+\OuterFrameSep=\skip55
+\fb@frw=\dimen167
+\fb@frh=\dimen168
+\FrameRule=\dimen169
+\FrameSep=\dimen170
+) (C:\Program Files\MiKTeX\tex/latex/graphics\graphicx.sty
+Package: graphicx 2024/12/31 v1.2e Enhanced LaTeX Graphics (DPC,SPQR)
+(C:\Program Files\MiKTeX\tex/latex/graphics\graphics.sty
+Package: graphics 2024/08/06 v1.4g Standard LaTeX Graphics (DPC,SPQR)
+(C:\Program Files\MiKTeX\tex/latex/graphics\trig.sty
+Package: trig 2023/12/02 v1.11 sin cos tan (DPC)
+) (C:\Program Files\MiKTeX\tex/latex/graphics-cfg\graphics.cfg
+File: graphics.cfg 2016/06/04 v1.11 sample graphics configuration
+)
+Package graphics Info: Driver file: pdftex.def on input line 106.
+)
+\Gin@req@height=\dimen171
+\Gin@req@width=\dimen172
+)
+\pandoc@box=\box57
+(C:\Users\a1242176\AppData\Roaming\MiKTeX\tex/latex/bookmark\bookmark.sty
+Package: bookmark 2023-12-10 v1.31 PDF bookmarks (HO)
+(C:\Program Files\MiKTeX\tex/latex/hyperref\hyperref.sty
+Package: hyperref 2026-01-29 v7.01p Hypertext links for LaTeX
+
+(C:\Users\a1242176\AppData\Roaming\MiKTeX\tex/generic/kvdefinekeys\kvdefinekeys
+.sty
+Package: kvdefinekeys 2019-12-19 v1.6 Define keys (HO)
+) (C:\Users\a1242176\AppData\Roaming\MiKTeX\tex/generic/pdfescape\pdfescape.sty
+Package: pdfescape 2019/12/09 v1.15 Implements pdfTeX's escape features (HO)
+(C:\Program Files\MiKTeX\tex/generic/pdftexcmds\pdftexcmds.sty
+Package: pdftexcmds 2020-06-27 v0.33 Utility functions of pdfTeX for LuaTeX (HO
+)
+(C:\Users\a1242176\AppData\Roaming\MiKTeX\tex/generic/infwarerr\infwarerr.sty
+Package: infwarerr 2019/12/03 v1.5 Providing info/warning/error messages (HO)
+)
+Package pdftexcmds Info: \pdf@primitive is available.
+Package pdftexcmds Info: \pdf@ifprimitive is available.
+Package pdftexcmds Info: \pdfdraftmode found.
+)) (C:\Users\a1242176\AppData\Roaming\MiKTeX\tex/latex/hycolor\hycolor.sty
+Package: hycolor 2020-01-27 v1.10 Color options for hyperref/bookmark (HO)
+) (C:\Program Files\MiKTeX\tex/latex/hyperref\nameref.sty
+Package: nameref 2026-01-29 v2.58 Cross-referencing by name of section
+(C:\Users\a1242176\AppData\Roaming\MiKTeX\tex/latex/refcount\refcount.sty
+Package: refcount 2019/12/15 v3.6 Data extraction from label references (HO)
+)
+(C:\Users\a1242176\AppData\Roaming\MiKTeX\tex/generic/gettitlestring\gettitlest
+ring.sty
+Package: gettitlestring 2019/12/15 v1.6 Cleanup title references (HO)
+)
+\c@section@level=\count304
+) (C:\Users\a1242176\AppData\Roaming\MiKTeX\tex/generic/stringenc\stringenc.sty
+Package: stringenc 2019/11/29 v1.12 Convert strings between diff. encodings (HO
+)
+)
+\@linkdim=\dimen173
+\Hy@linkcounter=\count305
+\Hy@pagecounter=\count306
+(C:\Program Files\MiKTeX\tex/latex/hyperref\pd1enc.def
+File: pd1enc.def 2026-01-29 v7.01p Hyperref: PDFDocEncoding definition (HO)
+Now handling font encoding PD1 ...
+... no UTF-8 mapping file for font encoding PD1
+) (C:\Users\a1242176\AppData\Roaming\MiKTeX\tex/generic/intcalc\intcalc.sty
+Package: intcalc 2019/12/15 v1.3 Expandable calculations with integers (HO)
+)
+\Hy@SavedSpaceFactor=\count307
+(C:\Program Files\MiKTeX\tex/latex/hyperref\puenc.def
+File: puenc.def 2026-01-29 v7.01p Hyperref: PDF Unicode definition (HO)
+Now handling font encoding PU ...
+... no UTF-8 mapping file for font encoding PU
+)
+Package hyperref Info: Option `unicode' set `true' on input line 4072.
+Package hyperref Info: Hyper figures OFF on input line 4201.
+Package hyperref Info: Link nesting OFF on input line 4206.
+Package hyperref Info: Hyper index ON on input line 4209.
+Package hyperref Info: Plain pages OFF on input line 4216.
+Package hyperref Info: Backreferencing OFF on input line 4221.
+Package hyperref Info: Implicit mode ON; LaTeX internals redefined.
+Package hyperref Info: Bookmarks ON on input line 4468.
+\c@Hy@tempcnt=\count308
+(C:\Program Files\MiKTeX\tex/latex/url\url.sty
+\Urlmuskip=\muskip18
+Package: url 2013/09/16  ver 3.4  Verb mode for urls, etc.
+)
+LaTeX Info: Redefining \url on input line 4807.
+\XeTeXLinkMargin=\dimen174
+(C:\Users\a1242176\AppData\Roaming\MiKTeX\tex/generic/bitset\bitset.sty
+Package: bitset 2019/12/09 v1.3 Handle bit-vector datatype (HO)
+
+(C:\Users\a1242176\AppData\Roaming\MiKTeX\tex/generic/bigintcalc\bigintcalc.sty
+Package: bigintcalc 2019/12/15 v1.5 Expandable calculations on big integers (HO
+)
+))
+\Fld@menulength=\count309
+\Field@Width=\dimen175
+\Fld@charsize=\dimen176
+Package hyperref Info: Hyper figures OFF on input line 6084.
+Package hyperref Info: Link nesting OFF on input line 6089.
+Package hyperref Info: Hyper index ON on input line 6092.
+Package hyperref Info: backreferencing OFF on input line 6099.
+Package hyperref Info: Link coloring OFF on input line 6104.
+Package hyperref Info: Link coloring with OCG OFF on input line 6109.
+Package hyperref Info: PDF/A mode OFF on input line 6114.
+\Hy@abspage=\count310
+\c@Item=\count311
+\c@Hfootnote=\count312
+)
+Package hyperref Info: Driver (autodetected): hpdftex.
+(C:\Program Files\MiKTeX\tex/latex/hyperref\hpdftex.def
+File: hpdftex.def 2026-01-29 v7.01p Hyperref driver for pdfTeX
+\Fld@listcount=\count313
+\c@bookmark@seq@number=\count314
+
+(C:\Users\a1242176\AppData\Roaming\MiKTeX\tex/latex/rerunfilecheck\rerunfileche
+ck.sty
+Package: rerunfilecheck 2025-06-21 v1.11 Rerun checks for auxiliary files (HO)
+
+(C:\Users\a1242176\AppData\Roaming\MiKTeX\tex/generic/uniquecounter\uniquecount
+er.sty
+Package: uniquecounter 2019/12/15 v1.4 Provide unlimited unique counter (HO)
+)
+Package uniquecounter Info: New unique counter `rerunfilecheck' on input line 2
+84.
+)
+\Hy@SectionHShift=\skip56
+) (C:\Users\a1242176\AppData\Roaming\MiKTeX\tex/latex/bookmark\bkm-pdftex.def
+File: bkm-pdftex.def 2023-12-10 v1.31 bookmark driver for pdfTeX and luaTeX (HO
+)
+\BKM@id=\count315
+)) (C:\Users\a1242176\AppData\Roaming\MiKTeX\tex/latex/xurl\xurl.sty
+Package: xurl 2022/01/09 v 0.10 modify URL breaks
+)
+LaTeX Font Info:    Trying to load font information for T1+lmr on input line 10
+8.
+(C:\Program Files\MiKTeX\tex/latex/lm\t1lmr.fd
+File: t1lmr.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
+) (C:\Program Files\MiKTeX\tex/latex/l3backend\l3backend-pdftex.def
+File: l3backend-pdftex.def 2025-10-09 L3 backend support: PDF output (pdfTeX)
+\l__color_backend_stack_int=\count316
+) (porometer.anal_d.v1.aux)
+\openout1 = `porometer.anal_d.v1.aux'.
+
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 108.
+LaTeX Font Info:    ... okay on input line 108.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 108.
+LaTeX Font Info:    ... okay on input line 108.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 108.
+LaTeX Font Info:    ... okay on input line 108.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 108.
+LaTeX Font Info:    ... okay on input line 108.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 108.
+LaTeX Font Info:    ... okay on input line 108.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 108.
+LaTeX Font Info:    ... okay on input line 108.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 108.
+LaTeX Font Info:    ... okay on input line 108.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 108.
+LaTeX Font Info:    ... okay on input line 108.
+LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 108.
+LaTeX Font Info:    ... okay on input line 108.
+(C:\Program Files\MiKTeX\tex/context/base/mkii\supp-pdf.mkii
+[Loading MPS to PDF converter (version 2006.09.02).]
+\scratchcounter=\count317
+\scratchdimen=\dimen177
+\scratchbox=\box58
+\nofMPsegments=\count318
+\nofMParguments=\count319
+\everyMPshowfont=\toks28
+\MPscratchCnt=\count320
+\MPscratchDim=\dimen178
+\MPnumerator=\count321
+\makeMPintoPDFobject=\count322
+\everyMPtoPDFconversion=\toks29
+) (C:\Program Files\MiKTeX\tex/latex/epstopdf-pkg\epstopdf-base.sty
+Package: epstopdf-base 2020-01-24 v2.11 Base part for package epstopdf
+Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 4
+85.
+(C:\Program Files\MiKTeX\tex/latex/00miktex\epstopdf-sys.cfg
+File: epstopdf-sys.cfg 2021/03/18 v2.0 Configuration of epstopdf for MiKTeX
+))
+*geometry* driver: auto-detecting
+*geometry* detected driver: pdftex
+*geometry* verbose mode - [ preamble ] result:
+* driver: pdftex
+* paper: <default>
+* layout: <same size as paper>
+* layoutoffset:(h,v)=(0.0pt,0.0pt)
+* modes: 
+* h-part:(L,W,R)=(72.26999pt, 469.75502pt, 72.26999pt)
+* v-part:(T,H,B)=(72.26999pt, 650.43001pt, 72.26999pt)
+* \paperwidth=614.295pt
+* \paperheight=794.96999pt
+* \textwidth=469.75502pt
+* \textheight=650.43001pt
+* \oddsidemargin=0.0pt
+* \evensidemargin=0.0pt
+* \topmargin=-37.0pt
+* \headheight=12.0pt
+* \headsep=25.0pt
+* \topskip=10.0pt
+* \footskip=30.0pt
+* \marginparwidth=65.0pt
+* \marginparsep=11.0pt
+* \columnsep=10.0pt
+* \skip\footins=9.0pt plus 4.0pt minus 2.0pt
+* \hoffset=0.0pt
+* \voffset=0.0pt
+* \mag=1000
+* \@twocolumnfalse
+* \@twosidefalse
+* \@mparswitchfalse
+* \@reversemarginfalse
+* (1in=72.27pt=25.4mm, 1cm=28.453pt)
+
+LaTeX Info: Redefining \microtypecontext on input line 108.
+Package microtype Info: Applying patch `item' on input line 108.
+Package microtype Info: Applying patch `toc' on input line 108.
+Package microtype Info: Applying patch `eqnum' on input line 108.
+
+Package microtype Warning: Unable to apply patch `footnote' on input line 108.
+
+Package microtype Info: Applying patch `verbatim' on input line 108.
+LaTeX Info: Redefining \microtypesetup on input line 108.
+Package microtype Info: Generating PDF output.
+Package microtype Info: Character protrusion enabled (level 2).
+Package microtype Info: Using protrusion set `basicmath'.
+Package microtype Info: Automatic font expansion enabled (level 2),
+(microtype)             stretch: 20, shrink: 20, step: 1, non-selected.
+Package microtype Info: Using default expansion set `alltext-nott'.
+Package microtype Info: Patching command `\showhyphens'.
+Package microtype Info: No adjustment of tracking.
+Package microtype Info: No adjustment of interword spacing.
+Package microtype Info: No adjustment of character kerning.
+(C:\Users\a1242176\AppData\Roaming\MiKTeX\tex/latex/microtype\mt-cmr.cfg
+File: mt-cmr.cfg 2013/05/19 v2.2 microtype config. file: Computer Modern Roman 
+(RS)
+)
+Package hyperref Info: Link coloring OFF on input line 108.
+LaTeX Font Info:    Trying to load font information for TS1+lmr on input line 1
+22.
+(C:\Program Files\MiKTeX\tex/latex/lm\ts1lmr.fd
+File: ts1lmr.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
+)
+LaTeX Font Info:    Trying to load font information for T1+lmtt on input line 1
+28.
+(C:\Program Files\MiKTeX\tex/latex/lm\t1lmtt.fd
+File: t1lmtt.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
+)
+LaTeX Font Info:    Font shape `T1/lmtt/bx/n' in size <10> not available
+(Font)              Font shape `T1/lmtt/b/n' tried instead on input line 129.
+
+LaTeX Font Warning: Font shape `T1/lmtt/bx/it' in size <10> not available
+(Font)              Font shape `T1/lmtt/b/sl' tried instead on input line 136.
+
+<figures/increase/unnamed-chunk-3-1.png, id=3, 542.025pt x 722.7pt>
+File: figures/increase/unnamed-chunk-3-1.png Graphic file (type png)
+<use figures/increase/unnamed-chunk-3-1.png>
+Package pdftex.def Info: figures/increase/unnamed-chunk-3-1.png  used on input 
+line 186.
+(pdftex.def)             Requested size: 542.02367pt x 722.69823pt.
+[1
+
+{C:/Users/a1242176/AppData/Local/MiKTeX/fonts/map/pdftex/pdftex.map}{C:/Program
+ Files/MiKTeX/fonts/enc/dvips/lm/lm-ec.enc}{C:/Program Files/MiKTeX/fonts/enc/d
+vips/lm/lm-ts1.enc}] [2 <./figures/increase/unnamed-chunk-3-1.png>]
+Underfull \vbox (badness 10000) detected at line 316
+ []
+
+
+Underfull \vbox (badness 10000) detected at line 316
+ []
+
+[3]
+Underfull \vbox (badness 10000) detected at line 316
+ []
+
+
+Underfull \vbox (badness 10000) detected at line 316
+ []
+
+[4]
+<figures/increase/unnamed-chunk-4-1.png, id=38, 542.025pt x 722.7pt>
+File: figures/increase/unnamed-chunk-4-1.png Graphic file (type png)
+<use figures/increase/unnamed-chunk-4-1.png>
+Package pdftex.def Info: figures/increase/unnamed-chunk-4-1.png  used on input 
+line 353.
+(pdftex.def)             Requested size: 542.02367pt x 722.69823pt.
+
+Overfull \hbox (595.99188pt too wide) in paragraph at lines 720--720
+[]         \T1/lmtt/m/n/10 g0 ~ 1 + Line * Device_Watering * Room_Temperature +
+ (1 | CEBRoom:CEBSide + CEBRoom:CEBSide:CEBLocation + CEBRoom:CEBSide:CEBLocati
+on:CEBSubUnit + CEBRoom:CEBSide:CEBLocation:CEBSubUnit:CEBCell)[] 
+ []
+
+[5] [6 <./figures/increase/unnamed-chunk-4-1.png>]
+Overfull \hbox (595.99188pt too wide) in paragraph at lines 720--720
+[]         \T1/lmtt/m/n/10 g1 ~ 1 + Line * Device_Watering * Room_Temperature +
+ (1 | CEBRoom:CEBSide + CEBRoom:CEBSide:CEBLocation + CEBRoom:CEBSide:CEBLocati
+on:CEBSubUnit + CEBRoom:CEBSide:CEBLocation:CEBSubUnit:CEBCell)[] 
+ []
+
+
+Overfull \hbox (286.24278pt too wide) in paragraph at lines 720--720
+[]                                                                             
+                 \T1/lmtt/m/n/10 Estimate Est.Error l-95% CI u-95% CI Rhat Bulk
+_ESS[] 
+ []
+
+
+Overfull \hbox (286.24278pt too wide) in paragraph at lines 720--720
+[]\T1/lmtt/m/n/10 g0_Intercept                                                 
+                                     0.38      0.06     0.26     0.51 1.00     
+1442[] 
+ []
+
+
+Overfull \hbox (286.24278pt too wide) in paragraph at lines 720--720
+[]\T1/lmtt/m/n/10 g0_LinePBI17N002M0CM0NM0NM010NM16N                           
+                                    -0.29      0.06    -0.40    -0.18 1.01     
+1524[] 
+ []
+
+
+Overfull \hbox (286.24278pt too wide) in paragraph at lines 720--720
+[]\T1/lmtt/m/n/10 g0_LinePBI17N006M0NM0NM89N                                   
+                                    -0.08      0.06    -0.19     0.04 1.00     
+1439[] 
+ []
+
+
+Overfull \hbox (286.24278pt too wide) in paragraph at lines 720--720
+[]\T1/lmtt/m/n/10 g0_LinePBI17N007M0CM0NM0NM010NM8N                            
+                                    -0.12      0.06    -0.22    -0.01 1.00     
+1486[] 
+ []
+
+
+Overfull \hbox (286.24278pt too wide) in paragraph at lines 720--720
+[]\T1/lmtt/m/n/10 g0_LinePBI17N013M0CM0NM0NM010NM8N                            
+                                    -0.11      0.06    -0.22    -0.00 1.00     
+1404[] 
+ []
+
+
+Overfull \hbox (286.24278pt too wide) in paragraph at lines 720--720
+[]\T1/lmtt/m/n/10 g0_LinePBI17N016M0CM0NM0NM010NM27N                           
+                                    -0.29      0.06    -0.40    -0.17 1.00     
+1575[] 
+ []
+
+
+Overfull \hbox (286.24278pt too wide) in paragraph at lines 720--720
+[]\T1/lmtt/m/n/10 g0_LinePBI19N007M0NM3N                                       
+                                    -0.02      0.06    -0.14     0.09 1.00     
+1416[] 
+ []
+
+
+Overfull \hbox (286.24278pt too wide) in paragraph at lines 720--720
+[]\T1/lmtt/m/n/10 g0_LinePBIC15034M0CM24NM010NM1NM0N                           
+                                    -0.17      0.06    -0.28    -0.05 1.00     
+1394[] 
+ []
+
+
+Overfull \hbox (286.24278pt too wide) in paragraph at lines 720--720
+[]\T1/lmtt/m/n/10 g0_LineROCKSTAR                                              
+                                    -0.09      0.06    -0.20     0.02 1.00     
+1396[] 
+ []
+
+
+Overfull \hbox (286.24278pt too wide) in paragraph at lines 720--720
+[]\T1/lmtt/m/n/10 g0_LineSUNCHASER                                             
+                                    -0.07      0.06    -0.18     0.05 1.00     
+1469[] 
+ []
+
+
+Overfull \hbox (286.24278pt too wide) in paragraph at lines 720--720
+[]\T1/lmtt/m/n/10 g0_Device_WateringD2_Limited                                 
+                                    -0.36      0.06    -0.47    -0.24 1.01     
+ 985[] 
+ []
+
+
+Overfull \hbox (286.24278pt too wide) in paragraph at lines 720--720
+[]\T1/lmtt/m/n/10 g0_Room_TemperatureCER8_Ambient                              
+                                     0.18      0.08     0.02     0.34 1.00     
+1547[] 
+ []
+
+
+Overfull \hbox (286.24278pt too wide) in paragraph at lines 720--720
+[]\T1/lmtt/m/n/10 g0_LinePBI17N002M0CM0NM0NM010NM16N:Device_WateringD2_Limited 
+                                     0.28      0.08     0.14     0.43 1.01     
+1371[] 
+ []
+
+
+Overfull \hbox (286.24278pt too wide) in paragraph at lines 720--720
+[]\T1/lmtt/m/n/10 g0_LinePBI17N006M0NM0NM89N:Device_WateringD2_Limited         
+                                     0.09      0.08    -0.06     0.24 1.00     
+1305[] 
+ []
+
+
+Overfull \hbox (286.24278pt too wide) in paragraph at lines 720--720
+[]\T1/lmtt/m/n/10 g0_LinePBI17N007M0CM0NM0NM010NM8N:Device_WateringD2_Limited  
+                                     0.10      0.08    -0.04     0.25 1.00     
+1349[] 
+ []
+
+
+Overfull \hbox (286.24278pt too wide) in paragraph at lines 720--720
+[]\T1/lmtt/m/n/10 g0_LinePBI17N013M0CM0NM0NM010NM8N:Device_WateringD2_Limited  
+                                     0.17      0.08     0.02     0.33 1.01     
+1355[] 
+ []
+
+
+Overfull \hbox (286.24278pt too wide) in paragraph at lines 720--720
+[]\T1/lmtt/m/n/10 g0_LinePBI17N016M0CM0NM0NM010NM27N:Device_WateringD2_Limited 
+                                     0.28      0.08     0.13     0.42 1.00     
+1461[] 
+ []
+
+
+Overfull \hbox (286.24278pt too wide) in paragraph at lines 720--720
+[]\T1/lmtt/m/n/10 g0_LinePBI19N007M0NM3N:Device_WateringD2_Limited             
+                                     0.10      0.08    -0.05     0.25 1.00     
+1251[] 
+ []
+
+
+Overfull \hbox (286.24278pt too wide) in paragraph at lines 720--720
+[]\T1/lmtt/m/n/10 g0_LinePBIC15034M0CM24NM010NM1NM0N:Device_WateringD2_Limited 
+                                     0.20      0.08     0.05     0.36 1.01     
+1171[] 
+ []
+
+
+Overfull \hbox (286.24278pt too wide) in paragraph at lines 720--720
+[]\T1/lmtt/m/n/10 g0_LineROCKSTAR:Device_WateringD2_Limited                    
+                                     0.19      0.08     0.04     0.34 1.00     
+1296[] 
+ []
+
+
+Overfull \hbox (286.24278pt too wide) in paragraph at lines 720--720
+[]\T1/lmtt/m/n/10 g0_LineSUNCHASER:Device_WateringD2_Limited                   
+                                     0.10      0.08    -0.05     0.25 1.00     
+1360[] 
+ []
+
+
+Overfull \hbox (286.24278pt too wide) in paragraph at lines 720--720
+[]\T1/lmtt/m/n/10 g0_LinePBI17N002M0CM0NM0NM010NM16N:Room_TemperatureCER8_Ambie
+nt                                  -0.18      0.07    -0.33    -0.04 1.00     
+1859[] 
+ []
+
+
+Overfull \hbox (286.24278pt too wide) in paragraph at lines 720--720
+[]\T1/lmtt/m/n/10 g0_LinePBI17N006M0NM0NM89N:Room_TemperatureCER8_Ambient      
+                                    -0.26      0.08    -0.41    -0.11 1.00     
+1513[] 
+ []
+
+
+Overfull \hbox (286.24278pt too wide) in paragraph at lines 720--720
+[]\T1/lmtt/m/n/10 g0_LinePBI17N007M0CM0NM0NM010NM8N:Room_TemperatureCER8_Ambien
+t                                   -0.30      0.07    -0.45    -0.16 1.00     
+1592[] 
+ []
+
+[7]
+Overfull \hbox (286.24278pt too wide) in paragraph at lines 720--720
+[]\T1/lmtt/m/n/10 g0_LinePBI17N013M0CM0NM0NM010NM8N:Room_TemperatureCER8_Ambien
+t                                   -0.22      0.08    -0.37    -0.08 1.00     
+1731[] 
+ []
+
+
+Overfull \hbox (286.24278pt too wide) in paragraph at lines 720--720
+[]\T1/lmtt/m/n/10 g0_LinePBI17N016M0CM0NM0NM010NM27N:Room_TemperatureCER8_Ambie
+nt                                  -0.18      0.08    -0.33    -0.03 1.00     
+1672[] 
+ []
+
+
+Overfull \hbox (286.24278pt too wide) in paragraph at lines 720--720
+[]\T1/lmtt/m/n/10 g0_LinePBI19N007M0NM3N:Room_TemperatureCER8_Ambient          
+                                    -0.22      0.07    -0.37    -0.07 1.00     
+1524[] 
+ []
+
+
+Overfull \hbox (286.24278pt too wide) in paragraph at lines 720--720
+[]\T1/lmtt/m/n/10 g0_LinePBIC15034M0CM24NM010NM1NM0N:Room_TemperatureCER8_Ambie
+nt                                  -0.16      0.08    -0.30    -0.01 1.00     
+1546[] 
+ []
+
+
+Overfull \hbox (286.24278pt too wide) in paragraph at lines 720--720
+[]\T1/lmtt/m/n/10 g0_LineROCKSTAR:Room_TemperatureCER8_Ambient                 
+                                    -0.25      0.08    -0.40    -0.10 1.00     
+1565[] 
+ []
+
+
+Overfull \hbox (286.24278pt too wide) in paragraph at lines 720--720
+[]\T1/lmtt/m/n/10 g0_LineSUNCHASER:Room_TemperatureCER8_Ambient                
+                                    -0.22      0.08    -0.37    -0.07 1.00     
+1566[] 
+ []
+
+
+Overfull \hbox (286.24278pt too wide) in paragraph at lines 720--720
+[]\T1/lmtt/m/n/10 g0_Device_WateringD2_Limited:Room_TemperatureCER8_Ambient    
+                                    -0.09      0.08    -0.25     0.06 1.00     
+1088[] 
+ []
+
+
+Overfull \hbox (286.24278pt too wide) in paragraph at lines 720--720
+[]\T1/lmtt/m/n/10 g0_LinePBI17N002M0CM0NM0NM010NM16N:Device_WateringD2_Limited:
+Room_TemperatureCER8_Ambient         0.10      0.10    -0.10     0.29 1.00     
+1423[] 
+ []
+
+
+Overfull \hbox (286.24278pt too wide) in paragraph at lines 720--720
+[]\T1/lmtt/m/n/10 g0_LinePBI17N006M0NM0NM89N:Device_WateringD2_Limited:Room_Tem
+peratureCER8_Ambient                 0.18      0.10    -0.02     0.39 1.00     
+1374[] 
+ []
+
+
+Overfull \hbox (286.24278pt too wide) in paragraph at lines 720--720
+[]\T1/lmtt/m/n/10 g0_LinePBI17N007M0CM0NM0NM010NM8N:Device_WateringD2_Limited:R
+oom_TemperatureCER8_Ambient          0.22      0.10     0.02     0.42 1.00     
+1385[] 
+ []
+
+
+Overfull \hbox (286.24278pt too wide) in paragraph at lines 720--720
+[]\T1/lmtt/m/n/10 g0_LinePBI17N013M0CM0NM0NM010NM8N:Device_WateringD2_Limited:R
+oom_TemperatureCER8_Ambient          0.12      0.11    -0.09     0.33 1.01     
+1471[] 
+ []
+
+
+Overfull \hbox (286.24278pt too wide) in paragraph at lines 720--720
+[]\T1/lmtt/m/n/10 g0_LinePBI17N016M0CM0NM0NM010NM27N:Device_WateringD2_Limited:
+Room_TemperatureCER8_Ambient         0.15      0.10    -0.04     0.35 1.00     
+1452[] 
+ []
+
+
+Overfull \hbox (286.24278pt too wide) in paragraph at lines 720--720
+[]\T1/lmtt/m/n/10 g0_LinePBI19N007M0NM3N:Device_WateringD2_Limited:Room_Tempera
+tureCER8_Ambient                     0.10      0.10    -0.11     0.29 1.00     
+1360[] 
+ []
+
+
+Overfull \hbox (286.24278pt too wide) in paragraph at lines 720--720
+[]\T1/lmtt/m/n/10 g0_LinePBIC15034M0CM24NM010NM1NM0N:Device_WateringD2_Limited:
+Room_TemperatureCER8_Ambient         0.06      0.10    -0.15     0.26 1.01     
+1304[] 
+ []
+
+
+Overfull \hbox (286.24278pt too wide) in paragraph at lines 720--720
+[]\T1/lmtt/m/n/10 g0_LineROCKSTAR:Device_WateringD2_Limited:Room_TemperatureCER
+8_Ambient                            0.17      0.10    -0.03     0.37 1.00     
+1385[] 
+ []
+
+
+Overfull \hbox (286.24278pt too wide) in paragraph at lines 720--720
+[]\T1/lmtt/m/n/10 g0_LineSUNCHASER:Device_WateringD2_Limited:Room_TemperatureCE
+R8_Ambient                           0.15      0.10    -0.04     0.35 1.00     
+1526[] 
+ []
+
+
+Overfull \hbox (286.24278pt too wide) in paragraph at lines 720--720
+[]\T1/lmtt/m/n/10 g1_Intercept                                                 
+                                     0.00      0.01    -0.02     0.02 1.00     
+4506[] 
+ []
+
+
+Overfull \hbox (286.24278pt too wide) in paragraph at lines 720--720
+[]\T1/lmtt/m/n/10 g1_LinePBI17N002M0CM0NM0NM010NM16N                           
+                                    -0.01      0.01    -0.02     0.00 1.00     
+6290[] 
+ []
+
+
+Overfull \hbox (286.24278pt too wide) in paragraph at lines 720--720
+[]\T1/lmtt/m/n/10 g1_LinePBI17N006M0NM0NM89N                                   
+                                    -0.02      0.01    -0.03    -0.00 1.00     
+5883[] 
+ []
+
+
+Overfull \hbox (286.24278pt too wide) in paragraph at lines 720--720
+[]\T1/lmtt/m/n/10 g1_LinePBI17N007M0CM0NM0NM010NM8N                            
+                                    -0.01      0.01    -0.02     0.01 1.00     
+5388[] 
+ []
+
+
+Overfull \hbox (286.24278pt too wide) in paragraph at lines 720--720
+[]\T1/lmtt/m/n/10 g1_LinePBI17N013M0CM0NM0NM010NM8N                            
+                                    -0.02      0.01    -0.03    -0.01 1.00     
+5773[] 
+ []
+
+
+Overfull \hbox (286.24278pt too wide) in paragraph at lines 720--720
+[]\T1/lmtt/m/n/10 g1_LinePBI17N016M0CM0NM0NM010NM27N                           
+                                    -0.01      0.01    -0.02     0.01 1.00     
+5566[] 
+ []
+
+
+Overfull \hbox (286.24278pt too wide) in paragraph at lines 720--720
+[]\T1/lmtt/m/n/10 g1_LinePBI19N007M0NM3N                                       
+                                    -0.01      0.01    -0.03    -0.00 1.00     
+5675[] 
+ []
+
+
+Overfull \hbox (286.24278pt too wide) in paragraph at lines 720--720
+[]\T1/lmtt/m/n/10 g1_LinePBIC15034M0CM24NM010NM1NM0N                           
+                                    -0.02      0.01    -0.03    -0.01 1.00     
+5713[] 
+ []
+
+
+Overfull \hbox (286.24278pt too wide) in paragraph at lines 720--720
+[]\T1/lmtt/m/n/10 g1_LineROCKSTAR                                              
+                                    -0.01      0.01    -0.03     0.00 1.00     
+5545[] 
+ []
+
+
+Overfull \hbox (286.24278pt too wide) in paragraph at lines 720--720
+[]\T1/lmtt/m/n/10 g1_LineSUNCHASER                                             
+                                    -0.01      0.01    -0.03    -0.00 1.00     
+5388[] 
+ []
+
+
+Overfull \hbox (286.24278pt too wide) in paragraph at lines 720--720
+[]\T1/lmtt/m/n/10 g1_Device_WateringD2_Limited                                 
+                                    -0.00      0.01    -0.02     0.02 1.00     
+4157[] 
+ []
+
+
+Overfull \hbox (286.24278pt too wide) in paragraph at lines 720--720
+[]\T1/lmtt/m/n/10 g1_Room_TemperatureCER8_Ambient                              
+                                    -0.01      0.01    -0.03     0.01 1.00     
+4877[] 
+ []
+
+
+Overfull \hbox (286.24278pt too wide) in paragraph at lines 720--720
+[]\T1/lmtt/m/n/10 g1_LinePBI17N002M0CM0NM0NM010NM16N:Device_WateringD2_Limited 
+                                    -0.00      0.01    -0.02     0.02 1.00     
+8591[] 
+ []
+
+
+Overfull \hbox (286.24278pt too wide) in paragraph at lines 720--720
+[]\T1/lmtt/m/n/10 g1_LinePBI17N006M0NM0NM89N:Device_WateringD2_Limited         
+                                     0.00      0.01    -0.02     0.02 1.00     
+7780[] 
+ []
+
+
+Overfull \hbox (286.24278pt too wide) in paragraph at lines 720--720
+[]\T1/lmtt/m/n/10 g1_LinePBI17N007M0CM0NM0NM010NM8N:Device_WateringD2_Limited  
+                                     0.00      0.01    -0.02     0.02 1.00     
+7856[] 
+ []
+
+
+Overfull \hbox (286.24278pt too wide) in paragraph at lines 720--720
+[]\T1/lmtt/m/n/10 g1_LinePBI17N013M0CM0NM0NM010NM8N:Device_WateringD2_Limited  
+                                    -0.00      0.01    -0.02     0.02 1.00     
+8610[] 
+ []
+
+
+Overfull \hbox (286.24278pt too wide) in paragraph at lines 720--720
+[]\T1/lmtt/m/n/10 g1_LinePBI17N016M0CM0NM0NM010NM27N:Device_WateringD2_Limited 
+                                    -0.00      0.01    -0.02     0.02 1.00     
+7528[] 
+ []
+
+
+Overfull \hbox (286.24278pt too wide) in paragraph at lines 720--720
+[]\T1/lmtt/m/n/10 g1_LinePBI19N007M0NM3N:Device_WateringD2_Limited             
+                                    -0.01      0.01    -0.03     0.01 1.00     
+8802[] 
+ []
+
+
+Overfull \hbox (286.24278pt too wide) in paragraph at lines 720--720
+[]\T1/lmtt/m/n/10 g1_LinePBIC15034M0CM24NM010NM1NM0N:Device_WateringD2_Limited 
+                                     0.00      0.01    -0.02     0.02 1.00     
+8544[] 
+ []
+
+
+Overfull \hbox (286.24278pt too wide) in paragraph at lines 720--720
+[]\T1/lmtt/m/n/10 g1_LineROCKSTAR:Device_WateringD2_Limited                    
+                                    -0.02      0.01    -0.04     0.00 1.00     
+8117[] 
+ []
+
+
+Overfull \hbox (286.24278pt too wide) in paragraph at lines 720--720
+[]\T1/lmtt/m/n/10 g1_LineSUNCHASER:Device_WateringD2_Limited                   
+                                    -0.00      0.01    -0.02     0.02 1.00     
+7357[] 
+ []
+
+
+Overfull \hbox (286.24278pt too wide) in paragraph at lines 720--720
+[]\T1/lmtt/m/n/10 g1_LinePBI17N002M0CM0NM0NM010NM16N:Room_TemperatureCER8_Ambie
+nt                                   0.01      0.01    -0.01     0.02 1.00     
+7453[] 
+ []
+
+
+Overfull \hbox (286.24278pt too wide) in paragraph at lines 720--720
+[]\T1/lmtt/m/n/10 g1_LinePBI17N006M0NM0NM89N:Room_TemperatureCER8_Ambient      
+                                    -0.02      0.01    -0.03     0.00 1.00     
+7429[] 
+ []
+
+
+Overfull \hbox (286.24278pt too wide) in paragraph at lines 720--720
+[]\T1/lmtt/m/n/10 g1_LinePBI17N007M0CM0NM0NM010NM8N:Room_TemperatureCER8_Ambien
+t                                   -0.00      0.01    -0.02     0.02 1.00     
+7865[] 
+ []
+
+
+Overfull \hbox (286.24278pt too wide) in paragraph at lines 720--720
+[]\T1/lmtt/m/n/10 g1_LinePBI17N013M0CM0NM0NM010NM8N:Room_TemperatureCER8_Ambien
+t                                   -0.01      0.01    -0.03     0.01 1.00     
+7898[] 
+ []
+
+
+Overfull \hbox (286.24278pt too wide) in paragraph at lines 720--720
+[]\T1/lmtt/m/n/10 g1_LinePBI17N016M0CM0NM0NM010NM27N:Room_TemperatureCER8_Ambie
+nt                                  -0.00      0.01    -0.02     0.02 1.00     
+7388[] 
+ []
+
+
+Overfull \hbox (286.24278pt too wide) in paragraph at lines 720--720
+[]\T1/lmtt/m/n/10 g1_LinePBI19N007M0NM3N:Room_TemperatureCER8_Ambient          
+                                    -0.02      0.01    -0.04    -0.00 1.00     
+7120[] 
+ []
+
+
+Overfull \hbox (286.24278pt too wide) in paragraph at lines 720--720
+[]\T1/lmtt/m/n/10 g1_LinePBIC15034M0CM24NM010NM1NM0N:Room_TemperatureCER8_Ambie
+nt                                  -0.01      0.01    -0.03     0.01 1.00     
+6186[] 
+ []
+
+
+Overfull \hbox (286.24278pt too wide) in paragraph at lines 720--720
+[]\T1/lmtt/m/n/10 g1_LineROCKSTAR:Room_TemperatureCER8_Ambient                 
+                                    -0.02      0.01    -0.04    -0.00 1.00     
+6960[] 
+ []
+
+
+Overfull \hbox (286.24278pt too wide) in paragraph at lines 720--720
+[]\T1/lmtt/m/n/10 g1_LineSUNCHASER:Room_TemperatureCER8_Ambient                
+                                    -0.02      0.01    -0.04    -0.00 1.00     
+6988[] 
+ []
+
+
+Overfull \hbox (286.24278pt too wide) in paragraph at lines 720--720
+[]\T1/lmtt/m/n/10 g1_Device_WateringD2_Limited:Room_TemperatureCER8_Ambient    
+                                     0.00      0.01    -0.02     0.03 1.00     
+5072[] 
+ []
+
+
+Overfull \hbox (286.24278pt too wide) in paragraph at lines 720--720
+[]\T1/lmtt/m/n/10 g1_LinePBI17N002M0CM0NM0NM010NM16N:Device_WateringD2_Limited:
+Room_TemperatureCER8_Ambient         0.00      0.02    -0.03     0.03 1.00    1
+0291[] 
+ []
+
+
+Overfull \hbox (286.24278pt too wide) in paragraph at lines 720--720
+[]\T1/lmtt/m/n/10 g1_LinePBI17N006M0NM0NM89N:Device_WateringD2_Limited:Room_Tem
+peratureCER8_Ambient                 0.01      0.02    -0.02     0.04 1.00    1
+0584[] 
+ []
+
+
+Overfull \hbox (286.24278pt too wide) in paragraph at lines 720--720
+[]\T1/lmtt/m/n/10 g1_LinePBI17N007M0CM0NM0NM010NM8N:Device_WateringD2_Limited:R
+oom_TemperatureCER8_Ambient          0.01      0.02    -0.02     0.04 1.00    1
+2093[] 
+ []
+
+
+Overfull \hbox (286.24278pt too wide) in paragraph at lines 720--720
+[]\T1/lmtt/m/n/10 g1_LinePBI17N013M0CM0NM0NM010NM8N:Device_WateringD2_Limited:R
+oom_TemperatureCER8_Ambient          0.01      0.02    -0.02     0.04 1.00    1
+1460[] 
+ []
+
+
+Overfull \hbox (286.24278pt too wide) in paragraph at lines 720--720
+[]\T1/lmtt/m/n/10 g1_LinePBI17N016M0CM0NM0NM010NM27N:Device_WateringD2_Limited:
+Room_TemperatureCER8_Ambient        -0.01      0.02    -0.04     0.02 1.00    1
+2038[] 
+ []
+
+
+Overfull \hbox (286.24278pt too wide) in paragraph at lines 720--720
+[]\T1/lmtt/m/n/10 g1_LinePBI19N007M0NM3N:Device_WateringD2_Limited:Room_Tempera
+tureCER8_Ambient                     0.01      0.02    -0.02     0.04 1.00    1
+1453[] 
+ []
+
+
+Overfull \hbox (286.24278pt too wide) in paragraph at lines 720--720
+[]\T1/lmtt/m/n/10 g1_LinePBIC15034M0CM24NM010NM1NM0N:Device_WateringD2_Limited:
+Room_TemperatureCER8_Ambient         0.00      0.02    -0.03     0.03 1.00    1
+0672[] 
+ []
+
+[8]
+Overfull \hbox (286.24278pt too wide) in paragraph at lines 720--720
+[]\T1/lmtt/m/n/10 g1_LineROCKSTAR:Device_WateringD2_Limited:Room_TemperatureCER
+8_Ambient                           -0.02      0.02    -0.05     0.01 1.00    1
+1850[] 
+ []
+
+
+Overfull \hbox (286.24278pt too wide) in paragraph at lines 720--720
+[]\T1/lmtt/m/n/10 g1_LineSUNCHASER:Device_WateringD2_Limited:Room_TemperatureCE
+R8_Ambient                          -0.01      0.02    -0.04     0.02 1.00    1
+0844[] 
+ []
+
+
+Overfull \hbox (286.24278pt too wide) in paragraph at lines 720--720
+[]\T1/lmtt/m/n/10 k_Intercept                                                  
+                                     1.98      0.10     1.79     2.17 1.00     
+8939[] 
+ []
+
+
+Overfull \hbox (286.24278pt too wide) in paragraph at lines 720--720
+[]\T1/lmtt/m/n/10 k_LinePBI17N002M0CM0NM0NM010NM16N                            
+                                     2.97      0.10     2.77     3.16 1.00    1
+4386[] 
+ []
+
+
+Overfull \hbox (286.24278pt too wide) in paragraph at lines 720--720
+[]\T1/lmtt/m/n/10 k_LinePBI17N006M0NM0NM89N                                    
+                                     2.80      0.10     2.60     3.00 1.00    1
+3075[] 
+ []
+
+
+Overfull \hbox (286.24278pt too wide) in paragraph at lines 720--720
+[]\T1/lmtt/m/n/10 k_LinePBI17N007M0CM0NM0NM010NM8N                             
+                                     2.93      0.10     2.74     3.12 1.00    1
+1022[] 
+ []
+
+
+Overfull \hbox (286.24278pt too wide) in paragraph at lines 720--720
+[]\T1/lmtt/m/n/10 k_LinePBI17N013M0CM0NM0NM010NM8N                             
+                                     2.88      0.10     2.68     3.08 1.00    1
+2637[] 
+ []
+
+
+Overfull \hbox (286.24278pt too wide) in paragraph at lines 720--720
+[]\T1/lmtt/m/n/10 k_LinePBI17N016M0CM0NM0NM010NM27N                            
+                                     2.97      0.10     2.77     3.16 1.00    1
+2413[] 
+ []
+
+
+Overfull \hbox (286.24278pt too wide) in paragraph at lines 720--720
+[]\T1/lmtt/m/n/10 k_LinePBI19N007M0NM3N                                        
+                                     2.74      0.10     2.53     2.93 1.00    1
+2751[] 
+ []
+
+
+Overfull \hbox (286.24278pt too wide) in paragraph at lines 720--720
+[]\T1/lmtt/m/n/10 k_LinePBIC15034M0CM24NM010NM1NM0N                            
+                                     2.86      0.10     2.66     3.06 1.00    1
+2041[] 
+ []
+
+
+Overfull \hbox (286.24278pt too wide) in paragraph at lines 720--720
+[]\T1/lmtt/m/n/10 k_LineROCKSTAR                                               
+                                     2.83      0.10     2.63     3.02 1.00    1
+3320[] 
+ []
+
+
+Overfull \hbox (286.24278pt too wide) in paragraph at lines 720--720
+[]\T1/lmtt/m/n/10 k_LineSUNCHASER                                              
+                                     2.84      0.10     2.64     3.03 1.00    1
+3957[] 
+ []
+
+
+Overfull \hbox (286.24278pt too wide) in paragraph at lines 720--720
+[]\T1/lmtt/m/n/10 k_Device_WateringD2_Limited                                  
+                                     2.89      0.10     2.69     3.09 1.00    1
+2998[] 
+ []
+
+
+Overfull \hbox (286.24278pt too wide) in paragraph at lines 720--720
+[]\T1/lmtt/m/n/10 k_Room_TemperatureCER8_Ambient                               
+                                     2.54      0.10     2.35     2.73 1.00    1
+0151[] 
+ []
+
+
+Overfull \hbox (286.24278pt too wide) in paragraph at lines 720--720
+[]\T1/lmtt/m/n/10 k_LinePBI17N002M0CM0NM0NM010NM16N:Device_WateringD2_Limited  
+                                     3.00      0.10     2.80     3.20 1.00    1
+4185[] 
+ []
+
+
+Overfull \hbox (286.24278pt too wide) in paragraph at lines 720--720
+[]\T1/lmtt/m/n/10 k_LinePBI17N006M0NM0NM89N:Device_WateringD2_Limited          
+                                     3.00      0.10     2.80     3.19 1.00    1
+3189[] 
+ []
+
+
+Overfull \hbox (286.24278pt too wide) in paragraph at lines 720--720
+[]\T1/lmtt/m/n/10 k_LinePBI17N007M0CM0NM0NM010NM8N:Device_WateringD2_Limited   
+                                     3.00      0.10     2.81     3.19 1.00    1
+5118[] 
+ []
+
+
+Overfull \hbox (286.24278pt too wide) in paragraph at lines 720--720
+[]\T1/lmtt/m/n/10 k_LinePBI17N013M0CM0NM0NM010NM8N:Device_WateringD2_Limited   
+                                     2.99      0.10     2.80     3.18 1.00    1
+1627[] 
+ []
+
+
+Overfull \hbox (286.24278pt too wide) in paragraph at lines 720--720
+[]\T1/lmtt/m/n/10 k_LinePBI17N016M0CM0NM0NM010NM27N:Device_WateringD2_Limited  
+                                     2.99      0.10     2.80     3.19 1.00    1
+2210[] 
+ []
+
+
+Overfull \hbox (286.24278pt too wide) in paragraph at lines 720--720
+[]\T1/lmtt/m/n/10 k_LinePBI19N007M0NM3N:Device_WateringD2_Limited              
+                                     2.98      0.10     2.78     3.18 1.00    1
+2214[] 
+ []
+
+
+Overfull \hbox (286.24278pt too wide) in paragraph at lines 720--720
+[]\T1/lmtt/m/n/10 k_LinePBIC15034M0CM24NM010NM1NM0N:Device_WateringD2_Limited  
+                                     2.99      0.10     2.79     3.19 1.00    1
+1766[] 
+ []
+
+
+Overfull \hbox (286.24278pt too wide) in paragraph at lines 720--720
+[]\T1/lmtt/m/n/10 k_LineROCKSTAR:Device_WateringD2_Limited                     
+                                     2.95      0.10     2.76     3.15 1.00    1
+2476[] 
+ []
+
+
+Overfull \hbox (286.24278pt too wide) in paragraph at lines 720--720
+[]\T1/lmtt/m/n/10 k_LineSUNCHASER:Device_WateringD2_Limited                    
+                                     2.99      0.10     2.78     3.19 1.00    1
+3662[] 
+ []
+
+
+Overfull \hbox (286.24278pt too wide) in paragraph at lines 720--720
+[]\T1/lmtt/m/n/10 k_LinePBI17N002M0CM0NM0NM010NM16N:Room_TemperatureCER8_Ambien
+t                                    2.98      0.10     2.79     3.18 1.00    1
+1938[] 
+ []
+
+
+Overfull \hbox (286.24278pt too wide) in paragraph at lines 720--720
+[]\T1/lmtt/m/n/10 k_LinePBI17N006M0NM0NM89N:Room_TemperatureCER8_Ambient       
+                                     2.93      0.10     2.74     3.13 1.00    1
+2864[] 
+ []
+
+
+Overfull \hbox (286.24278pt too wide) in paragraph at lines 720--720
+[]\T1/lmtt/m/n/10 k_LinePBI17N007M0CM0NM0NM010NM8N:Room_TemperatureCER8_Ambient
+                                     2.98      0.10     2.78     3.17 1.00    1
+3380[] 
+ []
+
+
+Overfull \hbox (286.24278pt too wide) in paragraph at lines 720--720
+[]\T1/lmtt/m/n/10 k_LinePBI17N013M0CM0NM0NM010NM8N:Room_TemperatureCER8_Ambient
+                                     2.93      0.10     2.73     3.13 1.00    1
+3623[] 
+ []
+
+
+Overfull \hbox (286.24278pt too wide) in paragraph at lines 720--720
+[]\T1/lmtt/m/n/10 k_LinePBI17N016M0CM0NM0NM010NM27N:Room_TemperatureCER8_Ambien
+t                                    2.99      0.10     2.79     3.18 1.00    1
+2727[] 
+ []
+
+
+Overfull \hbox (286.24278pt too wide) in paragraph at lines 720--720
+[]\T1/lmtt/m/n/10 k_LinePBI19N007M0NM3N:Room_TemperatureCER8_Ambient           
+                                     2.90      0.10     2.71     3.09 1.00    1
+3235[] 
+ []
+
+
+Overfull \hbox (286.24278pt too wide) in paragraph at lines 720--720
+[]\T1/lmtt/m/n/10 k_LinePBIC15034M0CM24NM010NM1NM0N:Room_TemperatureCER8_Ambien
+t                                    2.92      0.10     2.72     3.11 1.00    1
+4729[] 
+ []
+
+
+Overfull \hbox (286.24278pt too wide) in paragraph at lines 720--720
+[]\T1/lmtt/m/n/10 k_LineROCKSTAR:Room_TemperatureCER8_Ambient                  
+                                     2.94      0.10     2.74     3.13 1.00    1
+0882[] 
+ []
+
+
+Overfull \hbox (286.24278pt too wide) in paragraph at lines 720--720
+[]\T1/lmtt/m/n/10 k_LineSUNCHASER:Room_TemperatureCER8_Ambient                 
+                                     2.92      0.10     2.73     3.12 1.00    1
+2612[] 
+ []
+
+
+Overfull \hbox (286.24278pt too wide) in paragraph at lines 720--720
+[]\T1/lmtt/m/n/10 k_Device_WateringD2_Limited:Room_TemperatureCER8_Ambient     
+                                     2.96      0.10     2.77     3.15 1.00    1
+1988[] 
+ []
+
+
+Overfull \hbox (286.24278pt too wide) in paragraph at lines 720--720
+[]\T1/lmtt/m/n/10 k_LinePBI17N002M0CM0NM0NM010NM16N:Device_WateringD2_Limited:R
+oom_TemperatureCER8_Ambient          3.00      0.10     2.80     3.19 1.00    1
+3974[] 
+ []
+
+
+Overfull \hbox (286.24278pt too wide) in paragraph at lines 720--720
+[]\T1/lmtt/m/n/10 k_LinePBI17N006M0NM0NM89N:Device_WateringD2_Limited:Room_Temp
+eratureCER8_Ambient                  3.00      0.10     2.80     3.20 1.00    1
+3495[] 
+ []
+
+
+Overfull \hbox (286.24278pt too wide) in paragraph at lines 720--720
+[]\T1/lmtt/m/n/10 k_LinePBI17N007M0CM0NM0NM010NM8N:Device_WateringD2_Limited:Ro
+om_TemperatureCER8_Ambient           3.00      0.10     2.81     3.19 1.00    1
+3290[] 
+ []
+
+
+Overfull \hbox (286.24278pt too wide) in paragraph at lines 720--720
+[]\T1/lmtt/m/n/10 k_LinePBI17N013M0CM0NM0NM010NM8N:Device_WateringD2_Limited:Ro
+om_TemperatureCER8_Ambient           3.00      0.10     2.80     3.19 1.00    1
+3603[] 
+ []
+
+
+Overfull \hbox (286.24278pt too wide) in paragraph at lines 720--720
+[]\T1/lmtt/m/n/10 k_LinePBI17N016M0CM0NM0NM010NM27N:Device_WateringD2_Limited:R
+oom_TemperatureCER8_Ambient          2.99      0.10     2.80     3.19 1.00    1
+3708[] 
+ []
+
+
+Overfull \hbox (286.24278pt too wide) in paragraph at lines 720--720
+[]\T1/lmtt/m/n/10 k_LinePBI19N007M0NM3N:Device_WateringD2_Limited:Room_Temperat
+ureCER8_Ambient                      3.00      0.10     2.79     3.21 1.00    1
+3763[] 
+ []
+
+
+Overfull \hbox (286.24278pt too wide) in paragraph at lines 720--720
+[]\T1/lmtt/m/n/10 k_LinePBIC15034M0CM24NM010NM1NM0N:Device_WateringD2_Limited:R
+oom_TemperatureCER8_Ambient          3.00      0.10     2.80     3.19 1.00    1
+2734[] 
+ []
+
+
+Overfull \hbox (286.24278pt too wide) in paragraph at lines 720--720
+[]\T1/lmtt/m/n/10 k_LineROCKSTAR:Device_WateringD2_Limited:Room_TemperatureCER8
+_Ambient                             2.98      0.10     2.79     3.18 1.00    1
+2494[] 
+ []
+
+
+Overfull \hbox (286.24278pt too wide) in paragraph at lines 720--720
+[]\T1/lmtt/m/n/10 k_LineSUNCHASER:Device_WateringD2_Limited:Room_TemperatureCER
+8_Ambient                            3.00      0.10     2.80     3.19 1.00    1
+1073[] 
+ []
+
+
+Overfull \hbox (286.24278pt too wide) in paragraph at lines 720--720
+[]\T1/lmtt/m/n/10 lambda_Intercept                                             
+                                     0.02      0.02     0.00     0.09 1.00     
+8022[] 
+ []
+
+
+Overfull \hbox (286.24278pt too wide) in paragraph at lines 720--720
+[]\T1/lmtt/m/n/10 lambda_LinePBI17N002M0CM0NM0NM010NM16N                       
+                                     0.42      0.22     0.04     0.89 1.00     
+3862[] 
+ []
+
+
+Overfull \hbox (286.24278pt too wide) in paragraph at lines 720--720
+[]\T1/lmtt/m/n/10 lambda_LinePBI17N006M0NM0NM89N                               
+                                     0.16      0.13     0.01     0.49 1.00     
+5643[] 
+ []
+
+
+Overfull \hbox (286.24278pt too wide) in paragraph at lines 720--720
+[]\T1/lmtt/m/n/10 lambda_LinePBI17N007M0CM0NM0NM010NM8N                        
+                                     0.35      0.20     0.03     0.79 1.00     
+4333[] 
+ []
+
+
+Overfull \hbox (286.24278pt too wide) in paragraph at lines 720--720
+[]\T1/lmtt/m/n/10 lambda_LinePBI17N013M0CM0NM0NM010NM8N                        
+                                     0.28      0.18     0.02     0.68 1.00     
+5243[] 
+ []
+
+
+Overfull \hbox (286.24278pt too wide) in paragraph at lines 720--720
+[]\T1/lmtt/m/n/10 lambda_LinePBI17N016M0CM0NM0NM010NM27N                       
+                                     0.41      0.22     0.04     0.86 1.00     
+4501[] 
+ []
+
+
+Overfull \hbox (286.24278pt too wide) in paragraph at lines 720--720
+[]\T1/lmtt/m/n/10 lambda_LinePBI19N007M0NM3N                                   
+                                     0.12      0.10     0.00     0.38 1.00     
+6208[] 
+ []
+
+
+Overfull \hbox (286.24278pt too wide) in paragraph at lines 720--720
+[]\T1/lmtt/m/n/10 lambda_LinePBIC15034M0CM24NM010NM1NM0N                       
+                                     0.25      0.17     0.01     0.65 1.00     
+4997[] 
+ []
+
+
+Overfull \hbox (286.24278pt too wide) in paragraph at lines 720--720
+[]\T1/lmtt/m/n/10 lambda_LineROCKSTAR                                          
+                                     0.18      0.14     0.01     0.51 1.00     
+5966[] 
+ []
+
+
+Overfull \hbox (286.24278pt too wide) in paragraph at lines 720--720
+[]\T1/lmtt/m/n/10 lambda_LineSUNCHASER                                         
+                                     0.22      0.16     0.01     0.59 1.00     
+5193[] 
+ []
+
+
+Overfull \hbox (286.24278pt too wide) in paragraph at lines 720--720
+[]\T1/lmtt/m/n/10 lambda_Device_WateringD2_Limited                             
+                                     0.18      0.14     0.01     0.53 1.00     
+5049[] 
+ []
+
+
+Overfull \hbox (286.24278pt too wide) in paragraph at lines 720--720
+[]\T1/lmtt/m/n/10 lambda_Room_TemperatureCER8_Ambient                          
+                                     0.06      0.05     0.00     0.20 1.00     
+6462[] 
+ []
+
+[9]
+Overfull \hbox (286.24278pt too wide) in paragraph at lines 720--720
+[]\T1/lmtt/m/n/10 lambda_LinePBI17N002M0CM0NM0NM010NM16N:Device_WateringD2_Limi
+ted                                  0.50      0.23     0.08     0.98 1.00     
+3496[] 
+ []
+
+
+Overfull \hbox (286.24278pt too wide) in paragraph at lines 720--720
+[]\T1/lmtt/m/n/10 lambda_LinePBI17N006M0NM0NM89N:Device_WateringD2_Limited     
+                                     0.49      0.23     0.06     0.95 1.00     
+4945[] 
+ []
+
+
+Overfull \hbox (286.24278pt too wide) in paragraph at lines 720--720
+[]\T1/lmtt/m/n/10 lambda_LinePBI17N007M0CM0NM0NM010NM8N:Device_WateringD2_Limit
+ed                                   0.50      0.23     0.07     0.98 1.00     
+4299[] 
+ []
+
+
+Overfull \hbox (286.24278pt too wide) in paragraph at lines 720--720
+[]\T1/lmtt/m/n/10 lambda_LinePBI17N013M0CM0NM0NM010NM8N:Device_WateringD2_Limit
+ed                                   0.48      0.23     0.06     0.94 1.00     
+4530[] 
+ []
+
+
+Overfull \hbox (286.24278pt too wide) in paragraph at lines 720--720
+[]\T1/lmtt/m/n/10 lambda_LinePBI17N016M0CM0NM0NM010NM27N:Device_WateringD2_Limi
+ted                                  0.48      0.24     0.06     0.97 1.00     
+4278[] 
+ []
+
+
+Overfull \hbox (286.24278pt too wide) in paragraph at lines 720--720
+[]\T1/lmtt/m/n/10 lambda_LinePBI19N007M0NM3N:Device_WateringD2_Limited         
+                                     0.45      0.23     0.05     0.90 1.00     
+4008[] 
+ []
+
+
+Overfull \hbox (286.24278pt too wide) in paragraph at lines 720--720
+[]\T1/lmtt/m/n/10 lambda_LinePBIC15034M0CM24NM010NM1NM0N:Device_WateringD2_Limi
+ted                                  0.48      0.22     0.08     0.93 1.00     
+4944[] 
+ []
+
+
+Overfull \hbox (286.24278pt too wide) in paragraph at lines 720--720
+[]\T1/lmtt/m/n/10 lambda_LineROCKSTAR:Device_WateringD2_Limited                
+                                     0.37      0.21     0.03     0.82 1.00     
+4676[] 
+ []
+
+
+Overfull \hbox (286.24278pt too wide) in paragraph at lines 720--720
+[]\T1/lmtt/m/n/10 lambda_LineSUNCHASER:Device_WateringD2_Limited               
+                                     0.45      0.23     0.05     0.93 1.00     
+4436[] 
+ []
+
+
+Overfull \hbox (286.24278pt too wide) in paragraph at lines 720--720
+[]\T1/lmtt/m/n/10 lambda_LinePBI17N002M0CM0NM0NM010NM16N:Room_TemperatureCER8_A
+mbient                               0.45      0.23     0.06     0.93 1.00     
+4310[] 
+ []
+
+
+Overfull \hbox (65.74342pt too wide) in paragraph at lines 720--720
+[]                                                                             
+                 \T1/lmtt/m/n/10 Tail_ESS[] 
+ []
+
+
+Overfull \hbox (65.74342pt too wide) in paragraph at lines 720--720
+[]\T1/lmtt/m/n/10 g0_Intercept                                                 
+                                     2356[] 
+ []
+
+
+Overfull \hbox (65.74342pt too wide) in paragraph at lines 720--720
+[]\T1/lmtt/m/n/10 g0_LinePBI17N002M0CM0NM0NM010NM16N                           
+                                     3040[] 
+ []
+
+
+Overfull \hbox (65.74342pt too wide) in paragraph at lines 720--720
+[]\T1/lmtt/m/n/10 g0_LinePBI17N006M0NM0NM89N                                   
+                                     2855[] 
+ []
+
+
+Overfull \hbox (65.74342pt too wide) in paragraph at lines 720--720
+[]\T1/lmtt/m/n/10 g0_LinePBI17N007M0CM0NM0NM010NM8N                            
+                                     3149[] 
+ []
+
+
+Overfull \hbox (65.74342pt too wide) in paragraph at lines 720--720
+[]\T1/lmtt/m/n/10 g0_LinePBI17N013M0CM0NM0NM010NM8N                            
+                                     3030[] 
+ []
+
+
+Overfull \hbox (65.74342pt too wide) in paragraph at lines 720--720
+[]\T1/lmtt/m/n/10 g0_LinePBI17N016M0CM0NM0NM010NM27N                           
+                                     2468[] 
+ []
+
+
+Overfull \hbox (65.74342pt too wide) in paragraph at lines 720--720
+[]\T1/lmtt/m/n/10 g0_LinePBI19N007M0NM3N                                       
+                                     2847[] 
+ []
+
+
+Overfull \hbox (65.74342pt too wide) in paragraph at lines 720--720
+[]\T1/lmtt/m/n/10 g0_LinePBIC15034M0CM24NM010NM1NM0N                           
+                                     2365[] 
+ []
+
+
+Overfull \hbox (65.74342pt too wide) in paragraph at lines 720--720
+[]\T1/lmtt/m/n/10 g0_LineROCKSTAR                                              
+                                     2662[] 
+ []
+
+
+Overfull \hbox (65.74342pt too wide) in paragraph at lines 720--720
+[]\T1/lmtt/m/n/10 g0_LineSUNCHASER                                             
+                                     2548[] 
+ []
+
+
+Overfull \hbox (65.74342pt too wide) in paragraph at lines 720--720
+[]\T1/lmtt/m/n/10 g0_Device_WateringD2_Limited                                 
+                                     2555[] 
+ []
+
+
+Overfull \hbox (65.74342pt too wide) in paragraph at lines 720--720
+[]\T1/lmtt/m/n/10 g0_Room_TemperatureCER8_Ambient                              
+                                     2514[] 
+ []
+
+
+Overfull \hbox (65.74342pt too wide) in paragraph at lines 720--720
+[]\T1/lmtt/m/n/10 g0_LinePBI17N002M0CM0NM0NM010NM16N:Device_WateringD2_Limited 
+                                     3093[] 
+ []
+
+
+Overfull \hbox (65.74342pt too wide) in paragraph at lines 720--720
+[]\T1/lmtt/m/n/10 g0_LinePBI17N006M0NM0NM89N:Device_WateringD2_Limited         
+                                     2531[] 
+ []
+
+
+Overfull \hbox (65.74342pt too wide) in paragraph at lines 720--720
+[]\T1/lmtt/m/n/10 g0_LinePBI17N007M0CM0NM0NM010NM8N:Device_WateringD2_Limited  
+                                     2911[] 
+ []
+
+
+Overfull \hbox (65.74342pt too wide) in paragraph at lines 720--720
+[]\T1/lmtt/m/n/10 g0_LinePBI17N013M0CM0NM0NM010NM8N:Device_WateringD2_Limited  
+                                     2873[] 
+ []
+
+
+Overfull \hbox (65.74342pt too wide) in paragraph at lines 720--720
+[]\T1/lmtt/m/n/10 g0_LinePBI17N016M0CM0NM0NM010NM27N:Device_WateringD2_Limited 
+                                     2922[] 
+ []
+
+
+Overfull \hbox (65.74342pt too wide) in paragraph at lines 720--720
+[]\T1/lmtt/m/n/10 g0_LinePBI19N007M0NM3N:Device_WateringD2_Limited             
+                                     2515[] 
+ []
+
+
+Overfull \hbox (65.74342pt too wide) in paragraph at lines 720--720
+[]\T1/lmtt/m/n/10 g0_LinePBIC15034M0CM24NM010NM1NM0N:Device_WateringD2_Limited 
+                                     2888[] 
+ []
+
+
+Overfull \hbox (65.74342pt too wide) in paragraph at lines 720--720
+[]\T1/lmtt/m/n/10 g0_LineROCKSTAR:Device_WateringD2_Limited                    
+                                     2935[] 
+ []
+
+
+Overfull \hbox (65.74342pt too wide) in paragraph at lines 720--720
+[]\T1/lmtt/m/n/10 g0_LineSUNCHASER:Device_WateringD2_Limited                   
+                                     3013[] 
+ []
+
+
+Overfull \hbox (65.74342pt too wide) in paragraph at lines 720--720
+[]\T1/lmtt/m/n/10 g0_LinePBI17N002M0CM0NM0NM010NM16N:Room_TemperatureCER8_Ambie
+nt                                   2674[] 
+ []
+
+
+Overfull \hbox (65.74342pt too wide) in paragraph at lines 720--720
+[]\T1/lmtt/m/n/10 g0_LinePBI17N006M0NM0NM89N:Room_TemperatureCER8_Ambient      
+                                     2600[] 
+ []
+
+
+Overfull \hbox (65.74342pt too wide) in paragraph at lines 720--720
+[]\T1/lmtt/m/n/10 g0_LinePBI17N007M0CM0NM0NM010NM8N:Room_TemperatureCER8_Ambien
+t                                    2715[] 
+ []
+
+
+Overfull \hbox (65.74342pt too wide) in paragraph at lines 720--720
+[]\T1/lmtt/m/n/10 g0_LinePBI17N013M0CM0NM0NM010NM8N:Room_TemperatureCER8_Ambien
+t                                    3208[] 
+ []
+
+
+Overfull \hbox (65.74342pt too wide) in paragraph at lines 720--720
+[]\T1/lmtt/m/n/10 g0_LinePBI17N016M0CM0NM0NM010NM27N:Room_TemperatureCER8_Ambie
+nt                                   2526[] 
+ []
+
+
+Overfull \hbox (65.74342pt too wide) in paragraph at lines 720--720
+[]\T1/lmtt/m/n/10 g0_LinePBI19N007M0NM3N:Room_TemperatureCER8_Ambient          
+                                     2909[] 
+ []
+
+
+Overfull \hbox (65.74342pt too wide) in paragraph at lines 720--720
+[]\T1/lmtt/m/n/10 g0_LinePBIC15034M0CM24NM010NM1NM0N:Room_TemperatureCER8_Ambie
+nt                                   2560[] 
+ []
+
+
+Overfull \hbox (65.74342pt too wide) in paragraph at lines 720--720
+[]\T1/lmtt/m/n/10 g0_LineROCKSTAR:Room_TemperatureCER8_Ambient                 
+                                     2710[] 
+ []
+
+
+Overfull \hbox (65.74342pt too wide) in paragraph at lines 720--720
+[]\T1/lmtt/m/n/10 g0_LineSUNCHASER:Room_TemperatureCER8_Ambient                
+                                     3088[] 
+ []
+
+
+Overfull \hbox (65.74342pt too wide) in paragraph at lines 720--720
+[]\T1/lmtt/m/n/10 g0_Device_WateringD2_Limited:Room_TemperatureCER8_Ambient    
+                                     2561[] 
+ []
+
+
+Overfull \hbox (65.74342pt too wide) in paragraph at lines 720--720
+[]\T1/lmtt/m/n/10 g0_LinePBI17N002M0CM0NM0NM010NM16N:Device_WateringD2_Limited:
+Room_TemperatureCER8_Ambient         2251[] 
+ []
+
+
+Overfull \hbox (65.74342pt too wide) in paragraph at lines 720--720
+[]\T1/lmtt/m/n/10 g0_LinePBI17N006M0NM0NM89N:Device_WateringD2_Limited:Room_Tem
+peratureCER8_Ambient                 2349[] 
+ []
+
+
+Overfull \hbox (65.74342pt too wide) in paragraph at lines 720--720
+[]\T1/lmtt/m/n/10 g0_LinePBI17N007M0CM0NM0NM010NM8N:Device_WateringD2_Limited:R
+oom_TemperatureCER8_Ambient          3122[] 
+ []
+
+
+Overfull \hbox (65.74342pt too wide) in paragraph at lines 720--720
+[]\T1/lmtt/m/n/10 g0_LinePBI17N013M0CM0NM0NM010NM8N:Device_WateringD2_Limited:R
+oom_TemperatureCER8_Ambient          3099[] 
+ []
+
+
+Overfull \hbox (65.74342pt too wide) in paragraph at lines 720--720
+[]\T1/lmtt/m/n/10 g0_LinePBI17N016M0CM0NM0NM010NM27N:Device_WateringD2_Limited:
+Room_TemperatureCER8_Ambient         2957[] 
+ []
+
+
+Overfull \hbox (65.74342pt too wide) in paragraph at lines 720--720
+[]\T1/lmtt/m/n/10 g0_LinePBI19N007M0NM3N:Device_WateringD2_Limited:Room_Tempera
+tureCER8_Ambient                     2563[] 
+ []
+
+
+Overfull \hbox (65.74342pt too wide) in paragraph at lines 720--720
+[]\T1/lmtt/m/n/10 g0_LinePBIC15034M0CM24NM010NM1NM0N:Device_WateringD2_Limited:
+Room_TemperatureCER8_Ambient         2719[] 
+ []
+
+
+Overfull \hbox (65.74342pt too wide) in paragraph at lines 720--720
+[]\T1/lmtt/m/n/10 g0_LineROCKSTAR:Device_WateringD2_Limited:Room_TemperatureCER
+8_Ambient                            2845[] 
+ []
+
+
+Overfull \hbox (65.74342pt too wide) in paragraph at lines 720--720
+[]\T1/lmtt/m/n/10 g0_LineSUNCHASER:Device_WateringD2_Limited:Room_TemperatureCE
+R8_Ambient                           2581[] 
+ []
+
+
+Overfull \hbox (65.74342pt too wide) in paragraph at lines 720--720
+[]\T1/lmtt/m/n/10 g1_Intercept                                                 
+                                     3948[] 
+ []
+
+
+Overfull \hbox (65.74342pt too wide) in paragraph at lines 720--720
+[]\T1/lmtt/m/n/10 g1_LinePBI17N002M0CM0NM0NM010NM16N                           
+                                     4738[] 
+ []
+
+
+Overfull \hbox (65.74342pt too wide) in paragraph at lines 720--720
+[]\T1/lmtt/m/n/10 g1_LinePBI17N006M0NM0NM89N                                   
+                                     4406[] 
+ []
+
+[10]
+Overfull \hbox (65.74342pt too wide) in paragraph at lines 720--720
+[]\T1/lmtt/m/n/10 g1_LinePBI17N007M0CM0NM0NM010NM8N                            
+                                     4757[] 
+ []
+
+
+Overfull \hbox (65.74342pt too wide) in paragraph at lines 720--720
+[]\T1/lmtt/m/n/10 g1_LinePBI17N013M0CM0NM0NM010NM8N                            
+                                     4973[] 
+ []
+
+
+Overfull \hbox (65.74342pt too wide) in paragraph at lines 720--720
+[]\T1/lmtt/m/n/10 g1_LinePBI17N016M0CM0NM0NM010NM27N                           
+                                     4935[] 
+ []
+
+
+Overfull \hbox (65.74342pt too wide) in paragraph at lines 720--720
+[]\T1/lmtt/m/n/10 g1_LinePBI19N007M0NM3N                                       
+                                     4887[] 
+ []
+
+
+Overfull \hbox (65.74342pt too wide) in paragraph at lines 720--720
+[]\T1/lmtt/m/n/10 g1_LinePBIC15034M0CM24NM010NM1NM0N                           
+                                     4910[] 
+ []
+
+
+Overfull \hbox (65.74342pt too wide) in paragraph at lines 720--720
+[]\T1/lmtt/m/n/10 g1_LineROCKSTAR                                              
+                                     4696[] 
+ []
+
+
+Overfull \hbox (65.74342pt too wide) in paragraph at lines 720--720
+[]\T1/lmtt/m/n/10 g1_LineSUNCHASER                                             
+                                     5103[] 
+ []
+
+
+Overfull \hbox (65.74342pt too wide) in paragraph at lines 720--720
+[]\T1/lmtt/m/n/10 g1_Device_WateringD2_Limited                                 
+                                     3891[] 
+ []
+
+
+Overfull \hbox (65.74342pt too wide) in paragraph at lines 720--720
+[]\T1/lmtt/m/n/10 g1_Room_TemperatureCER8_Ambient                              
+                                     4250[] 
+ []
+
+
+Overfull \hbox (65.74342pt too wide) in paragraph at lines 720--720
+[]\T1/lmtt/m/n/10 g1_LinePBI17N002M0CM0NM0NM010NM16N:Device_WateringD2_Limited 
+                                     5274[] 
+ []
+
+
+Overfull \hbox (65.74342pt too wide) in paragraph at lines 720--720
+[]\T1/lmtt/m/n/10 g1_LinePBI17N006M0NM0NM89N:Device_WateringD2_Limited         
+                                     4884[] 
+ []
+
+
+Overfull \hbox (65.74342pt too wide) in paragraph at lines 720--720
+[]\T1/lmtt/m/n/10 g1_LinePBI17N007M0CM0NM0NM010NM8N:Device_WateringD2_Limited  
+                                     4597[] 
+ []
+
+
+Overfull \hbox (65.74342pt too wide) in paragraph at lines 720--720
+[]\T1/lmtt/m/n/10 g1_LinePBI17N013M0CM0NM0NM010NM8N:Device_WateringD2_Limited  
+                                     4977[] 
+ []
+
+
+Overfull \hbox (65.74342pt too wide) in paragraph at lines 720--720
+[]\T1/lmtt/m/n/10 g1_LinePBI17N016M0CM0NM0NM010NM27N:Device_WateringD2_Limited 
+                                     4493[] 
+ []
+
+
+Overfull \hbox (65.74342pt too wide) in paragraph at lines 720--720
+[]\T1/lmtt/m/n/10 g1_LinePBI19N007M0NM3N:Device_WateringD2_Limited             
+                                     5347[] 
+ []
+
+
+Overfull \hbox (65.74342pt too wide) in paragraph at lines 720--720
+[]\T1/lmtt/m/n/10 g1_LinePBIC15034M0CM24NM010NM1NM0N:Device_WateringD2_Limited 
+                                     5240[] 
+ []
+
+
+Overfull \hbox (65.74342pt too wide) in paragraph at lines 720--720
+[]\T1/lmtt/m/n/10 g1_LineROCKSTAR:Device_WateringD2_Limited                    
+                                     5123[] 
+ []
+
+
+Overfull \hbox (65.74342pt too wide) in paragraph at lines 720--720
+[]\T1/lmtt/m/n/10 g1_LineSUNCHASER:Device_WateringD2_Limited                   
+                                     4835[] 
+ []
+
+
+Overfull \hbox (65.74342pt too wide) in paragraph at lines 720--720
+[]\T1/lmtt/m/n/10 g1_LinePBI17N002M0CM0NM0NM010NM16N:Room_TemperatureCER8_Ambie
+nt                                   4932[] 
+ []
+
+
+Overfull \hbox (65.74342pt too wide) in paragraph at lines 720--720
+[]\T1/lmtt/m/n/10 g1_LinePBI17N006M0NM0NM89N:Room_TemperatureCER8_Ambient      
+                                     4946[] 
+ []
+
+
+Overfull \hbox (65.74342pt too wide) in paragraph at lines 720--720
+[]\T1/lmtt/m/n/10 g1_LinePBI17N007M0CM0NM0NM010NM8N:Room_TemperatureCER8_Ambien
+t                                    5082[] 
+ []
+
+
+Overfull \hbox (65.74342pt too wide) in paragraph at lines 720--720
+[]\T1/lmtt/m/n/10 g1_LinePBI17N013M0CM0NM0NM010NM8N:Room_TemperatureCER8_Ambien
+t                                    4712[] 
+ []
+
+
+Overfull \hbox (65.74342pt too wide) in paragraph at lines 720--720
+[]\T1/lmtt/m/n/10 g1_LinePBI17N016M0CM0NM0NM010NM27N:Room_TemperatureCER8_Ambie
+nt                                   4497[] 
+ []
+
+
+Overfull \hbox (65.74342pt too wide) in paragraph at lines 720--720
+[]\T1/lmtt/m/n/10 g1_LinePBI19N007M0NM3N:Room_TemperatureCER8_Ambient          
+                                     4796[] 
+ []
+
+
+Overfull \hbox (65.74342pt too wide) in paragraph at lines 720--720
+[]\T1/lmtt/m/n/10 g1_LinePBIC15034M0CM24NM010NM1NM0N:Room_TemperatureCER8_Ambie
+nt                                   4884[] 
+ []
+
+
+Overfull \hbox (65.74342pt too wide) in paragraph at lines 720--720
+[]\T1/lmtt/m/n/10 g1_LineROCKSTAR:Room_TemperatureCER8_Ambient                 
+                                     4630[] 
+ []
+
+
+Overfull \hbox (65.74342pt too wide) in paragraph at lines 720--720
+[]\T1/lmtt/m/n/10 g1_LineSUNCHASER:Room_TemperatureCER8_Ambient                
+                                     5302[] 
+ []
+
+
+Overfull \hbox (65.74342pt too wide) in paragraph at lines 720--720
+[]\T1/lmtt/m/n/10 g1_Device_WateringD2_Limited:Room_TemperatureCER8_Ambient    
+                                     4436[] 
+ []
+
+
+Overfull \hbox (65.74342pt too wide) in paragraph at lines 720--720
+[]\T1/lmtt/m/n/10 g1_LinePBI17N002M0CM0NM0NM010NM16N:Device_WateringD2_Limited:
+Room_TemperatureCER8_Ambient         4051[] 
+ []
+
+
+Overfull \hbox (65.74342pt too wide) in paragraph at lines 720--720
+[]\T1/lmtt/m/n/10 g1_LinePBI17N006M0NM0NM89N:Device_WateringD2_Limited:Room_Tem
+peratureCER8_Ambient                 4719[] 
+ []
+
+
+Overfull \hbox (65.74342pt too wide) in paragraph at lines 720--720
+[]\T1/lmtt/m/n/10 g1_LinePBI17N007M0CM0NM0NM010NM8N:Device_WateringD2_Limited:R
+oom_TemperatureCER8_Ambient          4621[] 
+ []
+
+
+Overfull \hbox (65.74342pt too wide) in paragraph at lines 720--720
+[]\T1/lmtt/m/n/10 g1_LinePBI17N013M0CM0NM0NM010NM8N:Device_WateringD2_Limited:R
+oom_TemperatureCER8_Ambient          4922[] 
+ []
+
+
+Overfull \hbox (65.74342pt too wide) in paragraph at lines 720--720
+[]\T1/lmtt/m/n/10 g1_LinePBI17N016M0CM0NM0NM010NM27N:Device_WateringD2_Limited:
+Room_TemperatureCER8_Ambient         4530[] 
+ []
+
+
+Overfull \hbox (65.74342pt too wide) in paragraph at lines 720--720
+[]\T1/lmtt/m/n/10 g1_LinePBI19N007M0NM3N:Device_WateringD2_Limited:Room_Tempera
+tureCER8_Ambient                     4770[] 
+ []
+
+
+Overfull \hbox (65.74342pt too wide) in paragraph at lines 720--720
+[]\T1/lmtt/m/n/10 g1_LinePBIC15034M0CM24NM010NM1NM0N:Device_WateringD2_Limited:
+Room_TemperatureCER8_Ambient         4894[] 
+ []
+
+
+Overfull \hbox (65.74342pt too wide) in paragraph at lines 720--720
+[]\T1/lmtt/m/n/10 g1_LineROCKSTAR:Device_WateringD2_Limited:Room_TemperatureCER
+8_Ambient                            4600[] 
+ []
+
+
+Overfull \hbox (65.74342pt too wide) in paragraph at lines 720--720
+[]\T1/lmtt/m/n/10 g1_LineSUNCHASER:Device_WateringD2_Limited:Room_TemperatureCE
+R8_Ambient                           4417[] 
+ []
+
+
+Overfull \hbox (65.74342pt too wide) in paragraph at lines 720--720
+[]\T1/lmtt/m/n/10 k_Intercept                                                  
+                                     4896[] 
+ []
+
+
+Overfull \hbox (65.74342pt too wide) in paragraph at lines 720--720
+[]\T1/lmtt/m/n/10 k_LinePBI17N002M0CM0NM0NM010NM16N                            
+                                     4166[] 
+ []
+
+
+Overfull \hbox (65.74342pt too wide) in paragraph at lines 720--720
+[]\T1/lmtt/m/n/10 k_LinePBI17N006M0NM0NM89N                                    
+                                     4797[] 
+ []
+
+
+Overfull \hbox (65.74342pt too wide) in paragraph at lines 720--720
+[]\T1/lmtt/m/n/10 k_LinePBI17N007M0CM0NM0NM010NM8N                             
+                                     4186[] 
+ []
+
+
+Overfull \hbox (65.74342pt too wide) in paragraph at lines 720--720
+[]\T1/lmtt/m/n/10 k_LinePBI17N013M0CM0NM0NM010NM8N                             
+                                     4390[] 
+ []
+
+
+Overfull \hbox (65.74342pt too wide) in paragraph at lines 720--720
+[]\T1/lmtt/m/n/10 k_LinePBI17N016M0CM0NM0NM010NM27N                            
+                                     4294[] 
+ []
+
+
+Overfull \hbox (65.74342pt too wide) in paragraph at lines 720--720
+[]\T1/lmtt/m/n/10 k_LinePBI19N007M0NM3N                                        
+                                     4105[] 
+ []
+
+
+Overfull \hbox (65.74342pt too wide) in paragraph at lines 720--720
+[]\T1/lmtt/m/n/10 k_LinePBIC15034M0CM24NM010NM1NM0N                            
+                                     4327[] 
+ []
+
+
+Overfull \hbox (65.74342pt too wide) in paragraph at lines 720--720
+[]\T1/lmtt/m/n/10 k_LineROCKSTAR                                               
+                                     4484[] 
+ []
+
+
+Overfull \hbox (65.74342pt too wide) in paragraph at lines 720--720
+[]\T1/lmtt/m/n/10 k_LineSUNCHASER                                              
+                                     4144[] 
+ []
+
+
+Overfull \hbox (65.74342pt too wide) in paragraph at lines 720--720
+[]\T1/lmtt/m/n/10 k_Device_WateringD2_Limited                                  
+                                     4438[] 
+ []
+
+
+Overfull \hbox (65.74342pt too wide) in paragraph at lines 720--720
+[]\T1/lmtt/m/n/10 k_Room_TemperatureCER8_Ambient                               
+                                     4381[] 
+ []
+
+
+Overfull \hbox (65.74342pt too wide) in paragraph at lines 720--720
+[]\T1/lmtt/m/n/10 k_LinePBI17N002M0CM0NM0NM010NM16N:Device_WateringD2_Limited  
+                                     4506[] 
+ []
+
+
+Overfull \hbox (65.74342pt too wide) in paragraph at lines 720--720
+[]\T1/lmtt/m/n/10 k_LinePBI17N006M0NM0NM89N:Device_WateringD2_Limited          
+                                     4314[] 
+ []
+
+
+Overfull \hbox (65.74342pt too wide) in paragraph at lines 720--720
+[]\T1/lmtt/m/n/10 k_LinePBI17N007M0CM0NM0NM010NM8N:Device_WateringD2_Limited   
+                                     4305[] 
+ []
+
+
+Overfull \hbox (65.74342pt too wide) in paragraph at lines 720--720
+[]\T1/lmtt/m/n/10 k_LinePBI17N013M0CM0NM0NM010NM8N:Device_WateringD2_Limited   
+                                     4195[] 
+ []
+
+
+Overfull \hbox (65.74342pt too wide) in paragraph at lines 720--720
+[]\T1/lmtt/m/n/10 k_LinePBI17N016M0CM0NM0NM010NM27N:Device_WateringD2_Limited  
+                                     3937[] 
+ []
+
+[11]
+Overfull \hbox (65.74342pt too wide) in paragraph at lines 720--720
+[]\T1/lmtt/m/n/10 k_LinePBI19N007M0NM3N:Device_WateringD2_Limited              
+                                     3884[] 
+ []
+
+
+Overfull \hbox (65.74342pt too wide) in paragraph at lines 720--720
+[]\T1/lmtt/m/n/10 k_LinePBIC15034M0CM24NM010NM1NM0N:Device_WateringD2_Limited  
+                                     4034[] 
+ []
+
+
+Overfull \hbox (65.74342pt too wide) in paragraph at lines 720--720
+[]\T1/lmtt/m/n/10 k_LineROCKSTAR:Device_WateringD2_Limited                     
+                                     4497[] 
+ []
+
+
+Overfull \hbox (65.74342pt too wide) in paragraph at lines 720--720
+[]\T1/lmtt/m/n/10 k_LineSUNCHASER:Device_WateringD2_Limited                    
+                                     4267[] 
+ []
+
+
+Overfull \hbox (65.74342pt too wide) in paragraph at lines 720--720
+[]\T1/lmtt/m/n/10 k_LinePBI17N002M0CM0NM0NM010NM16N:Room_TemperatureCER8_Ambien
+t                                    3724[] 
+ []
+
+
+Overfull \hbox (65.74342pt too wide) in paragraph at lines 720--720
+[]\T1/lmtt/m/n/10 k_LinePBI17N006M0NM0NM89N:Room_TemperatureCER8_Ambient       
+                                     4290[] 
+ []
+
+
+Overfull \hbox (65.74342pt too wide) in paragraph at lines 720--720
+[]\T1/lmtt/m/n/10 k_LinePBI17N007M0CM0NM0NM010NM8N:Room_TemperatureCER8_Ambient
+                                     4181[] 
+ []
+
+
+Overfull \hbox (65.74342pt too wide) in paragraph at lines 720--720
+[]\T1/lmtt/m/n/10 k_LinePBI17N013M0CM0NM0NM010NM8N:Room_TemperatureCER8_Ambient
+                                     4048[] 
+ []
+
+
+Overfull \hbox (65.74342pt too wide) in paragraph at lines 720--720
+[]\T1/lmtt/m/n/10 k_LinePBI17N016M0CM0NM0NM010NM27N:Room_TemperatureCER8_Ambien
+t                                    3865[] 
+ []
+
+
+Overfull \hbox (65.74342pt too wide) in paragraph at lines 720--720
+[]\T1/lmtt/m/n/10 k_LinePBI19N007M0NM3N:Room_TemperatureCER8_Ambient           
+                                     4388[] 
+ []
+
+
+Overfull \hbox (65.74342pt too wide) in paragraph at lines 720--720
+[]\T1/lmtt/m/n/10 k_LinePBIC15034M0CM24NM010NM1NM0N:Room_TemperatureCER8_Ambien
+t                                    4555[] 
+ []
+
+
+Overfull \hbox (65.74342pt too wide) in paragraph at lines 720--720
+[]\T1/lmtt/m/n/10 k_LineROCKSTAR:Room_TemperatureCER8_Ambient                  
+                                     4271[] 
+ []
+
+
+Overfull \hbox (65.74342pt too wide) in paragraph at lines 720--720
+[]\T1/lmtt/m/n/10 k_LineSUNCHASER:Room_TemperatureCER8_Ambient                 
+                                     4075[] 
+ []
+
+
+Overfull \hbox (65.74342pt too wide) in paragraph at lines 720--720
+[]\T1/lmtt/m/n/10 k_Device_WateringD2_Limited:Room_TemperatureCER8_Ambient     
+                                     3920[] 
+ []
+
+
+Overfull \hbox (65.74342pt too wide) in paragraph at lines 720--720
+[]\T1/lmtt/m/n/10 k_LinePBI17N002M0CM0NM0NM010NM16N:Device_WateringD2_Limited:R
+oom_TemperatureCER8_Ambient          4229[] 
+ []
+
+
+Overfull \hbox (65.74342pt too wide) in paragraph at lines 720--720
+[]\T1/lmtt/m/n/10 k_LinePBI17N006M0NM0NM89N:Device_WateringD2_Limited:Room_Temp
+eratureCER8_Ambient                  4368[] 
+ []
+
+
+Overfull \hbox (65.74342pt too wide) in paragraph at lines 720--720
+[]\T1/lmtt/m/n/10 k_LinePBI17N007M0CM0NM0NM010NM8N:Device_WateringD2_Limited:Ro
+om_TemperatureCER8_Ambient           4229[] 
+ []
+
+
+Overfull \hbox (65.74342pt too wide) in paragraph at lines 720--720
+[]\T1/lmtt/m/n/10 k_LinePBI17N013M0CM0NM0NM010NM8N:Device_WateringD2_Limited:Ro
+om_TemperatureCER8_Ambient           4147[] 
+ []
+
+
+Overfull \hbox (65.74342pt too wide) in paragraph at lines 720--720
+[]\T1/lmtt/m/n/10 k_LinePBI17N016M0CM0NM0NM010NM27N:Device_WateringD2_Limited:R
+oom_TemperatureCER8_Ambient          4429[] 
+ []
+
+
+Overfull \hbox (65.74342pt too wide) in paragraph at lines 720--720
+[]\T1/lmtt/m/n/10 k_LinePBI19N007M0NM3N:Device_WateringD2_Limited:Room_Temperat
+ureCER8_Ambient                      4285[] 
+ []
+
+
+Overfull \hbox (65.74342pt too wide) in paragraph at lines 720--720
+[]\T1/lmtt/m/n/10 k_LinePBIC15034M0CM24NM010NM1NM0N:Device_WateringD2_Limited:R
+oom_TemperatureCER8_Ambient          4360[] 
+ []
+
+
+Overfull \hbox (65.74342pt too wide) in paragraph at lines 720--720
+[]\T1/lmtt/m/n/10 k_LineROCKSTAR:Device_WateringD2_Limited:Room_TemperatureCER8
+_Ambient                             4032[] 
+ []
+
+
+Overfull \hbox (65.74342pt too wide) in paragraph at lines 720--720
+[]\T1/lmtt/m/n/10 k_LineSUNCHASER:Device_WateringD2_Limited:Room_TemperatureCER
+8_Ambient                            4375[] 
+ []
+
+
+Overfull \hbox (65.74342pt too wide) in paragraph at lines 720--720
+[]\T1/lmtt/m/n/10 lambda_Intercept                                             
+                                     3349[] 
+ []
+
+
+Overfull \hbox (65.74342pt too wide) in paragraph at lines 720--720
+[]\T1/lmtt/m/n/10 lambda_LinePBI17N002M0CM0NM0NM010NM16N                       
+                                     1703[] 
+ []
+
+
+Overfull \hbox (65.74342pt too wide) in paragraph at lines 720--720
+[]\T1/lmtt/m/n/10 lambda_LinePBI17N006M0NM0NM89N                               
+                                     3287[] 
+ []
+
+
+Overfull \hbox (65.74342pt too wide) in paragraph at lines 720--720
+[]\T1/lmtt/m/n/10 lambda_LinePBI17N007M0CM0NM0NM010NM8N                        
+                                     2588[] 
+ []
+
+
+Overfull \hbox (65.74342pt too wide) in paragraph at lines 720--720
+[]\T1/lmtt/m/n/10 lambda_LinePBI17N013M0CM0NM0NM010NM8N                        
+                                     3302[] 
+ []
+
+
+Overfull \hbox (65.74342pt too wide) in paragraph at lines 720--720
+[]\T1/lmtt/m/n/10 lambda_LinePBI17N016M0CM0NM0NM010NM27N                       
+                                     2363[] 
+ []
+
+
+Overfull \hbox (65.74342pt too wide) in paragraph at lines 720--720
+[]\T1/lmtt/m/n/10 lambda_LinePBI19N007M0NM3N                                   
+                                     3287[] 
+ []
+
+
+Overfull \hbox (65.74342pt too wide) in paragraph at lines 720--720
+[]\T1/lmtt/m/n/10 lambda_LinePBIC15034M0CM24NM010NM1NM0N                       
+                                     2699[] 
+ []
+
+
+Overfull \hbox (65.74342pt too wide) in paragraph at lines 720--720
+[]\T1/lmtt/m/n/10 lambda_LineROCKSTAR                                          
+                                     3238[] 
+ []
+
+
+Overfull \hbox (65.74342pt too wide) in paragraph at lines 720--720
+[]\T1/lmtt/m/n/10 lambda_LineSUNCHASER                                         
+                                     2972[] 
+ []
+
+
+Overfull \hbox (65.74342pt too wide) in paragraph at lines 720--720
+[]\T1/lmtt/m/n/10 lambda_Device_WateringD2_Limited                             
+                                     2828[] 
+ []
+
+
+Overfull \hbox (65.74342pt too wide) in paragraph at lines 720--720
+[]\T1/lmtt/m/n/10 lambda_Room_TemperatureCER8_Ambient                          
+                                     3473[] 
+ []
+
+
+Overfull \hbox (65.74342pt too wide) in paragraph at lines 720--720
+[]\T1/lmtt/m/n/10 lambda_LinePBI17N002M0CM0NM0NM010NM16N:Device_WateringD2_Limi
+ted                                  1798[] 
+ []
+
+
+Overfull \hbox (65.74342pt too wide) in paragraph at lines 720--720
+[]\T1/lmtt/m/n/10 lambda_LinePBI17N006M0NM0NM89N:Device_WateringD2_Limited     
+                                     2277[] 
+ []
+
+
+Overfull \hbox (65.74342pt too wide) in paragraph at lines 720--720
+[]\T1/lmtt/m/n/10 lambda_LinePBI17N007M0CM0NM0NM010NM8N:Device_WateringD2_Limit
+ed                                   2334[] 
+ []
+
+
+Overfull \hbox (65.74342pt too wide) in paragraph at lines 720--720
+[]\T1/lmtt/m/n/10 lambda_LinePBI17N013M0CM0NM0NM010NM8N:Device_WateringD2_Limit
+ed                                   1827[] 
+ []
+
+
+Overfull \hbox (65.74342pt too wide) in paragraph at lines 720--720
+[]\T1/lmtt/m/n/10 lambda_LinePBI17N016M0CM0NM0NM010NM27N:Device_WateringD2_Limi
+ted                                  1859[] 
+ []
+
+
+Overfull \hbox (65.74342pt too wide) in paragraph at lines 720--720
+[]\T1/lmtt/m/n/10 lambda_LinePBI19N007M0NM3N:Device_WateringD2_Limited         
+                                     1801[] 
+ []
+
+
+Overfull \hbox (65.74342pt too wide) in paragraph at lines 720--720
+[]\T1/lmtt/m/n/10 lambda_LinePBIC15034M0CM24NM010NM1NM0N:Device_WateringD2_Limi
+ted                                  2360[] 
+ []
+
+
+Overfull \hbox (65.74342pt too wide) in paragraph at lines 720--720
+[]\T1/lmtt/m/n/10 lambda_LineROCKSTAR:Device_WateringD2_Limited                
+                                     2716[] 
+ []
+
+
+Overfull \hbox (65.74342pt too wide) in paragraph at lines 720--720
+[]\T1/lmtt/m/n/10 lambda_LineSUNCHASER:Device_WateringD2_Limited               
+                                     2406[] 
+ []
+
+
+Overfull \hbox (65.74342pt too wide) in paragraph at lines 720--720
+[]\T1/lmtt/m/n/10 lambda_LinePBI17N002M0CM0NM0NM010NM16N:Room_TemperatureCER8_A
+mbient                               2105[] 
+ []
+
+LaTeX Font Info:    Trying to load font information for TS1+lmtt on input line 
+720.
+(C:\Program Files\MiKTeX\tex/latex/lm\ts1lmtt.fd
+File: ts1lmtt.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
+) [12]
+<figures/increase/unnamed-chunk-4-2.png, id=76, 542.025pt x 722.7pt>
+File: figures/increase/unnamed-chunk-4-2.png Graphic file (type png)
+<use figures/increase/unnamed-chunk-4-2.png>
+Package pdftex.def Info: figures/increase/unnamed-chunk-4-2.png  used on input 
+line 730.
+(pdftex.def)             Requested size: 542.02367pt x 722.69823pt.
+<figures/increase/unnamed-chunk-4-3.png, id=77, 542.025pt x 722.7pt>
+File: figures/increase/unnamed-chunk-4-3.png Graphic file (type png)
+<use figures/increase/unnamed-chunk-4-3.png>
+Package pdftex.def Info: figures/increase/unnamed-chunk-4-3.png  used on input 
+line 736.
+(pdftex.def)             Requested size: 542.02367pt x 722.69823pt.
+<figures/increase/unnamed-chunk-4-4.png, id=78, 542.025pt x 722.7pt>
+File: figures/increase/unnamed-chunk-4-4.png Graphic file (type png)
+<use figures/increase/unnamed-chunk-4-4.png>
+Package pdftex.def Info: figures/increase/unnamed-chunk-4-4.png  used on input 
+line 742.
+(pdftex.def)             Requested size: 542.02367pt x 722.69823pt.
+<figures/increase/unnamed-chunk-4-5.png, id=79, 542.025pt x 722.7pt>
+File: figures/increase/unnamed-chunk-4-5.png Graphic file (type png)
+<use figures/increase/unnamed-chunk-4-5.png>
+Package pdftex.def Info: figures/increase/unnamed-chunk-4-5.png  used on input 
+line 748.
+(pdftex.def)             Requested size: 542.02367pt x 722.69823pt.
+<figures/increase/unnamed-chunk-4-6.png, id=80, 542.025pt x 722.7pt>
+File: figures/increase/unnamed-chunk-4-6.png Graphic file (type png)
+<use figures/increase/unnamed-chunk-4-6.png>
+Package pdftex.def Info: figures/increase/unnamed-chunk-4-6.png  used on input 
+line 754.
+(pdftex.def)             Requested size: 542.02367pt x 722.69823pt.
+<figures/increase/unnamed-chunk-4-7.png, id=81, 542.025pt x 722.7pt>
+File: figures/increase/unnamed-chunk-4-7.png Graphic file (type png)
+<use figures/increase/unnamed-chunk-4-7.png>
+Package pdftex.def Info: figures/increase/unnamed-chunk-4-7.png  used on input 
+line 760.
+(pdftex.def)             Requested size: 542.02367pt x 722.69823pt.
+<figures/increase/unnamed-chunk-4-8.png, id=82, 542.025pt x 722.7pt>
+File: figures/increase/unnamed-chunk-4-8.png Graphic file (type png)
+<use figures/increase/unnamed-chunk-4-8.png>
+Package pdftex.def Info: figures/increase/unnamed-chunk-4-8.png  used on input 
+line 766.
+(pdftex.def)             Requested size: 542.02367pt x 722.69823pt.
+<figures/increase/unnamed-chunk-4-9.png, id=83, 542.025pt x 722.7pt>
+File: figures/increase/unnamed-chunk-4-9.png Graphic file (type png)
+<use figures/increase/unnamed-chunk-4-9.png>
+Package pdftex.def Info: figures/increase/unnamed-chunk-4-9.png  used on input 
+line 772.
+(pdftex.def)             Requested size: 542.02367pt x 722.69823pt.
+<figures/increase/unnamed-chunk-4-10.png, id=84, 542.025pt x 722.7pt>
+File: figures/increase/unnamed-chunk-4-10.png Graphic file (type png)
+<use figures/increase/unnamed-chunk-4-10.png>
+Package pdftex.def Info: figures/increase/unnamed-chunk-4-10.png  used on input
+ line 778.
+(pdftex.def)             Requested size: 542.02367pt x 722.69823pt.
+<figures/increase/unnamed-chunk-4-11.png, id=85, 542.025pt x 722.7pt>
+File: figures/increase/unnamed-chunk-4-11.png Graphic file (type png)
+<use figures/increase/unnamed-chunk-4-11.png>
+Package pdftex.def Info: figures/increase/unnamed-chunk-4-11.png  used on input
+ line 784.
+(pdftex.def)             Requested size: 542.02367pt x 722.69823pt.
+<figures/increase/unnamed-chunk-4-12.png, id=86, 542.025pt x 722.7pt>
+File: figures/increase/unnamed-chunk-4-12.png Graphic file (type png)
+<use figures/increase/unnamed-chunk-4-12.png>
+Package pdftex.def Info: figures/increase/unnamed-chunk-4-12.png  used on input
+ line 790.
+(pdftex.def)             Requested size: 542.02367pt x 722.69823pt.
+<figures/increase/unnamed-chunk-4-13.png, id=87, 542.025pt x 722.7pt>
+File: figures/increase/unnamed-chunk-4-13.png Graphic file (type png)
+<use figures/increase/unnamed-chunk-4-13.png>
+Package pdftex.def Info: figures/increase/unnamed-chunk-4-13.png  used on input
+ line 796.
+(pdftex.def)             Requested size: 542.02367pt x 722.69823pt.
+<figures/increase/unnamed-chunk-4-14.png, id=88, 542.025pt x 722.7pt>
+File: figures/increase/unnamed-chunk-4-14.png Graphic file (type png)
+<use figures/increase/unnamed-chunk-4-14.png>
+Package pdftex.def Info: figures/increase/unnamed-chunk-4-14.png  used on input
+ line 802.
+(pdftex.def)             Requested size: 542.02367pt x 722.69823pt.
+<figures/increase/unnamed-chunk-4-15.png, id=89, 542.025pt x 722.7pt>
+File: figures/increase/unnamed-chunk-4-15.png Graphic file (type png)
+<use figures/increase/unnamed-chunk-4-15.png>
+Package pdftex.def Info: figures/increase/unnamed-chunk-4-15.png  used on input
+ line 808.
+(pdftex.def)             Requested size: 542.02367pt x 722.69823pt.
+<figures/increase/unnamed-chunk-4-16.png, id=90, 542.025pt x 722.7pt>
+File: figures/increase/unnamed-chunk-4-16.png Graphic file (type png)
+<use figures/increase/unnamed-chunk-4-16.png>
+Package pdftex.def Info: figures/increase/unnamed-chunk-4-16.png  used on input
+ line 814.
+(pdftex.def)             Requested size: 542.02367pt x 722.69823pt.
+<figures/increase/unnamed-chunk-4-17.png, id=91, 542.025pt x 722.7pt>
+File: figures/increase/unnamed-chunk-4-17.png Graphic file (type png)
+<use figures/increase/unnamed-chunk-4-17.png>
+Package pdftex.def Info: figures/increase/unnamed-chunk-4-17.png  used on input
+ line 820.
+(pdftex.def)             Requested size: 542.02367pt x 722.69823pt.
+<figures/increase/unnamed-chunk-4-18.png, id=92, 542.025pt x 722.7pt>
+File: figures/increase/unnamed-chunk-4-18.png Graphic file (type png)
+<use figures/increase/unnamed-chunk-4-18.png>
+Package pdftex.def Info: figures/increase/unnamed-chunk-4-18.png  used on input
+ line 826.
+(pdftex.def)             Requested size: 542.02367pt x 722.69823pt.
+<figures/increase/unnamed-chunk-4-19.png, id=93, 542.025pt x 722.7pt>
+File: figures/increase/unnamed-chunk-4-19.png Graphic file (type png)
+<use figures/increase/unnamed-chunk-4-19.png>
+Package pdftex.def Info: figures/increase/unnamed-chunk-4-19.png  used on input
+ line 832.
+(pdftex.def)             Requested size: 542.02367pt x 722.69823pt.
+<figures/increase/unnamed-chunk-4-20.png, id=94, 542.025pt x 722.7pt>
+File: figures/increase/unnamed-chunk-4-20.png Graphic file (type png)
+<use figures/increase/unnamed-chunk-4-20.png>
+Package pdftex.def Info: figures/increase/unnamed-chunk-4-20.png  used on input
+ line 838.
+(pdftex.def)             Requested size: 542.02367pt x 722.69823pt.
+<figures/increase/unnamed-chunk-4-21.png, id=95, 542.025pt x 722.7pt>
+File: figures/increase/unnamed-chunk-4-21.png Graphic file (type png)
+<use figures/increase/unnamed-chunk-4-21.png>
+Package pdftex.def Info: figures/increase/unnamed-chunk-4-21.png  used on input
+ line 844.
+(pdftex.def)             Requested size: 542.02367pt x 722.69823pt.
+<figures/increase/unnamed-chunk-4-22.png, id=96, 542.025pt x 722.7pt>
+File: figures/increase/unnamed-chunk-4-22.png Graphic file (type png)
+<use figures/increase/unnamed-chunk-4-22.png>
+Package pdftex.def Info: figures/increase/unnamed-chunk-4-22.png  used on input
+ line 850.
+(pdftex.def)             Requested size: 542.02367pt x 722.69823pt.
+<figures/increase/unnamed-chunk-4-23.png, id=97, 542.025pt x 722.7pt>
+File: figures/increase/unnamed-chunk-4-23.png Graphic file (type png)
+<use figures/increase/unnamed-chunk-4-23.png>
+Package pdftex.def Info: figures/increase/unnamed-chunk-4-23.png  used on input
+ line 856.
+(pdftex.def)             Requested size: 542.02367pt x 722.69823pt.
+<figures/increase/unnamed-chunk-4-24.png, id=98, 542.025pt x 722.7pt>
+File: figures/increase/unnamed-chunk-4-24.png Graphic file (type png)
+<use figures/increase/unnamed-chunk-4-24.png>
+Package pdftex.def Info: figures/increase/unnamed-chunk-4-24.png  used on input
+ line 862.
+(pdftex.def)             Requested size: 542.02367pt x 722.69823pt.
+<figures/increase/unnamed-chunk-4-25.png, id=99, 542.025pt x 722.7pt>
+File: figures/increase/unnamed-chunk-4-25.png Graphic file (type png)
+<use figures/increase/unnamed-chunk-4-25.png>
+Package pdftex.def Info: figures/increase/unnamed-chunk-4-25.png  used on input
+ line 868.
+(pdftex.def)             Requested size: 542.02367pt x 722.69823pt.
+<figures/increase/unnamed-chunk-4-26.png, id=100, 542.025pt x 722.7pt>
+File: figures/increase/unnamed-chunk-4-26.png Graphic file (type png)
+<use figures/increase/unnamed-chunk-4-26.png>
+Package pdftex.def Info: figures/increase/unnamed-chunk-4-26.png  used on input
+ line 874.
+(pdftex.def)             Requested size: 542.02367pt x 722.69823pt.
+<figures/increase/unnamed-chunk-4-27.png, id=101, 542.025pt x 722.7pt>
+File: figures/increase/unnamed-chunk-4-27.png Graphic file (type png)
+<use figures/increase/unnamed-chunk-4-27.png>
+Package pdftex.def Info: figures/increase/unnamed-chunk-4-27.png  used on input
+ line 880.
+(pdftex.def)             Requested size: 542.02367pt x 722.69823pt.
+<figures/increase/unnamed-chunk-4-28.png, id=102, 542.025pt x 722.7pt>
+File: figures/increase/unnamed-chunk-4-28.png Graphic file (type png)
+<use figures/increase/unnamed-chunk-4-28.png>
+Package pdftex.def Info: figures/increase/unnamed-chunk-4-28.png  used on input
+ line 886.
+(pdftex.def)             Requested size: 542.02367pt x 722.69823pt.
+<figures/increase/unnamed-chunk-4-29.png, id=103, 542.025pt x 722.7pt>
+File: figures/increase/unnamed-chunk-4-29.png Graphic file (type png)
+<use figures/increase/unnamed-chunk-4-29.png>
+Package pdftex.def Info: figures/increase/unnamed-chunk-4-29.png  used on input
+ line 892.
+(pdftex.def)             Requested size: 542.02367pt x 722.69823pt.
+<figures/increase/unnamed-chunk-4-30.png, id=104, 542.025pt x 722.7pt>
+File: figures/increase/unnamed-chunk-4-30.png Graphic file (type png)
+<use figures/increase/unnamed-chunk-4-30.png>
+Package pdftex.def Info: figures/increase/unnamed-chunk-4-30.png  used on input
+ line 898.
+(pdftex.def)             Requested size: 542.02367pt x 722.69823pt.
+<figures/increase/unnamed-chunk-4-31.png, id=105, 542.025pt x 722.7pt>
+File: figures/increase/unnamed-chunk-4-31.png Graphic file (type png)
+<use figures/increase/unnamed-chunk-4-31.png>
+Package pdftex.def Info: figures/increase/unnamed-chunk-4-31.png  used on input
+ line 904.
+(pdftex.def)             Requested size: 542.02367pt x 722.69823pt.
+<figures/increase/unnamed-chunk-4-32.png, id=106, 542.025pt x 722.7pt>
+File: figures/increase/unnamed-chunk-4-32.png Graphic file (type png)
+<use figures/increase/unnamed-chunk-4-32.png>
+Package pdftex.def Info: figures/increase/unnamed-chunk-4-32.png  used on input
+ line 910.
+(pdftex.def)             Requested size: 542.02367pt x 722.69823pt.
+<figures/increase/unnamed-chunk-4-33.png, id=107, 542.025pt x 722.7pt>
+File: figures/increase/unnamed-chunk-4-33.png Graphic file (type png)
+<use figures/increase/unnamed-chunk-4-33.png>
+Package pdftex.def Info: figures/increase/unnamed-chunk-4-33.png  used on input
+ line 916.
+(pdftex.def)             Requested size: 542.02367pt x 722.69823pt.
+<figures/increase/unnamed-chunk-4-34.png, id=108, 542.025pt x 722.7pt>
+File: figures/increase/unnamed-chunk-4-34.png Graphic file (type png)
+<use figures/increase/unnamed-chunk-4-34.png>
+Package pdftex.def Info: figures/increase/unnamed-chunk-4-34.png  used on input
+ line 922.
+(pdftex.def)             Requested size: 542.02367pt x 722.69823pt.
+<figures/increase/unnamed-chunk-4-35.png, id=109, 542.025pt x 722.7pt>
+File: figures/increase/unnamed-chunk-4-35.png Graphic file (type png)
+<use figures/increase/unnamed-chunk-4-35.png>
+Package pdftex.def Info: figures/increase/unnamed-chunk-4-35.png  used on input
+ line 928.
+(pdftex.def)             Requested size: 542.02367pt x 722.69823pt.
+
+Overfull \hbox (291.49277pt too wide) in paragraph at lines 976--976
+[]\T1/lmtt/m/n/10 Warning: Found 61 observations with a pareto_k > 0.7 in model
+ \TS1/lmtt/m/n/10 '\T1/lmtt/m/n/10 fit_off_max\TS1/lmtt/m/n/10 '\T1/lmtt/m/n/10
+ . We recommend to set \TS1/lmtt/m/n/10 '\T1/lmtt/m/n/10 moment_match = TRUE\TS
+1/lmtt/m/n/10 ' \T1/lmtt/m/n/10 in order to perform moment[] 
+ []
+
+<figures/increase/unnamed-chunk-4-36.png, id=110, 542.025pt x 722.7pt>
+File: figures/increase/unnamed-chunk-4-36.png Graphic file (type png)
+<use figures/increase/unnamed-chunk-4-36.png>
+Package pdftex.def Info: figures/increase/unnamed-chunk-4-36.png  used on input
+ line 1010.
+(pdftex.def)             Requested size: 542.02367pt x 722.69823pt.
+<figures/increase/unnamed-chunk-4-37.png, id=111, 542.025pt x 722.7pt>
+File: figures/increase/unnamed-chunk-4-37.png Graphic file (type png)
+<use figures/increase/unnamed-chunk-4-37.png>
+Package pdftex.def Info: figures/increase/unnamed-chunk-4-37.png  used on input
+ line 1026.
+(pdftex.def)             Requested size: 542.02367pt x 722.69823pt.
+<figures/increase/unnamed-chunk-4-38.png, id=112, 542.025pt x 722.7pt>
+File: figures/increase/unnamed-chunk-4-38.png Graphic file (type png)
+<use figures/increase/unnamed-chunk-4-38.png>
+Package pdftex.def Info: figures/increase/unnamed-chunk-4-38.png  used on input
+ line 1038.
+(pdftex.def)             Requested size: 542.02367pt x 722.69823pt.
+
+Overfull \hbox (39.4935pt too wide) in paragraph at lines 1054--1054
+[]\T1/lmtt/m/n/10 Note: in most cases the default test statistic \TS1/lmtt/m/n/
+10 '\T1/lmtt/m/n/10 mean\TS1/lmtt/m/n/10 ' \T1/lmtt/m/n/10 is too weak to detec
+t anything of interest.[] 
+ []
+
+<figures/increase/unnamed-chunk-4-39.png, id=113, 542.025pt x 722.7pt>
+File: figures/increase/unnamed-chunk-4-39.png Graphic file (type png)
+<use figures/increase/unnamed-chunk-4-39.png>
+Package pdftex.def Info: figures/increase/unnamed-chunk-4-39.png  used on input
+ line 1058.
+(pdftex.def)             Requested size: 542.02367pt x 722.69823pt.
+[13] [14 <./figures/increase/unnamed-chunk-4-2.png>] [15 <./figures/increase/un
+named-chunk-4-3.png>] [16 <./figures/increase/unnamed-chunk-4-4.png>] [17 <./fi
+gures/increase/unnamed-chunk-4-5.png>] [18 <./figures/increase/unnamed-chunk-4-
+6.png>] [19 <./figures/increase/unnamed-chunk-4-7.png>] [20 <./figures/increase
+/unnamed-chunk-4-8.png>] [21 <./figures/increase/unnamed-chunk-4-9.png>] [22 <.
+/figures/increase/unnamed-chunk-4-10.png>] [23 <./figures/increase/unnamed-chun
+k-4-11.png>] [24 <./figures/increase/unnamed-chunk-4-12.png>] [25 <./figures/in
+crease/unnamed-chunk-4-13.png>] [26 <./figures/increase/unnamed-chunk-4-14.png>
+] [27 <./figures/increase/unnamed-chunk-4-15.png>] [28 <./figures/increase/unna
+med-chunk-4-16.png>] [29 <./figures/increase/unnamed-chunk-4-17.png>] [30 <./fi
+gures/increase/unnamed-chunk-4-18.png>] [31 <./figures/increase/unnamed-chunk-4
+-19.png>] [32 <./figures/increase/unnamed-chunk-4-20.png>] [33 <./figures/incre
+ase/unnamed-chunk-4-21.png>] [34 <./figures/increase/unnamed-chunk-4-22.png>] [
+35 <./figures/increase/unnamed-chunk-4-23.png>] [36 <./figures/increase/unnamed
+-chunk-4-24.png>] [37 <./figures/increase/unnamed-chunk-4-25.png>] [38 <./figur
+es/increase/unnamed-chunk-4-26.png>] [39 <./figures/increase/unnamed-chunk-4-27
+.png>] [40 <./figures/increase/unnamed-chunk-4-28.png>] [41 <./figures/increase
+/unnamed-chunk-4-29.png>] [42 <./figures/increase/unnamed-chunk-4-30.png>] [43 
+<./figures/increase/unnamed-chunk-4-31.png>] [44 <./figures/increase/unnamed-ch
+unk-4-32.png>] [45 <./figures/increase/unnamed-chunk-4-33.png>] [46 <./figures/
+increase/unnamed-chunk-4-34.png>] [47 <./figures/increase/unnamed-chunk-4-35.pn
+g>] [48 <./figures/increase/unnamed-chunk-4-36.png>] [49 <./figures/increase/un
+named-chunk-4-37.png>] [50 <./figures/increase/unnamed-chunk-4-38.png>] [51 <./
+figures/increase/unnamed-chunk-4-39.png>]
+Overfull \hbox (317.74269pt too wide) in paragraph at lines 1075--1075
+[]\T1/lmtt/m/n/10 Warning: Found 61 observations with a pareto_k > 0.7 in model
+ \TS1/lmtt/m/n/10 '\T1/lmtt/m/n/10 .x1\TS1/lmtt/m/n/10 '\T1/lmtt/m/n/10 . We re
+commend to set \TS1/lmtt/m/n/10 '\T1/lmtt/m/n/10 moment_match = TRUE\TS1/lmtt/m
+/n/10 ' \T1/lmtt/m/n/10 in order to perform moment matching for[] 
+ []
+
+<figures/increase/unnamed-chunk-4-40.png, id=353, 542.025pt x 722.7pt>
+File: figures/increase/unnamed-chunk-4-40.png Graphic file (type png)
+<use figures/increase/unnamed-chunk-4-40.png>
+Package pdftex.def Info: figures/increase/unnamed-chunk-4-40.png  used on input
+ line 1079.
+(pdftex.def)             Requested size: 542.02367pt x 722.69823pt.
+<figures/increase/unnamed-chunk-4-41.png, id=354, 542.025pt x 722.7pt>
+File: figures/increase/unnamed-chunk-4-41.png Graphic file (type png)
+<use figures/increase/unnamed-chunk-4-41.png>
+Package pdftex.def Info: figures/increase/unnamed-chunk-4-41.png  used on input
+ line 1092.
+(pdftex.def)             Requested size: 542.02367pt x 722.69823pt.
+<figures/increase/unnamed-chunk-4-42.png, id=355, 542.025pt x 722.7pt>
+File: figures/increase/unnamed-chunk-4-42.png Graphic file (type png)
+<use figures/increase/unnamed-chunk-4-42.png>
+Package pdftex.def Info: figures/increase/unnamed-chunk-4-42.png  used on input
+ line 1113.
+(pdftex.def)             Requested size: 542.02367pt x 722.69823pt.
+<figures/increase/unnamed-chunk-4-43.png, id=356, 542.025pt x 722.7pt>
+File: figures/increase/unnamed-chunk-4-43.png Graphic file (type png)
+<use figures/increase/unnamed-chunk-4-43.png>
+Package pdftex.def Info: figures/increase/unnamed-chunk-4-43.png  used on input
+ line 1131.
+(pdftex.def)             Requested size: 542.02367pt x 722.69823pt.
+
+Underfull \vbox (badness 1917) detected at line 1213
+ []
+
+[52] [53 <./figures/increase/unnamed-chunk-4-40.png>] [54 <./figures/increase/u
+nnamed-chunk-4-41.png>] [55 <./figures/increase/unnamed-chunk-4-42.png>] [56 <.
+/figures/increase/unnamed-chunk-4-43.png>] [57]
+Overfull \hbox (501.49216pt too wide) in paragraph at lines 1372--1372
+[]         \T1/lmtt/m/n/10 g0 ~ 1 + Line * Device_Watering * Room_Temperature +
+ (1 | CEBRoom:CEBSide:CEBLocation + CEBRoom:CEBSide:CEBLocation:CEBSubUnit + CE
+BRoom:CEBSide:CEBLocation:CEBSubUnit:CEBCell)[] 
+ []
+
+
+Overfull \hbox (522.4921pt too wide) in paragraph at lines 1372--1372
+[]         \T1/lmtt/m/n/10 g1 ~ 1 + Line + Device_Watering + Line:Device_Wateri
+ng + (1 | CEBRoom:CEBSide:CEBLocation + CEBRoom:CEBSide:CEBLocation:CEBSubUnit 
++ CEBRoom:CEBSide:CEBLocation:CEBSubUnit:CEBCell)[] 
+ []
+
+[58]
+Overfull \hbox (312.4927pt too wide) in paragraph at lines 1372--1372
+[]                                                                             
+             \T1/lmtt/m/n/10 Estimate Est.Error l-95% CI u-95% CI Rhat Bulk_ESS
+ Tail_ESS[] 
+ []
+
+
+Overfull \hbox (312.4927pt too wide) in paragraph at lines 1372--1372
+[]\T1/lmtt/m/n/10 g0_Intercept                                                 
+                                 0.36      0.07     0.22     0.49 1.00     6443
+    12020[] 
+ []
+
+
+Overfull \hbox (312.4927pt too wide) in paragraph at lines 1372--1372
+[]\T1/lmtt/m/n/10 g0_LinePBI17N002M0CM0NM0NM010NM16N                           
+                                -0.17      0.09    -0.34    -0.00 1.00     8002
+    12037[] 
+ []
+
+
+Overfull \hbox (312.4927pt too wide) in paragraph at lines 1372--1372
+[]\T1/lmtt/m/n/10 g0_LinePBI17N006M0NM0NM89N                                   
+                                 0.06      0.09    -0.11     0.23 1.00     7861
+    12553[] 
+ []
+
+
+Overfull \hbox (312.4927pt too wide) in paragraph at lines 1372--1372
+[]\T1/lmtt/m/n/10 g0_LinePBI17N007M0CM0NM0NM010NM8N                            
+                                 0.02      0.09    -0.14     0.19 1.00     7841
+    12448[] 
+ []
+
+
+Overfull \hbox (312.4927pt too wide) in paragraph at lines 1372--1372
+[]\T1/lmtt/m/n/10 g0_LinePBI17N013M0CM0NM0NM010NM8N                            
+                                 0.02      0.09    -0.14     0.19 1.00     7824
+    13393[] 
+ []
+
+
+Overfull \hbox (312.4927pt too wide) in paragraph at lines 1372--1372
+[]\T1/lmtt/m/n/10 g0_LinePBI17N016M0CM0NM0NM010NM27N                           
+                                -0.20      0.08    -0.36    -0.03 1.00     7531
+    12527[] 
+ []
+
+
+Overfull \hbox (312.4927pt too wide) in paragraph at lines 1372--1372
+[]\T1/lmtt/m/n/10 g0_LinePBI19N007M0NM3N                                       
+                                 0.13      0.08    -0.04     0.30 1.00     8240
+    13140[] 
+ []
+
+
+Overfull \hbox (312.4927pt too wide) in paragraph at lines 1372--1372
+[]\T1/lmtt/m/n/10 g0_LinePBIC15034M0CM24NM010NM1NM0N                           
+                                 0.04      0.09    -0.13     0.21 1.00     7999
+    12602[] 
+ []
+
+
+Overfull \hbox (312.4927pt too wide) in paragraph at lines 1372--1372
+[]\T1/lmtt/m/n/10 g0_LineROCKSTAR                                              
+                                 0.05      0.08    -0.12     0.22 1.00     7334
+    12203[] 
+ []
+
+
+Overfull \hbox (312.4927pt too wide) in paragraph at lines 1372--1372
+[]\T1/lmtt/m/n/10 g0_LineSUNCHASER                                             
+                                 0.12      0.09    -0.05     0.29 1.00     7899
+    12970[] 
+ []
+
+
+Overfull \hbox (312.4927pt too wide) in paragraph at lines 1372--1372
+[]\T1/lmtt/m/n/10 g0_Device_WateringD2_Limited                                 
+                                -0.31      0.09    -0.48    -0.14 1.00     7130
+    12112[] 
+ []
+
+
+Overfull \hbox (312.4927pt too wide) in paragraph at lines 1372--1372
+[]\T1/lmtt/m/n/10 g0_Room_TemperatureCER8_Ambient                              
+                                 0.17      0.09    -0.00     0.35 1.00     7082
+    12651[] 
+ []
+
+
+Overfull \hbox (312.4927pt too wide) in paragraph at lines 1372--1372
+[]\T1/lmtt/m/n/10 g0_LinePBI17N002M0CM0NM0NM010NM16N:Device_WateringD2_Limited 
+                                 0.22      0.12    -0.01     0.46 1.00     8644
+    12115[] 
+ []
+
+
+Overfull \hbox (312.4927pt too wide) in paragraph at lines 1372--1372
+[]\T1/lmtt/m/n/10 g0_LinePBI17N006M0NM0NM89N:Device_WateringD2_Limited         
+                                 0.03      0.12    -0.20     0.26 1.00     9435
+    13619[] 
+ []
+
+
+Overfull \hbox (312.4927pt too wide) in paragraph at lines 1372--1372
+[]\T1/lmtt/m/n/10 g0_LinePBI17N007M0CM0NM0NM010NM8N:Device_WateringD2_Limited  
+                                -0.00      0.12    -0.23     0.23 1.00     8909
+    13634[] 
+ []
+
+
+Overfull \hbox (312.4927pt too wide) in paragraph at lines 1372--1372
+[]\T1/lmtt/m/n/10 g0_LinePBI17N013M0CM0NM0NM010NM8N:Device_WateringD2_Limited  
+                                 0.08      0.12    -0.16     0.32 1.00     9218
+    13636[] 
+ []
+
+
+Overfull \hbox (312.4927pt too wide) in paragraph at lines 1372--1372
+[]\T1/lmtt/m/n/10 g0_LinePBI17N016M0CM0NM0NM010NM27N:Device_WateringD2_Limited 
+                                 0.21      0.12    -0.02     0.44 1.00     9038
+    13611[] 
+ []
+
+
+Overfull \hbox (312.4927pt too wide) in paragraph at lines 1372--1372
+[]\T1/lmtt/m/n/10 g0_LinePBI19N007M0NM3N:Device_WateringD2_Limited             
+                                 0.09      0.12    -0.15     0.32 1.00     9289
+    14349[] 
+ []
+
+
+Overfull \hbox (312.4927pt too wide) in paragraph at lines 1372--1372
+[]\T1/lmtt/m/n/10 g0_LinePBIC15034M0CM24NM010NM1NM0N:Device_WateringD2_Limited 
+                                 0.15      0.12    -0.08     0.39 1.00     9501
+    13022[] 
+ []
+
+
+Overfull \hbox (312.4927pt too wide) in paragraph at lines 1372--1372
+[]\T1/lmtt/m/n/10 g0_LineROCKSTAR:Device_WateringD2_Limited                    
+                                 0.15      0.12    -0.07     0.38 1.00     8403
+    12823[] 
+ []
+
+
+Overfull \hbox (312.4927pt too wide) in paragraph at lines 1372--1372
+[]\T1/lmtt/m/n/10 g0_LineSUNCHASER:Device_WateringD2_Limited                   
+                                 0.03      0.12    -0.21     0.26 1.00     8829
+    12357[] 
+ []
+
+
+Overfull \hbox (312.4927pt too wide) in paragraph at lines 1372--1372
+[]\T1/lmtt/m/n/10 g0_LinePBI17N002M0CM0NM0NM010NM16N:Room_TemperatureCER8_Ambie
+nt                              -0.20      0.12    -0.43     0.04 1.00     8591
+    11609[] 
+ []
+
+
+Overfull \hbox (312.4927pt too wide) in paragraph at lines 1372--1372
+[]\T1/lmtt/m/n/10 g0_LinePBI17N006M0NM0NM89N:Room_TemperatureCER8_Ambient      
+                                -0.18      0.12    -0.41     0.04 1.00     8329
+    13248[] 
+ []
+
+
+Overfull \hbox (312.4927pt too wide) in paragraph at lines 1372--1372
+[]\T1/lmtt/m/n/10 g0_LinePBI17N007M0CM0NM0NM010NM8N:Room_TemperatureCER8_Ambien
+t                               -0.29      0.12    -0.52    -0.06 1.00     7777
+    12299[] 
+ []
+
+
+Overfull \hbox (312.4927pt too wide) in paragraph at lines 1372--1372
+[]\T1/lmtt/m/n/10 g0_LinePBI17N013M0CM0NM0NM010NM8N:Room_TemperatureCER8_Ambien
+t                               -0.16      0.12    -0.38     0.07 1.00     8333
+    13272[] 
+ []
+
+
+Overfull \hbox (312.4927pt too wide) in paragraph at lines 1372--1372
+[]\T1/lmtt/m/n/10 g0_LinePBI17N016M0CM0NM0NM010NM27N:Room_TemperatureCER8_Ambie
+nt                              -0.14      0.12    -0.37     0.09 1.00     8193
+    12730[] 
+ []
+
+
+Overfull \hbox (312.4927pt too wide) in paragraph at lines 1372--1372
+[]\T1/lmtt/m/n/10 g0_LinePBI19N007M0NM3N:Room_TemperatureCER8_Ambient          
+                                -0.12      0.12    -0.34     0.11 1.00     8646
+    12570[] 
+ []
+
+
+Overfull \hbox (312.4927pt too wide) in paragraph at lines 1372--1372
+[]\T1/lmtt/m/n/10 g0_LinePBIC15034M0CM24NM010NM1NM0N:Room_TemperatureCER8_Ambie
+nt                              -0.15      0.12    -0.38     0.08 1.00     8195
+    12352[] 
+ []
+
+
+Overfull \hbox (312.4927pt too wide) in paragraph at lines 1372--1372
+[]\T1/lmtt/m/n/10 g0_LineROCKSTAR:Room_TemperatureCER8_Ambient                 
+                                -0.19      0.12    -0.42     0.04 1.00     8037
+    12363[] 
+ []
+
+
+Overfull \hbox (312.4927pt too wide) in paragraph at lines 1372--1372
+[]\T1/lmtt/m/n/10 g0_LineSUNCHASER:Room_TemperatureCER8_Ambient                
+                                -0.17      0.12    -0.40     0.06 1.00     8300
+    12565[] 
+ []
+
+
+Overfull \hbox (312.4927pt too wide) in paragraph at lines 1372--1372
+[]\T1/lmtt/m/n/10 g0_Device_WateringD2_Limited:Room_TemperatureCER8_Ambient    
+                                -0.09      0.11    -0.31     0.13 1.00     8594
+    11627[] 
+ []
+
+
+Overfull \hbox (312.4927pt too wide) in paragraph at lines 1372--1372
+[]\T1/lmtt/m/n/10 g0_LinePBI17N002M0CM0NM0NM010NM16N:Device_WateringD2_Limited:
+Room_TemperatureCER8_Ambient     0.07      0.16    -0.24     0.38 1.00     9917
+    13355[] 
+ []
+
+
+Overfull \hbox (312.4927pt too wide) in paragraph at lines 1372--1372
+[]\T1/lmtt/m/n/10 g0_LinePBI17N006M0NM0NM89N:Device_WateringD2_Limited:Room_Tem
+peratureCER8_Ambient             0.06      0.16    -0.25     0.37 1.00    10280
+    13586[] 
+ []
+
+
+Overfull \hbox (312.4927pt too wide) in paragraph at lines 1372--1372
+[]\T1/lmtt/m/n/10 g0_LinePBI17N007M0CM0NM0NM010NM8N:Device_WateringD2_Limited:R
+oom_TemperatureCER8_Ambient      0.16      0.16    -0.16     0.46 1.00    10313
+    13794[] 
+ []
+
+
+Overfull \hbox (312.4927pt too wide) in paragraph at lines 1372--1372
+[]\T1/lmtt/m/n/10 g0_LinePBI17N013M0CM0NM0NM010NM8N:Device_WateringD2_Limited:R
+oom_TemperatureCER8_Ambient      0.12      0.16    -0.20     0.43 1.00    10448
+    13313[] 
+ []
+
+
+Overfull \hbox (312.4927pt too wide) in paragraph at lines 1372--1372
+[]\T1/lmtt/m/n/10 g0_LinePBI17N016M0CM0NM0NM010NM27N:Device_WateringD2_Limited:
+Room_TemperatureCER8_Ambient     0.16      0.16    -0.14     0.47 1.00    10402
+    13789[] 
+ []
+
+
+Overfull \hbox (312.4927pt too wide) in paragraph at lines 1372--1372
+[]\T1/lmtt/m/n/10 g0_LinePBI19N007M0NM3N:Device_WateringD2_Limited:Room_Tempera
+tureCER8_Ambient                -0.10      0.16    -0.42     0.20 1.00    10388
+    13884[] 
+ []
+
+
+Overfull \hbox (312.4927pt too wide) in paragraph at lines 1372--1372
+[]\T1/lmtt/m/n/10 g0_LinePBIC15034M0CM24NM010NM1NM0N:Device_WateringD2_Limited:
+Room_TemperatureCER8_Ambient    -0.05      0.16    -0.36     0.26 1.00    10418
+    13710[] 
+ []
+
+
+Overfull \hbox (312.4927pt too wide) in paragraph at lines 1372--1372
+[]\T1/lmtt/m/n/10 g0_LineROCKSTAR:Device_WateringD2_Limited:Room_TemperatureCER
+8_Ambient                        0.19      0.16    -0.12     0.50 1.00    10031
+    14495[] 
+ []
+
+
+Overfull \hbox (312.4927pt too wide) in paragraph at lines 1372--1372
+[]\T1/lmtt/m/n/10 g0_LineSUNCHASER:Device_WateringD2_Limited:Room_TemperatureCE
+R8_Ambient                       0.09      0.16    -0.23     0.40 1.00    10351
+    14151[] 
+ []
+
+
+Overfull \hbox (312.4927pt too wide) in paragraph at lines 1372--1372
+[]\T1/lmtt/m/n/10 g1_Intercept                                                 
+                                 0.00      0.01    -0.01     0.01 1.00    11611
+    14403[] 
+ []
+
+[59]
+Overfull \hbox (312.4927pt too wide) in paragraph at lines 1372--1372
+[]\T1/lmtt/m/n/10 g1_LinePBI17N002M0CM0NM0NM010NM16N                           
+                                -0.00      0.00    -0.01     0.01 1.00    13692
+    16352[] 
+ []
+
+
+Overfull \hbox (312.4927pt too wide) in paragraph at lines 1372--1372
+[]\T1/lmtt/m/n/10 g1_LinePBI17N006M0NM0NM89N                                   
+                                -0.00      0.00    -0.01     0.01 1.00    14314
+    17789[] 
+ []
+
+
+Overfull \hbox (312.4927pt too wide) in paragraph at lines 1372--1372
+[]\T1/lmtt/m/n/10 g1_LinePBI17N007M0CM0NM0NM010NM8N                            
+                                 0.01      0.00    -0.00     0.01 1.00    12776
+    16519[] 
+ []
+
+
+Overfull \hbox (312.4927pt too wide) in paragraph at lines 1372--1372
+[]\T1/lmtt/m/n/10 g1_LinePBI17N013M0CM0NM0NM010NM8N                            
+                                -0.00      0.00    -0.01     0.00 1.00    13997
+    16852[] 
+ []
+
+
+Overfull \hbox (312.4927pt too wide) in paragraph at lines 1372--1372
+[]\T1/lmtt/m/n/10 g1_LinePBI17N016M0CM0NM0NM010NM27N                           
+                                -0.00      0.00    -0.01     0.01 1.00    13243
+    17539[] 
+ []
+
+
+Overfull \hbox (312.4927pt too wide) in paragraph at lines 1372--1372
+[]\T1/lmtt/m/n/10 g1_LinePBI19N007M0NM3N                                       
+                                 0.00      0.00    -0.01     0.01 1.00    13504
+    17256[] 
+ []
+
+
+Overfull \hbox (312.4927pt too wide) in paragraph at lines 1372--1372
+[]\T1/lmtt/m/n/10 g1_LinePBIC15034M0CM24NM010NM1NM0N                           
+                                -0.00      0.00    -0.01     0.00 1.00    14138
+    16610[] 
+ []
+
+
+Overfull \hbox (312.4927pt too wide) in paragraph at lines 1372--1372
+[]\T1/lmtt/m/n/10 g1_LineROCKSTAR                                              
+                                 0.00      0.00    -0.01     0.01 1.00    13856
+    16070[] 
+ []
+
+
+Overfull \hbox (312.4927pt too wide) in paragraph at lines 1372--1372
+[]\T1/lmtt/m/n/10 g1_LineSUNCHASER                                             
+                                 0.00      0.00    -0.01     0.01 1.00    13155
+    17009[] 
+ []
+
+
+Overfull \hbox (312.4927pt too wide) in paragraph at lines 1372--1372
+[]\T1/lmtt/m/n/10 g1_Device_WateringD2_Limited                                 
+                                 0.00      0.01    -0.01     0.02 1.00    11125
+    15322[] 
+ []
+
+
+Overfull \hbox (312.4927pt too wide) in paragraph at lines 1372--1372
+[]\T1/lmtt/m/n/10 g1_LinePBI17N002M0CM0NM0NM010NM16N:Device_WateringD2_Limited 
+                                -0.00      0.01    -0.02     0.01 1.00    15084
+    18120[] 
+ []
+
+
+Overfull \hbox (312.4927pt too wide) in paragraph at lines 1372--1372
+[]\T1/lmtt/m/n/10 g1_LinePBI17N006M0NM0NM89N:Device_WateringD2_Limited         
+                                -0.00      0.01    -0.01     0.01 1.00    16469
+    18051[] 
+ []
+
+
+Overfull \hbox (312.4927pt too wide) in paragraph at lines 1372--1372
+[]\T1/lmtt/m/n/10 g1_LinePBI17N007M0CM0NM0NM010NM8N:Device_WateringD2_Limited  
+                                -0.01      0.01    -0.02     0.00 1.00    15448
+    18302[] 
+ []
+
+
+Overfull \hbox (312.4927pt too wide) in paragraph at lines 1372--1372
+[]\T1/lmtt/m/n/10 g1_LinePBI17N013M0CM0NM0NM010NM8N:Device_WateringD2_Limited  
+                                 0.00      0.01    -0.01     0.01 1.00    15801
+    17077[] 
+ []
+
+
+Overfull \hbox (312.4927pt too wide) in paragraph at lines 1372--1372
+[]\T1/lmtt/m/n/10 g1_LinePBI17N016M0CM0NM0NM010NM27N:Device_WateringD2_Limited 
+                                -0.01      0.01    -0.02     0.01 1.00    14718
+    17325[] 
+ []
+
+
+Overfull \hbox (312.4927pt too wide) in paragraph at lines 1372--1372
+[]\T1/lmtt/m/n/10 g1_LinePBI19N007M0NM3N:Device_WateringD2_Limited             
+                                -0.01      0.01    -0.02     0.00 1.00    16226
+    16851[] 
+ []
+
+
+Overfull \hbox (312.4927pt too wide) in paragraph at lines 1372--1372
+[]\T1/lmtt/m/n/10 g1_LinePBIC15034M0CM24NM010NM1NM0N:Device_WateringD2_Limited 
+                                -0.00      0.01    -0.01     0.01 1.00    15625
+    17240[] 
+ []
+
+
+Overfull \hbox (312.4927pt too wide) in paragraph at lines 1372--1372
+[]\T1/lmtt/m/n/10 g1_LineROCKSTAR:Device_WateringD2_Limited                    
+                                -0.01      0.01    -0.02     0.00 1.00    15659
+    16868[] 
+ []
+
+
+Overfull \hbox (312.4927pt too wide) in paragraph at lines 1372--1372
+[]\T1/lmtt/m/n/10 g1_LineSUNCHASER:Device_WateringD2_Limited                   
+                                -0.01      0.01    -0.02     0.00 1.00    15856
+    17897[] 
+ []
+
+
+Overfull \hbox (312.4927pt too wide) in paragraph at lines 1372--1372
+[]\T1/lmtt/m/n/10 k_Intercept                                                  
+                                 2.62      0.04     2.54     2.69 1.00    39789
+    20523[] 
+ []
+
+
+Overfull \hbox (312.4927pt too wide) in paragraph at lines 1372--1372
+[]\T1/lmtt/m/n/10 k_Room_TemperatureCER8_Ambient                               
+                                 1.97      0.06     1.85     2.09 1.00    35775
+    20681[] 
+ []
+
+
+Overfull \hbox (312.4927pt too wide) in paragraph at lines 1372--1372
+[]\T1/lmtt/m/n/10 lambda_Intercept                                             
+                                 0.02      0.02     0.00     0.09 1.00    26708
+    13086[] 
+ []
+
+
+Overfull \hbox (312.4927pt too wide) in paragraph at lines 1372--1372
+[]\T1/lmtt/m/n/10 lambda_Device_WateringD2_Limited                             
+                                 0.03      0.03     0.00     0.11 1.00    27002
+    12874[] 
+ []
+
+<figures/increase/unnamed-chunk-5-1.png, id=399, 542.025pt x 722.7pt>
+File: figures/increase/unnamed-chunk-5-1.png Graphic file (type png)
+<use figures/increase/unnamed-chunk-5-1.png>
+Package pdftex.def Info: figures/increase/unnamed-chunk-5-1.png  used on input 
+line 1386.
+(pdftex.def)             Requested size: 542.02367pt x 722.69823pt.
+<figures/increase/unnamed-chunk-5-2.png, id=400, 542.025pt x 722.7pt>
+File: figures/increase/unnamed-chunk-5-2.png Graphic file (type png)
+<use figures/increase/unnamed-chunk-5-2.png>
+Package pdftex.def Info: figures/increase/unnamed-chunk-5-2.png  used on input 
+line 1431.
+(pdftex.def)             Requested size: 542.02367pt x 722.69823pt.
+<figures/increase/unnamed-chunk-5-3.png, id=401, 542.025pt x 722.7pt>
+File: figures/increase/unnamed-chunk-5-3.png Graphic file (type png)
+<use figures/increase/unnamed-chunk-5-3.png>
+Package pdftex.def Info: figures/increase/unnamed-chunk-5-3.png  used on input 
+line 1437.
+(pdftex.def)             Requested size: 542.02367pt x 722.69823pt.
+<figures/increase/unnamed-chunk-5-4.png, id=402, 542.025pt x 722.7pt>
+File: figures/increase/unnamed-chunk-5-4.png Graphic file (type png)
+<use figures/increase/unnamed-chunk-5-4.png>
+Package pdftex.def Info: figures/increase/unnamed-chunk-5-4.png  used on input 
+line 1443.
+(pdftex.def)             Requested size: 542.02367pt x 722.69823pt.
+<figures/increase/unnamed-chunk-5-5.png, id=403, 542.025pt x 722.7pt>
+File: figures/increase/unnamed-chunk-5-5.png Graphic file (type png)
+<use figures/increase/unnamed-chunk-5-5.png>
+Package pdftex.def Info: figures/increase/unnamed-chunk-5-5.png  used on input 
+line 1449.
+(pdftex.def)             Requested size: 542.02367pt x 722.69823pt.
+<figures/increase/unnamed-chunk-5-6.png, id=404, 542.025pt x 722.7pt>
+File: figures/increase/unnamed-chunk-5-6.png Graphic file (type png)
+<use figures/increase/unnamed-chunk-5-6.png>
+Package pdftex.def Info: figures/increase/unnamed-chunk-5-6.png  used on input 
+line 1455.
+(pdftex.def)             Requested size: 542.02367pt x 722.69823pt.
+<figures/increase/unnamed-chunk-5-7.png, id=405, 542.025pt x 722.7pt>
+File: figures/increase/unnamed-chunk-5-7.png Graphic file (type png)
+<use figures/increase/unnamed-chunk-5-7.png>
+Package pdftex.def Info: figures/increase/unnamed-chunk-5-7.png  used on input 
+line 1461.
+(pdftex.def)             Requested size: 542.02367pt x 722.69823pt.
+<figures/increase/unnamed-chunk-5-8.png, id=406, 542.025pt x 722.7pt>
+File: figures/increase/unnamed-chunk-5-8.png Graphic file (type png)
+<use figures/increase/unnamed-chunk-5-8.png>
+Package pdftex.def Info: figures/increase/unnamed-chunk-5-8.png  used on input 
+line 1467.
+(pdftex.def)             Requested size: 542.02367pt x 722.69823pt.
+<figures/increase/unnamed-chunk-5-9.png, id=407, 542.025pt x 722.7pt>
+File: figures/increase/unnamed-chunk-5-9.png Graphic file (type png)
+<use figures/increase/unnamed-chunk-5-9.png>
+Package pdftex.def Info: figures/increase/unnamed-chunk-5-9.png  used on input 
+line 1473.
+(pdftex.def)             Requested size: 542.02367pt x 722.69823pt.
+<figures/increase/unnamed-chunk-5-10.png, id=408, 542.025pt x 722.7pt>
+File: figures/increase/unnamed-chunk-5-10.png Graphic file (type png)
+<use figures/increase/unnamed-chunk-5-10.png>
+Package pdftex.def Info: figures/increase/unnamed-chunk-5-10.png  used on input
+ line 1479.
+(pdftex.def)             Requested size: 542.02367pt x 722.69823pt.
+<figures/increase/unnamed-chunk-5-11.png, id=409, 542.025pt x 722.7pt>
+File: figures/increase/unnamed-chunk-5-11.png Graphic file (type png)
+<use figures/increase/unnamed-chunk-5-11.png>
+Package pdftex.def Info: figures/increase/unnamed-chunk-5-11.png  used on input
+ line 1485.
+(pdftex.def)             Requested size: 542.02367pt x 722.69823pt.
+<figures/increase/unnamed-chunk-5-12.png, id=410, 542.025pt x 722.7pt>
+File: figures/increase/unnamed-chunk-5-12.png Graphic file (type png)
+<use figures/increase/unnamed-chunk-5-12.png>
+Package pdftex.def Info: figures/increase/unnamed-chunk-5-12.png  used on input
+ line 1491.
+(pdftex.def)             Requested size: 542.02367pt x 722.69823pt.
+<figures/increase/unnamed-chunk-5-13.png, id=411, 542.025pt x 722.7pt>
+File: figures/increase/unnamed-chunk-5-13.png Graphic file (type png)
+<use figures/increase/unnamed-chunk-5-13.png>
+Package pdftex.def Info: figures/increase/unnamed-chunk-5-13.png  used on input
+ line 1497.
+(pdftex.def)             Requested size: 542.02367pt x 722.69823pt.
+<figures/increase/unnamed-chunk-5-14.png, id=412, 542.025pt x 722.7pt>
+File: figures/increase/unnamed-chunk-5-14.png Graphic file (type png)
+<use figures/increase/unnamed-chunk-5-14.png>
+Package pdftex.def Info: figures/increase/unnamed-chunk-5-14.png  used on input
+ line 1503.
+(pdftex.def)             Requested size: 542.02367pt x 722.69823pt.
+<figures/increase/unnamed-chunk-5-15.png, id=413, 542.025pt x 722.7pt>
+File: figures/increase/unnamed-chunk-5-15.png Graphic file (type png)
+<use figures/increase/unnamed-chunk-5-15.png>
+Package pdftex.def Info: figures/increase/unnamed-chunk-5-15.png  used on input
+ line 1509.
+(pdftex.def)             Requested size: 542.02367pt x 722.69823pt.
+<figures/increase/unnamed-chunk-5-16.png, id=414, 542.025pt x 722.7pt>
+File: figures/increase/unnamed-chunk-5-16.png Graphic file (type png)
+<use figures/increase/unnamed-chunk-5-16.png>
+Package pdftex.def Info: figures/increase/unnamed-chunk-5-16.png  used on input
+ line 1515.
+(pdftex.def)             Requested size: 542.02367pt x 722.69823pt.
+
+Overfull \vbox (1.11772pt too high) detected at line 1532
+ []
+
+[60] [61 <./figures/increase/unnamed-chunk-5-1.png>] [62 <./figures/increase/un
+named-chunk-5-2.png>] [63 <./figures/increase/unnamed-chunk-5-3.png>] [64 <./fi
+gures/increase/unnamed-chunk-5-4.png>] [65 <./figures/increase/unnamed-chunk-5-
+5.png>] [66 <./figures/increase/unnamed-chunk-5-6.png>] [67 <./figures/increase
+/unnamed-chunk-5-7.png>] [68 <./figures/increase/unnamed-chunk-5-8.png>] [69 <.
+/figures/increase/unnamed-chunk-5-9.png>] [70 <./figures/increase/unnamed-chunk
+-5-10.png>] [71 <./figures/increase/unnamed-chunk-5-11.png>] [72 <./figures/inc
+rease/unnamed-chunk-5-12.png>] [73 <./figures/increase/unnamed-chunk-5-13.png>]
+[74 <./figures/increase/unnamed-chunk-5-14.png>] [75 <./figures/increase/unname
+d-chunk-5-15.png>] [76 <./figures/increase/unnamed-chunk-5-16.png>]
+<figures/increase/unnamed-chunk-5-17.png, id=518, 542.025pt x 722.7pt>
+File: figures/increase/unnamed-chunk-5-17.png Graphic file (type png)
+<use figures/increase/unnamed-chunk-5-17.png>
+Package pdftex.def Info: figures/increase/unnamed-chunk-5-17.png  used on input
+ line 1536.
+(pdftex.def)             Requested size: 542.02367pt x 722.69823pt.
+<figures/increase/unnamed-chunk-5-18.png, id=519, 542.025pt x 722.7pt>
+File: figures/increase/unnamed-chunk-5-18.png Graphic file (type png)
+<use figures/increase/unnamed-chunk-5-18.png>
+Package pdftex.def Info: figures/increase/unnamed-chunk-5-18.png  used on input
+ line 1554.
+(pdftex.def)             Requested size: 542.02367pt x 722.69823pt.
+[77] [78 <./figures/increase/unnamed-chunk-5-17.png>] [79 <./figures/increase/u
+nnamed-chunk-5-18.png>] (porometer.anal_d.v1.aux)
+ ***********
+LaTeX2e <2025-11-01>
+L3 programming layer <2026-01-19>
+ ***********
+ ) 
+Here is how much of TeX's memory you used:
+ 14333 strings out of 467866
+ 235275 string characters out of 5428383
+ 757754 words of memory out of 5000000
+ 42866 multiletter control sequences out of 15000+600000
+ 654383 words of font info for 72 fonts, out of 8000000 for 9000
+ 1141 hyphenation exceptions out of 8191
+ 83i,6n,93p,1028b,1279s stack positions out of 10000i,1000n,20000p,200000b,200000s
+<C:/Program Files/MiKTeX/fonts/type1/public/lm/lmbx10.pfb><C:/Program Files/M
+iKTeX/fonts/type1/public/lm/lmbx12.pfb><C:/Program Files/MiKTeX/fonts/type1/pub
+lic/lm/lmbxi10.pfb><C:/Program Files/MiKTeX/fonts/type1/public/lm/lmr10.pfb><C:
+/Program Files/MiKTeX/fonts/type1/public/lm/lmtk10.pfb><C:/Program Files/MiKTeX
+/fonts/type1/public/lm/lmtko10.pfb><C:/Program Files/MiKTeX/fonts/type1/public/
+lm/lmtt10.pfb><C:/Program Files/MiKTeX/fonts/type1/public/lm/lmtti10.pfb>
+Output written on porometer.anal_d.v1.pdf (79 pages, 7293877 bytes).
+PDF statistics:
+ 636 PDF objects out of 1000 (max. 8388607)
+ 151 named destinations out of 1000 (max. 500000)
+ 16751 words of extra memory for PDF output out of 17280 (max. 10000000)
+

@@ -1,0 +1,28 @@
+# --- OS / editor cruft ---
+.DS_Store
+**/.DS_Store
+.Rhistory
+.RData
+.Rproj.user/
+*.Rproj
+
+# --- Local-only material kept on disk but excluded from the repository ---
+# (third-party manuscript PDFs, the published Excel macro, duplicate raw-data copies,
+#  the original email, and the gs_fit.zip archive — see reference-material/REFERENCES.md)
+_local/
+"Clayton's Directories"/
+
+# --- Very large binary outputs (regenerable; keep OUT of git; GitHub blocks >100 MB) ---
+# High-resolution TIFF figures (20-62 MB each).
+*.tiff
+*.tif
+
+# Fitted brms objects and posterior-derived objects in the conductance stream
+# (268-752 MB each). Regenerable from the raw .xlsx inputs; deposit on Zenodo instead.
+stomatal-conductance/**/data/*anal_*.Rdata
+stomatal-conductance/**/data/stomatalCond*.Rdata
+stomatal-conductance/**/data/stomatalCond*.RData
+stomatal-conductance/**/data/iWUE*.Rdata
+# The small, imported post-processing objects (porometer.v1.Rdata, li6800.v1.Rdata) and
+# the .csv parameter exports are kept. The small anatomy .Rdata (incl. the entry point
+# anat.dat.v2.Rdata, ~0.3 MB) are also kept.

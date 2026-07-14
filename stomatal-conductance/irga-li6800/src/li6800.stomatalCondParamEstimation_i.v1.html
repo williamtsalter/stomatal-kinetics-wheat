@@ -1,0 +1,377 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+<meta name="generator" content="litedown 0.9">
+<title></title>
+<style type="text/css">
+body {
+  font-family: sans-serif;
+  max-width: 800px;
+  margin: auto;
+  padding: 1em;
+  line-height: 1.5;
+  print-color-adjust: exact;
+  -webkit-print-color-adjust: exact;
+}
+body, .abstract, code, .footnotes, footer, #refs, .caption { font-size: .9em; }
+li li { font-size: .95em; }
+ul:has(li > input[type="checkbox"]) { list-style: none; padding-left: 1em; }
+*, :before, :after { box-sizing: border-box; }
+a { color: steelblue; }
+pre, img { max-width: 100%; }
+pre { white-space: pre-wrap; word-break: break-word; }
+pre code { display: block; padding: 1em; overflow-x: auto; }
+code { font-family: 'DejaVu Sans Mono', 'Droid Sans Mono', 'Lucida Console', Consolas, Monaco, monospace; }
+:not(pre, th) > code, code[class], div > .caption { background: #f8f8f8; }
+pre > code:is(:not([class]), .language-plain, .language-none, .plain), .box, .figure, .table { background: inherit; border: 1px solid #eee; }
+pre > code {
+  &.message { border-color: #9eeaf9; }
+  &.warning { background: #fff3cd; border-color: #fff3cd; }
+  &.error { background: #f8d7da; border-color: #f8d7da; }
+}
+.fenced-chunk { border-left: 1px solid #666; }
+.code-fence {
+  opacity: .4;
+  border: 1px dashed #666;
+  border-left: 2px solid;
+  &:hover { opacity: inherit; }
+}
+.box, .figure, .table, table { margin: 1em auto; }
+div > .caption { padding: 1px 1em; }
+.figure { p:has(img, svg), pre:has(svg) { text-align: center; } }
+.flex-col { display: flex; justify-content: space-between; }
+table {
+  &:only-child:not(.table > *) { margin: auto; }
+  th, td { padding: 5px; font-variant-numeric: tabular-nums; }
+  thead, tfoot, tr:nth-child(even) { background: whitesmoke; }
+  thead th { border-bottom: 1px solid #ddd; }
+  &:not(.datatable-table) {
+    border-top: 1px solid #666;
+    border-bottom: 1px solid #666;
+  }
+}
+blockquote {
+  color: #666;
+  margin: 0;
+  padding: 1px 1em;
+  border-left: .5em solid #eee;
+}
+hr, .footnotes::before { border: 1px dashed #ddd; }
+.frontmatter { text-align: center; }
+#TOC {
+  a { text-decoration: none; }
+  ul { list-style: none; padding-left: 1em; }
+  & > ul { padding: 0; }
+  ul ul { border-left: 1px solid lightsteelblue; }
+}
+.body h2 { border-bottom: 1px solid #666; }
+.body .appendix, .appendix ~ h2 { border-bottom-style: dashed; }
+.main-number::after { content: "."; }
+span[class^="ref-number-"] { font-weight: bold; }
+.ref-number-fig::after, .ref-number-tab::after { content: ":"; }
+.cross-ref-chp::before { content: "Chapter "; }
+.cross-ref-sec::before { content: "Section "; }
+.cross-ref-fig::before, .ref-number-fig::before { content: "Figure "; }
+.cross-ref-tab::before, .ref-number-tab::before { content: "Table "; }
+.cross-ref-eqn::before, .MathJax_ref:has(mjx-mtext > mjx-c + mjx-c)::before { content: "Equation "; }
+.abstract, #refs {
+  &::before { display: block; margin: 1em auto; font-weight: bold; }
+}
+.abstract::before { content: "Abstract"; text-align: center; }
+#refs::before { content: "Bibliography"; font-size: 1.5em; }
+.ref-paren-open::before { content: "("; }
+.ref-paren-close::after { content: ")"; }
+.ref-semicolon::after { content: "; "; }
+.ref-and::after { content: " and "; }
+.ref-et-al::after { content: " et al."; font-style: italic; }
+.footnote-ref a {
+  &::before { content: "["; }
+  &::after { content: "]"; }
+}
+section.footnotes {
+  margin-top: 2em;
+  &::before { content: ""; display: block; max-width: 20em; }
+}
+.fade {
+  background: repeating-linear-gradient(135deg, white, white 30px, #ddd 32px, #ddd 32px);
+  opacity: 0.6;
+}
+
+@media print {
+  body { max-width: 100%; }
+  tr, img { break-inside: avoid; }
+}
+@media only screen and (min-width: 992px) {
+  body:not(.pagesjs) pre:has(.line-numbers):not(:hover) { white-space: pre; }
+}
+</style>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@xiee/utils@1.14.24/css/prism-xcode.min.css">
+</head>
+<body>
+<div class="frontmatter">
+</div>
+<div class="body">
+<h1 id="chp:exp-801-ds-wheat-heat-drought">Wheat stomatal kinetics (heat & drought)</h1>
+<h2 id="sec:ed-chaplin-usyd-apr-june-2025">— Ed Chaplin (USyd), <em>Apr–June 2025</em> —</h2>
+<h3 id="sec:li-6800-stomatal-conductance-model-parameter-estimation-light-off-to-light-on-increase">Li-6800 STOMATAL CONDUCTANCE MODEL PARAMETER ESTIMATION - LIGHT OFF TO LIGHT ON (INCREASE)</h3>
+<ul>
+<li>Using the final model fitted to the data, obtain the parameters of interest</li>
+<li>These include:</li>
+<li>k_i, being the time constant for gs to increase to Gsmax</li>
+<li>lambda, being the lag in the response time of gs to a step increase in light</li>
+<li>g0, being the starting value of the gs response (intercept/lower asymptote)</li>
+<li>g1, being the upper asymptote of the gs response (this will be used to calculate iWUE)</li>
+<li>Slmax, a derived trait from McAusland paper</li>
+<li></li>
+</ul>
+<h3 id="sec:load-the-libraries">Load the libraries</h3>
+<pre><code class="language-r">library(knitr)
+#knitr::spin(&quot;li6800.stomatalCondParamEstimation_i.v1.r&quot;)
+library(ggplot2)
+opts_chunk$set(&quot;tidy&quot; = FALSE, &quot;dev&quot; = &quot;png&quot;, &quot;dpi&quot; = 300, 
+               &quot;fig.width&quot; = 7.5, &quot;fig.height&quot; = 10, &quot;comment&quot;=NA, fig.path = &quot;figures/increase/&quot;)
+library(dae)
+library(dplyr)
+library(brms) ##package used to fit bayesian regression model using Stan
+library(tidyr)
+library(emmeans)
+library(tidybayes)
+</code></pre>
+<h3 id="sec:set-up-constants-and-files">Set up constants and files</h3>
+<pre><code class="language-r">options(width=90)
+load(&quot;../data/stomatalCondModel_i.v2.Rdata&quot;)
+saveFile &lt;- &quot;../data/stomatalCondParamEstimation_i.v1.Rdata&quot;
+</code></pre>
+<h3 id="sec:have-a-look-at-the-final-model-summary-and-store-fixed-effects">Have a look at the final model summary and store fixed effects</h3>
+<pre><code class="language-r">summary(fit_on_final)
+</code></pre>
+<pre><code>Warning: There were 21 divergent transitions after warmup. Increasing adapt_delta above
+0.99 may help. See
+http://mc-stan.org/misc/warnings.html#divergent-transitions-after-warmup
+</code></pre>
+<pre><code> Family: gaussian 
+  Links: mu = identity 
+Formula: gsw ~ g0 + (g1 - g0) * exp(-exp(((lambda - tmin)/k) + 1)) 
+         g0 ~ 1 + Room_Temperature * Watering + (1 | Rep)
+         g1 ~ 1 + Room_Temperature * Watering + (1 | Rep)
+         k ~ 1 + Room_Temperature
+         lambda ~ 1
+   Data: li6800.on.dat (Number of observations: 1462) 
+  Draws: 6 chains, each with iter = 10000; warmup = 6000; thin = 1;
+         total post-warmup draws = 24000
+
+Multilevel Hyperparameters:
+~Rep (Number of levels: 3) 
+                 Estimate Est.Error l-95% CI u-95% CI Rhat Bulk_ESS Tail_ESS
+sd(g0_Intercept)     0.01      0.01     0.00     0.05 1.00     7756    10949
+sd(g1_Intercept)     0.02      0.02     0.00     0.08 1.00     5627     7696
+
+Regression Coefficients:
+                                          Estimate Est.Error l-95% CI u-95% CI Rhat
+g0_Intercept                                  0.01      0.01    -0.01     0.02 1.00
+g0_Room_TemperatureCER8_Amb                  -0.02      0.01    -0.03    -0.01 1.00
+g0_WateringUnlim                             -0.01      0.01    -0.02     0.00 1.00
+g0_Room_TemperatureCER8_Amb:WateringUnlim     0.02      0.01     0.00     0.03 1.00
+g1_Intercept                                  0.34      0.01     0.31     0.37 1.00
+g1_Room_TemperatureCER8_Amb                  -0.13      0.00    -0.14    -0.12 1.00
+g1_WateringUnlim                              0.04      0.00     0.03     0.04 1.00
+g1_Room_TemperatureCER8_Amb:WateringUnlim     0.10      0.01     0.09     0.11 1.00
+k_Intercept                                   3.81      0.26     3.33     4.33 1.00
+k_Room_TemperatureCER8_Amb                    2.26      0.26     1.75     2.77 1.00
+lambda_Intercept                              2.91      0.43     2.04     3.72 1.00
+                                          Bulk_ESS Tail_ESS
+g0_Intercept                                 17601    16955
+g0_Room_TemperatureCER8_Amb                  19731    17878
+g0_WateringUnlim                             23298    18061
+g0_Room_TemperatureCER8_Amb:WateringUnlim    23462    19473
+g1_Intercept                                  8331     7204
+g1_Room_TemperatureCER8_Amb                  18562    18522
+g1_WateringUnlim                             18714    17275
+g1_Room_TemperatureCER8_Amb:WateringUnlim    16922    17677
+k_Intercept                                  14938    14344
+k_Room_TemperatureCER8_Amb                   20443    15960
+lambda_Intercept                             14254    12070
+
+Further Distributional Parameters:
+      Estimate Est.Error l-95% CI u-95% CI Rhat Bulk_ESS Tail_ESS
+sigma     0.05      0.00     0.05     0.05 1.00    27461    17232
+
+Draws were sampled using sampling(NUTS). For each parameter, Bulk_ESS
+and Tail_ESS are effective sample size measures, and Rhat is the potential
+scale reduction factor on split chains (at convergence, Rhat = 1).
+</code></pre>
+<h3 id="sec:build-a-dataframe-of-model-parameters">Build a dataframe of model parameters</h3>
+<pre><code class="language-r">li6800.i.param &lt;- expand.grid(Room_Temperature = levels(li6800.on.dat$Room_Temperature),
+                             Watering = levels(li6800.on.dat$Watering))
+</code></pre>
+<h3 id="sec:use-the-emmeans-package-to-get-out-the-expected-parameter-estimates-along-with-hpd-credible-intervals">Use the emmeans package to get out the expected parameter estimates, along with HPD (credible intervals)</h3>
+<pre><code class="language-r">g0.emmeans &lt;- as.data.frame(emmeans(fit_on_final,
+                                    ~ Room_Temperature * Watering,
+                                    nlpar = &quot;g0&quot;))
+g0.emmeans &lt;- g0.emmeans %&gt;% rename_with(~paste0(&quot;g0_&quot;, .x), 
+                                         -all_of(c(&quot;Room_Temperature&quot;, 
+                                                   &quot;Watering&quot;)))
+g0.emmeans &lt;- within(g0.emmeans, {
+  g0_tabquant &lt;- paste0(round(g0_emmean, 3), &quot; [&quot;, 
+                        round(g0_lower.HPD, 3), &quot;, &quot;, 
+                        round(g0_upper.HPD, 3), &quot;]&quot;)
+  
+})
+li6800.i.param &lt;- left_join(li6800.i.param, g0.emmeans)
+</code></pre>
+<pre><code>Joining with `by = join_by(Room_Temperature, Watering)`
+</code></pre>
+<pre><code class="language-r">g1.emmeans &lt;- as.data.frame(emmeans(fit_on_final,
+                                    ~ Room_Temperature * Watering,
+                                    nlpar = &quot;g1&quot;))
+g1.emmeans &lt;- g1.emmeans %&gt;% rename_with(~paste0(&quot;g1_&quot;, .x), 
+                                         -all_of(c(&quot;Room_Temperature&quot;, 
+                                                   &quot;Watering&quot;)))
+g1.emmeans &lt;- within(g1.emmeans, {
+  g1_tabquant &lt;- paste0(round(g1_emmean, 3), &quot; [&quot;, 
+                        round(g1_lower.HPD, 3), &quot;, &quot;, 
+                        round(g1_upper.HPD, 3), &quot;]&quot;)
+  
+})
+li6800.i.param &lt;- left_join(li6800.i.param, g1.emmeans)
+</code></pre>
+<pre><code>Joining with `by = join_by(Room_Temperature, Watering)`
+</code></pre>
+<pre><code class="language-r">k.emmeans &lt;- as.data.frame(emmeans(fit_on_final,
+                                    ~ Room_Temperature,
+                                    nlpar = &quot;k&quot;))
+k.emmeans &lt;- k.emmeans %&gt;% rename_with(~paste0(&quot;k_&quot;, .x), 
+                                       -all_of(c(&quot;Room_Temperature&quot;)))
+k.emmeans &lt;- within(k.emmeans, {
+  k_tabquant &lt;- paste0(round(k_emmean, 3), &quot; [&quot;, 
+                       round(k_lower.HPD, 3), &quot;, &quot;, 
+                       round(k_upper.HPD, 3), &quot;]&quot;)
+  
+})
+li6800.i.param &lt;- left_join(li6800.i.param, k.emmeans)
+</code></pre>
+<pre><code>Joining with `by = join_by(Room_Temperature)`
+</code></pre>
+<pre><code class="language-r">lambda.emmeans &lt;- as.data.frame(emmeans(fit_on_final,
+                                   ~ 1,
+                                   nlpar = &quot;lambda&quot;))
+lambda.emmeans &lt;- lambda.emmeans %&gt;% rename_with(~paste0(&quot;lambda_&quot;, .x))
+lambda.emmeans &lt;- within(lambda.emmeans, {
+  lambda_tabquant &lt;- paste0(round(lambda_emmean, 3), &quot; [&quot;, 
+                            round(lambda_lower.HPD, 3), &quot;, &quot;, 
+                            round(lambda_upper.HPD, 3), &quot;]&quot;)
+  
+})
+li6800.i.param &lt;- cbind(li6800.i.param, data.frame(lambda.emmeans[,2:5]))
+</code></pre>
+<pre><code>Warning in data.frame(..., check.names = FALSE): row names were found from a short
+variable and have been discarded
+</code></pre>
+<h3 id="sec:using-these-parameters-calculate-slmax">Using these parameters, calculate Slmax</h3>
+<ul>
+<li>Slmax looks to be reported in the units mmol m^-2 s^-2</li>
+<li>This involves multiplying g1 and g0 by 1000 and also k by 60</li>
+<li>I can calculate this using the posterior draws for each parameter and then combine them together</li>
+</ul>
+<pre><code class="language-r">g0_draws &lt;- emmeans(fit_on_final,
+                    ~ Room_Temperature * Watering,
+                    nlpar = &quot;g0&quot;) %&gt;%
+  gather_emmeans_draws()
+
+g1_draws &lt;- emmeans(fit_on_final,
+                    ~ Room_Temperature * Watering,
+                    nlpar = &quot;g1&quot;) %&gt;%
+  gather_emmeans_draws()
+
+k_draws &lt;- emmeans(fit_on_final,
+                   ~ Room_Temperature,
+                   nlpar = &quot;k&quot;) %&gt;%
+  gather_emmeans_draws()
+
+combined_draws &lt;- g0_draws %&gt;%
+  rename(g0 = .value) %&gt;%
+  left_join(g1_draws %&gt;% rename(g1 = .value),
+            by = c(&quot;.draw&quot;, &quot;Room_Temperature&quot;, &quot;Watering&quot;)) %&gt;%
+  left_join(k_draws %&gt;% rename(k = .value),
+            by = c(&quot;.draw&quot;, &quot;Room_Temperature&quot;))
+
+combined_draws &lt;- combined_draws %&gt;%
+  mutate(Slmax = (g1*1000 - g0*1000) / (exp(1) * k*60))
+
+summary_slopes &lt;- combined_draws %&gt;%
+  group_by(Room_Temperature, Watering) %&gt;%
+  median_hdi(Slmax) %&gt;%
+  rename(Slmax_emmean = Slmax) %&gt;%
+  rename(Slmax_lower.HPD = .lower) %&gt;%
+  rename(Slmax_upper.HPD = .upper)
+
+summary_slopes &lt;- within(summary_slopes, {
+  Slmax_tabquant &lt;- paste0(round(Slmax_emmean, 3), &quot; [&quot;, 
+                           round(Slmax_lower.HPD, 3), &quot;, &quot;, 
+                           round(Slmax_upper.HPD, 3), &quot;]&quot;)
+  
+})
+
+li6800.i.param &lt;- left_join(li6800.i.param,
+                            summary_slopes %&gt;% select(Room_Temperature,
+                                                      Watering,
+                                                      Slmax_emmean,
+                                                      Slmax_lower.HPD,
+                                                      Slmax_upper.HPD,
+                                                      Slmax_tabquant))
+</code></pre>
+<pre><code>Joining with `by = join_by(Room_Temperature, Watering)`
+</code></pre>
+<pre><code class="language-r">li6800.i.param
+</code></pre>
+<pre><code>  Room_Temperature Watering    g0_emmean g0_lower.HPD g0_upper.HPD            g0_tabquant
+1        CER7_Heat      Lim  0.005715822  -0.01067725 0.0204419120   0.006 [-0.011, 0.02]
+2         CER8_Amb      Lim -0.015632347  -0.03456335 0.0004020862     -0.016 [-0.035, 0]
+3        CER7_Heat    Unlim -0.002984951  -0.02342396 0.0153516116 -0.003 [-0.023, 0.015]
+4         CER8_Amb    Unlim -0.004560178  -0.02633910 0.0152058786 -0.005 [-0.026, 0.015]
+  g1_emmean g1_lower.HPD g1_upper.HPD          g1_tabquant k_emmean k_lower.HPD
+1 0.3368347    0.3063949    0.3663453 0.337 [0.306, 0.366] 3.809266    3.328434
+2 0.2094931    0.1797629    0.2394620  0.209 [0.18, 0.239] 6.063799    5.437185
+3 0.3723058    0.3430099    0.4029144 0.372 [0.343, 0.403] 3.809266    3.328434
+4 0.3422122    0.3103194    0.3705435  0.342 [0.31, 0.371] 6.063799    5.437185
+  k_upper.HPD           k_tabquant lambda_emmean lambda_lower.HPD lambda_upper.HPD
+1    4.327638 3.809 [3.328, 4.328]       2.92598         2.053094         3.730533
+2    6.651428 6.064 [5.437, 6.651]       2.92598         2.053094         3.730533
+3    4.327638 3.809 [3.328, 4.328]       2.92598         2.053094         3.730533
+4    6.651428 6.064 [5.437, 6.651]       2.92598         2.053094         3.730533
+       lambda_tabquant Slmax_emmean Slmax_lower.HPD Slmax_upper.HPD       Slmax_tabquant
+1 2.926 [2.053, 3.731]    0.5335851       0.4546119       0.6180032 0.534 [0.455, 0.618]
+2 2.926 [2.053, 3.731]    0.2276378       0.1904763       0.2709143  0.228 [0.19, 0.271]
+3 2.926 [2.053, 3.731]    0.6045666       0.5244643       0.6958533 0.605 [0.524, 0.696]
+4 2.926 [2.053, 3.731]    0.3506607       0.3047004       0.4000952   0.351 [0.305, 0.4]
+</code></pre>
+<h3 id="sec:format-this-in-a-nicer-way-for-export-to-excel">Format this in a nicer way for export to Excel</h3>
+<pre><code class="language-r">li6800.i.export &lt;- li6800.i.param %&gt;% select(Room_Temperature, Watering, 
+                                             grep(&quot;tabquant&quot;, colnames(.))) %&gt;%
+  pivot_longer(cols = 3:ncol(.),
+               names_to = &quot;params&quot;,
+               values_to = &quot;values&quot;) %&gt;%
+  pivot_wider(names_from = c(&quot;Room_Temperature&quot;, &quot;Watering&quot;),
+              values_from = &quot;values&quot;)
+li6800.i.export
+</code></pre>
+<pre><code># A tibble: 5 × 5
+  params          CER7_Heat_Lim        CER8_Amb_Lim         CER7_Heat_Unlim CER8_Amb_Unlim
+  &lt;chr&gt;           &lt;chr&gt;                &lt;chr&gt;                &lt;chr&gt;           &lt;chr&gt;         
+1 g0_tabquant     0.006 [-0.011, 0.02] -0.016 [-0.035, 0]   -0.003 [-0.023… -0.005 [-0.02…
+2 g1_tabquant     0.337 [0.306, 0.366] 0.209 [0.18, 0.239]  0.372 [0.343, … 0.342 [0.31, …
+3 k_tabquant      3.809 [3.328, 4.328] 6.064 [5.437, 6.651] 3.809 [3.328, … 6.064 [5.437,…
+4 lambda_tabquant 2.926 [2.053, 3.731] 2.926 [2.053, 3.731] 2.926 [2.053, … 2.926 [2.053,…
+5 Slmax_tabquant  0.534 [0.455, 0.618] 0.228 [0.19, 0.271]  0.605 [0.524, … 0.351 [0.305,…
+</code></pre>
+<h3 id="sec:save-data-and-export">Save data and export</h3>
+<pre><code class="language-r">save.image(saveFile)
+write.csv(li6800.i.export, &quot;../data/li6800.i.param.export.csv&quot;, row.names = FALSE)
+</code></pre>
+</div>
+<script src="https://cdn.jsdelivr.net/npm/prismjs@1.29.0/components/prism-core.min.js" defer></script>
+<script src="https://cdn.jsdelivr.net/npm/prismjs@1.29.0/plugins/autoloader/prism-autoloader.min.js" defer></script>
+</body>
+</html>

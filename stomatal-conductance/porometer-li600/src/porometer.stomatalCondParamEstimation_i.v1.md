@@ -1,0 +1,1064 @@
+---
+output:
+  pdf_document: default
+  html_document: default
+---
+# Wheat stomatal kinetics (heat & drought)
+## --- Ed Chaplin (USyd), *Apr--June 2025* ---
+### Li-600 STOMATAL CONDUCTANCE MODEL PARAMETER ESTIMATION - LIGHT OFF TO LIGHT ON (INCREASE)
+
+* Using the final model fitted to the data, obtain the parameters of interest
+* These include: 
+* k_i, being the time constant for gs to increase to Gsmax
+* lambda, being the lag in the response time of gs to a step increase in light
+* g0, being the starting value of the gs response (intercept/lower asymptote)
+* g1, being the upper asymptote of the gs response (this will be used to calculate iWUE)
+* Slmax, a derived trait from McAusland paper
+* 
+
+### Load the libraries
+
+
+``` r
+library(knitr)
+#knitr::spin("porometer.stomatalCondParamEstimation_i.v1.r")
+library(ggplot2)
+opts_chunk$set("tidy" = FALSE, "dev" = "png", "dpi" = 300, 
+               "fig.width" = 7.5, "fig.height" = 10, "comment"=NA, fig.path = "figures/increase/")
+library(dae)
+library(dplyr)
+library(brms) ##package used to fit bayesian regression model using Stan
+library(tidyr)
+library(emmeans)
+library(tidybayes)
+```
+
+### Set up constants and files
+
+
+``` r
+options(width=90)
+load("../data/porometer.anal_i.v1.Rdata")
+saveFile <- "../data/stomatalCondParamEstimation_porometer_i.v1.Rdata"
+```
+
+### Have a look at the final model summary and store fixed effects
+
+
+``` r
+summary(fit_on_final)
+```
+
+```
+ Family: gaussian 
+  Links: mu = identity 
+Formula: gsw ~ g0 + (g1 - g0) * exp(-exp(((lambda - time.adj)/k) + 1)) 
+         g0 ~ 1 + Line * Device_Watering * Room_Temperature + (1 | CEBRoom:CEBSide:CEBLocation + CEBRoom:CEBSide:CEBLocation:CEBSubUnit + CEBRoom:CEBSide:CEBLocation:CEBSubUnit:CEBCell)
+         g1 ~ 1 + Line + Device_Watering + Room_Temperature + Line:Device_Watering + Device_Watering:Room_Temperature + (1 | CEBRoom:CEBSide:CEBLocation + CEBRoom:CEBSide:CEBLocation:CEBSubUnit + CEBRoom:CEBSide:CEBLocation:CEBSubUnit:CEBCell)
+         k ~ 1 + Line
+         lambda ~ 1
+   Data: li600.on.dat (Number of observations: 1682) 
+  Draws: 6 chains, each with iter = 10000; warmup = 6000; thin = 1;
+         total post-warmup draws = 24000
+
+Multilevel Hyperparameters:
+~CEBRoom:CEBSide:CEBLocation (Number of levels: 8) 
+                 Estimate Est.Error l-95% CI u-95% CI Rhat Bulk_ESS Tail_ESS
+sd(g0_Intercept)     0.02      0.02     0.00     0.06 1.00     6963    11013
+sd(g1_Intercept)     0.03      0.03     0.00     0.10 1.00     9505    13168
+
+~CEBRoom:CEBSide:CEBLocation:CEBSubUnit (Number of levels: 16) 
+                 Estimate Est.Error l-95% CI u-95% CI Rhat Bulk_ESS Tail_ESS
+sd(g0_Intercept)     0.05      0.01     0.02     0.08 1.00     7495    10063
+sd(g1_Intercept)     0.09      0.03     0.06     0.15 1.00     6857    11296
+
+~CEBRoom:CEBSide:CEBLocation:CEBSubUnit:CEBCell (Number of levels: 159) 
+                 Estimate Est.Error l-95% CI u-95% CI Rhat Bulk_ESS Tail_ESS
+sd(g0_Intercept)     0.01      0.01     0.00     0.02 1.00     9583    11234
+sd(g1_Intercept)     0.09      0.01     0.08     0.11 1.00     7107    13229
+
+Regression Coefficients:
+                                                                                          Estimate
+g0_Intercept                                                                                  0.01
+g0_LinePBI17N002M0CM0NM0NM010NM16N                                                           -0.00
+g0_LinePBI17N006M0NM0NM89N                                                                   -0.00
+g0_LinePBI17N007M0CM0NM0NM010NM8N                                                             0.02
+g0_LinePBI17N013M0CM0NM0NM010NM8N                                                             0.02
+g0_LinePBI17N016M0CM0NM0NM010NM27N                                                           -0.01
+g0_LinePBI19N007M0NM3N                                                                       -0.01
+g0_LinePBIC15034M0CM24NM010NM1NM0N                                                           -0.01
+g0_LineROCKSTAR                                                                              -0.01
+g0_LineSUNCHASER                                                                              0.01
+g0_Device_WateringD2_Limited                                                                  0.03
+g0_Room_TemperatureCER8_Ambient                                                              -0.01
+g0_LinePBI17N002M0CM0NM0NM010NM16N:Device_WateringD2_Limited                                 -0.02
+g0_LinePBI17N006M0NM0NM89N:Device_WateringD2_Limited                                         -0.01
+g0_LinePBI17N007M0CM0NM0NM010NM8N:Device_WateringD2_Limited                                  -0.01
+g0_LinePBI17N013M0CM0NM0NM010NM8N:Device_WateringD2_Limited                                   0.01
+g0_LinePBI17N016M0CM0NM0NM010NM27N:Device_WateringD2_Limited                                 -0.00
+g0_LinePBI19N007M0NM3N:Device_WateringD2_Limited                                             -0.01
+g0_LinePBIC15034M0CM24NM010NM1NM0N:Device_WateringD2_Limited                                  0.04
+g0_LineROCKSTAR:Device_WateringD2_Limited                                                    -0.01
+g0_LineSUNCHASER:Device_WateringD2_Limited                                                    0.03
+g0_LinePBI17N002M0CM0NM0NM010NM16N:Room_TemperatureCER8_Ambient                               0.00
+g0_LinePBI17N006M0NM0NM89N:Room_TemperatureCER8_Ambient                                       0.00
+g0_LinePBI17N007M0CM0NM0NM010NM8N:Room_TemperatureCER8_Ambient                               -0.01
+g0_LinePBI17N013M0CM0NM0NM010NM8N:Room_TemperatureCER8_Ambient                                0.01
+g0_LinePBI17N016M0CM0NM0NM010NM27N:Room_TemperatureCER8_Ambient                              -0.00
+g0_LinePBI19N007M0NM3N:Room_TemperatureCER8_Ambient                                          -0.01
+g0_LinePBIC15034M0CM24NM010NM1NM0N:Room_TemperatureCER8_Ambient                               0.01
+g0_LineROCKSTAR:Room_TemperatureCER8_Ambient                                                  0.00
+g0_LineSUNCHASER:Room_TemperatureCER8_Ambient                                                -0.02
+g0_Device_WateringD2_Limited:Room_TemperatureCER8_Ambient                                     0.00
+g0_LinePBI17N002M0CM0NM0NM010NM16N:Device_WateringD2_Limited:Room_TemperatureCER8_Ambient    -0.01
+g0_LinePBI17N006M0NM0NM89N:Device_WateringD2_Limited:Room_TemperatureCER8_Ambient             0.00
+g0_LinePBI17N007M0CM0NM0NM010NM8N:Device_WateringD2_Limited:Room_TemperatureCER8_Ambient     -0.00
+g0_LinePBI17N013M0CM0NM0NM010NM8N:Device_WateringD2_Limited:Room_TemperatureCER8_Ambient      0.01
+g0_LinePBI17N016M0CM0NM0NM010NM27N:Device_WateringD2_Limited:Room_TemperatureCER8_Ambient    -0.00
+g0_LinePBI19N007M0NM3N:Device_WateringD2_Limited:Room_TemperatureCER8_Ambient                -0.00
+g0_LinePBIC15034M0CM24NM010NM1NM0N:Device_WateringD2_Limited:Room_TemperatureCER8_Ambient     0.01
+g0_LineROCKSTAR:Device_WateringD2_Limited:Room_TemperatureCER8_Ambient                       -0.00
+g0_LineSUNCHASER:Device_WateringD2_Limited:Room_TemperatureCER8_Ambient                      -0.01
+g1_Intercept                                                                                  0.23
+g1_LinePBI17N002M0CM0NM0NM010NM16N                                                            0.01
+g1_LinePBI17N006M0NM0NM89N                                                                    0.09
+g1_LinePBI17N007M0CM0NM0NM010NM8N                                                             0.08
+g1_LinePBI17N013M0CM0NM0NM010NM8N                                                             0.05
+g1_LinePBI17N016M0CM0NM0NM010NM27N                                                           -0.02
+g1_LinePBI19N007M0NM3N                                                                        0.13
+g1_LinePBIC15034M0CM24NM010NM1NM0N                                                            0.10
+g1_LineROCKSTAR                                                                               0.11
+g1_LineSUNCHASER                                                                              0.09
+g1_Device_WateringD2_Limited                                                                 -0.14
+g1_Room_TemperatureCER8_Ambient                                                               0.01
+g1_LinePBI17N002M0CM0NM0NM010NM16N:Device_WateringD2_Limited                                  0.12
+g1_LinePBI17N006M0NM0NM89N:Device_WateringD2_Limited                                          0.23
+g1_LinePBI17N007M0CM0NM0NM010NM8N:Device_WateringD2_Limited                                  -0.03
+g1_LinePBI17N013M0CM0NM0NM010NM8N:Device_WateringD2_Limited                                   0.19
+g1_LinePBI17N016M0CM0NM0NM010NM27N:Device_WateringD2_Limited                                  0.25
+g1_LinePBI19N007M0NM3N:Device_WateringD2_Limited                                              0.16
+g1_LinePBIC15034M0CM24NM010NM1NM0N:Device_WateringD2_Limited                                  0.08
+g1_LineROCKSTAR:Device_WateringD2_Limited                                                     0.16
+g1_LineSUNCHASER:Device_WateringD2_Limited                                                    0.18
+g1_Device_WateringD2_Limited:Room_TemperatureCER8_Ambient                                     0.04
+k_Intercept                                                                                   2.03
+k_LinePBI17N002M0CM0NM0NM010NM16N                                                             2.12
+k_LinePBI17N006M0NM0NM89N                                                                     1.13
+k_LinePBI17N007M0CM0NM0NM010NM8N                                                              0.50
+k_LinePBI17N013M0CM0NM0NM010NM8N                                                              0.15
+k_LinePBI17N016M0CM0NM0NM010NM27N                                                             2.15
+k_LinePBI19N007M0NM3N                                                                         4.68
+k_LinePBIC15034M0CM24NM010NM1NM0N                                                             5.22
+k_LineROCKSTAR                                                                                3.11
+k_LineSUNCHASER                                                                               3.98
+lambda_Intercept                                                                              5.47
+                                                                                          Est.Error
+g0_Intercept                                                                                   0.01
+g0_LinePBI17N002M0CM0NM0NM010NM16N                                                             0.01
+g0_LinePBI17N006M0NM0NM89N                                                                     0.01
+g0_LinePBI17N007M0CM0NM0NM010NM8N                                                              0.01
+g0_LinePBI17N013M0CM0NM0NM010NM8N                                                              0.01
+g0_LinePBI17N016M0CM0NM0NM010NM27N                                                             0.01
+g0_LinePBI19N007M0NM3N                                                                         0.01
+g0_LinePBIC15034M0CM24NM010NM1NM0N                                                             0.01
+g0_LineROCKSTAR                                                                                0.01
+g0_LineSUNCHASER                                                                               0.01
+g0_Device_WateringD2_Limited                                                                   0.02
+g0_Room_TemperatureCER8_Ambient                                                                0.02
+g0_LinePBI17N002M0CM0NM0NM010NM16N:Device_WateringD2_Limited                                   0.02
+g0_LinePBI17N006M0NM0NM89N:Device_WateringD2_Limited                                           0.02
+g0_LinePBI17N007M0CM0NM0NM010NM8N:Device_WateringD2_Limited                                    0.02
+g0_LinePBI17N013M0CM0NM0NM010NM8N:Device_WateringD2_Limited                                    0.02
+g0_LinePBI17N016M0CM0NM0NM010NM27N:Device_WateringD2_Limited                                   0.02
+g0_LinePBI19N007M0NM3N:Device_WateringD2_Limited                                               0.02
+g0_LinePBIC15034M0CM24NM010NM1NM0N:Device_WateringD2_Limited                                   0.02
+g0_LineROCKSTAR:Device_WateringD2_Limited                                                      0.02
+g0_LineSUNCHASER:Device_WateringD2_Limited                                                     0.02
+g0_LinePBI17N002M0CM0NM0NM010NM16N:Room_TemperatureCER8_Ambient                                0.02
+g0_LinePBI17N006M0NM0NM89N:Room_TemperatureCER8_Ambient                                        0.02
+g0_LinePBI17N007M0CM0NM0NM010NM8N:Room_TemperatureCER8_Ambient                                 0.02
+g0_LinePBI17N013M0CM0NM0NM010NM8N:Room_TemperatureCER8_Ambient                                 0.02
+g0_LinePBI17N016M0CM0NM0NM010NM27N:Room_TemperatureCER8_Ambient                                0.02
+g0_LinePBI19N007M0NM3N:Room_TemperatureCER8_Ambient                                            0.02
+g0_LinePBIC15034M0CM24NM010NM1NM0N:Room_TemperatureCER8_Ambient                                0.02
+g0_LineROCKSTAR:Room_TemperatureCER8_Ambient                                                   0.02
+g0_LineSUNCHASER:Room_TemperatureCER8_Ambient                                                  0.02
+g0_Device_WateringD2_Limited:Room_TemperatureCER8_Ambient                                      0.02
+g0_LinePBI17N002M0CM0NM0NM010NM16N:Device_WateringD2_Limited:Room_TemperatureCER8_Ambient      0.02
+g0_LinePBI17N006M0NM0NM89N:Device_WateringD2_Limited:Room_TemperatureCER8_Ambient              0.02
+g0_LinePBI17N007M0CM0NM0NM010NM8N:Device_WateringD2_Limited:Room_TemperatureCER8_Ambient       0.02
+g0_LinePBI17N013M0CM0NM0NM010NM8N:Device_WateringD2_Limited:Room_TemperatureCER8_Ambient       0.02
+g0_LinePBI17N016M0CM0NM0NM010NM27N:Device_WateringD2_Limited:Room_TemperatureCER8_Ambient      0.02
+g0_LinePBI19N007M0NM3N:Device_WateringD2_Limited:Room_TemperatureCER8_Ambient                  0.02
+g0_LinePBIC15034M0CM24NM010NM1NM0N:Device_WateringD2_Limited:Room_TemperatureCER8_Ambient      0.02
+g0_LineROCKSTAR:Device_WateringD2_Limited:Room_TemperatureCER8_Ambient                         0.02
+g0_LineSUNCHASER:Device_WateringD2_Limited:Room_TemperatureCER8_Ambient                        0.02
+g1_Intercept                                                                                   0.05
+g1_LinePBI17N002M0CM0NM0NM010NM16N                                                             0.04
+g1_LinePBI17N006M0NM0NM89N                                                                     0.04
+g1_LinePBI17N007M0CM0NM0NM010NM8N                                                              0.04
+g1_LinePBI17N013M0CM0NM0NM010NM8N                                                              0.04
+g1_LinePBI17N016M0CM0NM0NM010NM27N                                                             0.04
+g1_LinePBI19N007M0NM3N                                                                         0.04
+g1_LinePBIC15034M0CM24NM010NM1NM0N                                                             0.04
+g1_LineROCKSTAR                                                                                0.04
+g1_LineSUNCHASER                                                                               0.04
+g1_Device_WateringD2_Limited                                                                   0.07
+g1_Room_TemperatureCER8_Ambient                                                                0.06
+g1_LinePBI17N002M0CM0NM0NM010NM16N:Device_WateringD2_Limited                                   0.06
+g1_LinePBI17N006M0NM0NM89N:Device_WateringD2_Limited                                           0.05
+g1_LinePBI17N007M0CM0NM0NM010NM8N:Device_WateringD2_Limited                                    0.06
+g1_LinePBI17N013M0CM0NM0NM010NM8N:Device_WateringD2_Limited                                    0.06
+g1_LinePBI17N016M0CM0NM0NM010NM27N:Device_WateringD2_Limited                                   0.06
+g1_LinePBI19N007M0NM3N:Device_WateringD2_Limited                                               0.05
+g1_LinePBIC15034M0CM24NM010NM1NM0N:Device_WateringD2_Limited                                   0.06
+g1_LineROCKSTAR:Device_WateringD2_Limited                                                      0.06
+g1_LineSUNCHASER:Device_WateringD2_Limited                                                     0.06
+g1_Device_WateringD2_Limited:Room_TemperatureCER8_Ambient                                      0.08
+k_Intercept                                                                                    0.32
+k_LinePBI17N002M0CM0NM0NM010NM16N                                                              0.73
+k_LinePBI17N006M0NM0NM89N                                                                      0.39
+k_LinePBI17N007M0CM0NM0NM010NM8N                                                               0.34
+k_LinePBI17N013M0CM0NM0NM010NM8N                                                               0.14
+k_LinePBI17N016M0CM0NM0NM010NM27N                                                              0.55
+k_LinePBI19N007M0NM3N                                                                          0.63
+k_LinePBIC15034M0CM24NM010NM1NM0N                                                              0.96
+k_LineROCKSTAR                                                                                 0.57
+k_LineSUNCHASER                                                                                0.86
+lambda_Intercept                                                                               0.45
+                                                                                          l-95% CI
+g0_Intercept                                                                                 -0.02
+g0_LinePBI17N002M0CM0NM0NM010NM16N                                                           -0.03
+g0_LinePBI17N006M0NM0NM89N                                                                   -0.03
+g0_LinePBI17N007M0CM0NM0NM010NM8N                                                            -0.01
+g0_LinePBI17N013M0CM0NM0NM010NM8N                                                            -0.01
+g0_LinePBI17N016M0CM0NM0NM010NM27N                                                           -0.04
+g0_LinePBI19N007M0NM3N                                                                       -0.04
+g0_LinePBIC15034M0CM24NM010NM1NM0N                                                           -0.03
+g0_LineROCKSTAR                                                                              -0.03
+g0_LineSUNCHASER                                                                             -0.02
+g0_Device_WateringD2_Limited                                                                 -0.00
+g0_Room_TemperatureCER8_Ambient                                                              -0.04
+g0_LinePBI17N002M0CM0NM0NM010NM16N:Device_WateringD2_Limited                                 -0.05
+g0_LinePBI17N006M0NM0NM89N:Device_WateringD2_Limited                                         -0.04
+g0_LinePBI17N007M0CM0NM0NM010NM8N:Device_WateringD2_Limited                                  -0.04
+g0_LinePBI17N013M0CM0NM0NM010NM8N:Device_WateringD2_Limited                                  -0.03
+g0_LinePBI17N016M0CM0NM0NM010NM27N:Device_WateringD2_Limited                                 -0.04
+g0_LinePBI19N007M0NM3N:Device_WateringD2_Limited                                             -0.04
+g0_LinePBIC15034M0CM24NM010NM1NM0N:Device_WateringD2_Limited                                  0.00
+g0_LineROCKSTAR:Device_WateringD2_Limited                                                    -0.04
+g0_LineSUNCHASER:Device_WateringD2_Limited                                                    0.00
+g0_LinePBI17N002M0CM0NM0NM010NM16N:Room_TemperatureCER8_Ambient                              -0.03
+g0_LinePBI17N006M0NM0NM89N:Room_TemperatureCER8_Ambient                                      -0.03
+g0_LinePBI17N007M0CM0NM0NM010NM8N:Room_TemperatureCER8_Ambient                               -0.04
+g0_LinePBI17N013M0CM0NM0NM010NM8N:Room_TemperatureCER8_Ambient                               -0.02
+g0_LinePBI17N016M0CM0NM0NM010NM27N:Room_TemperatureCER8_Ambient                              -0.03
+g0_LinePBI19N007M0NM3N:Room_TemperatureCER8_Ambient                                          -0.04
+g0_LinePBIC15034M0CM24NM010NM1NM0N:Room_TemperatureCER8_Ambient                              -0.02
+g0_LineROCKSTAR:Room_TemperatureCER8_Ambient                                                 -0.03
+g0_LineSUNCHASER:Room_TemperatureCER8_Ambient                                                -0.05
+g0_Device_WateringD2_Limited:Room_TemperatureCER8_Ambient                                    -0.03
+g0_LinePBI17N002M0CM0NM0NM010NM16N:Device_WateringD2_Limited:Room_TemperatureCER8_Ambient    -0.04
+g0_LinePBI17N006M0NM0NM89N:Device_WateringD2_Limited:Room_TemperatureCER8_Ambient            -0.03
+g0_LinePBI17N007M0CM0NM0NM010NM8N:Device_WateringD2_Limited:Room_TemperatureCER8_Ambient     -0.04
+g0_LinePBI17N013M0CM0NM0NM010NM8N:Device_WateringD2_Limited:Room_TemperatureCER8_Ambient     -0.03
+g0_LinePBI17N016M0CM0NM0NM010NM27N:Device_WateringD2_Limited:Room_TemperatureCER8_Ambient    -0.04
+g0_LinePBI19N007M0NM3N:Device_WateringD2_Limited:Room_TemperatureCER8_Ambient                -0.04
+g0_LinePBIC15034M0CM24NM010NM1NM0N:Device_WateringD2_Limited:Room_TemperatureCER8_Ambient    -0.03
+g0_LineROCKSTAR:Device_WateringD2_Limited:Room_TemperatureCER8_Ambient                       -0.04
+g0_LineSUNCHASER:Device_WateringD2_Limited:Room_TemperatureCER8_Ambient                      -0.04
+g1_Intercept                                                                                  0.12
+g1_LinePBI17N002M0CM0NM0NM010NM16N                                                           -0.07
+g1_LinePBI17N006M0NM0NM89N                                                                    0.02
+g1_LinePBI17N007M0CM0NM0NM010NM8N                                                            -0.00
+g1_LinePBI17N013M0CM0NM0NM010NM8N                                                            -0.03
+g1_LinePBI17N016M0CM0NM0NM010NM27N                                                           -0.10
+g1_LinePBI19N007M0NM3N                                                                        0.05
+g1_LinePBIC15034M0CM24NM010NM1NM0N                                                            0.02
+g1_LineROCKSTAR                                                                               0.03
+g1_LineSUNCHASER                                                                              0.01
+g1_Device_WateringD2_Limited                                                                 -0.26
+g1_Room_TemperatureCER8_Ambient                                                              -0.11
+g1_LinePBI17N002M0CM0NM0NM010NM16N:Device_WateringD2_Limited                                  0.01
+g1_LinePBI17N006M0NM0NM89N:Device_WateringD2_Limited                                          0.12
+g1_LinePBI17N007M0CM0NM0NM010NM8N:Device_WateringD2_Limited                                  -0.13
+g1_LinePBI17N013M0CM0NM0NM010NM8N:Device_WateringD2_Limited                                   0.08
+g1_LinePBI17N016M0CM0NM0NM010NM27N:Device_WateringD2_Limited                                  0.15
+g1_LinePBI19N007M0NM3N:Device_WateringD2_Limited                                              0.06
+g1_LinePBIC15034M0CM24NM010NM1NM0N:Device_WateringD2_Limited                                 -0.03
+g1_LineROCKSTAR:Device_WateringD2_Limited                                                     0.05
+g1_LineSUNCHASER:Device_WateringD2_Limited                                                    0.07
+g1_Device_WateringD2_Limited:Room_TemperatureCER8_Ambient                                    -0.11
+k_Intercept                                                                                   1.41
+k_LinePBI17N002M0CM0NM0NM010NM16N                                                             0.85
+k_LinePBI17N006M0NM0NM89N                                                                     0.41
+k_LinePBI17N007M0CM0NM0NM010NM8N                                                              0.03
+k_LinePBI17N013M0CM0NM0NM010NM8N                                                              0.00
+k_LinePBI17N016M0CM0NM0NM010NM27N                                                             1.13
+k_LinePBI19N007M0NM3N                                                                         3.52
+k_LinePBIC15034M0CM24NM010NM1NM0N                                                             3.46
+k_LineROCKSTAR                                                                                2.04
+k_LineSUNCHASER                                                                               2.44
+lambda_Intercept                                                                              4.54
+                                                                                          u-95% CI
+g0_Intercept                                                                                  0.03
+g0_LinePBI17N002M0CM0NM0NM010NM16N                                                            0.03
+g0_LinePBI17N006M0NM0NM89N                                                                    0.02
+g0_LinePBI17N007M0CM0NM0NM010NM8N                                                             0.05
+g0_LinePBI17N013M0CM0NM0NM010NM8N                                                             0.05
+g0_LinePBI17N016M0CM0NM0NM010NM27N                                                            0.02
+g0_LinePBI19N007M0NM3N                                                                        0.01
+g0_LinePBIC15034M0CM24NM010NM1NM0N                                                            0.02
+g0_LineROCKSTAR                                                                               0.02
+g0_LineSUNCHASER                                                                              0.04
+g0_Device_WateringD2_Limited                                                                  0.07
+g0_Room_TemperatureCER8_Ambient                                                               0.02
+g0_LinePBI17N002M0CM0NM0NM010NM16N:Device_WateringD2_Limited                                  0.02
+g0_LinePBI17N006M0NM0NM89N:Device_WateringD2_Limited                                          0.03
+g0_LinePBI17N007M0CM0NM0NM010NM8N:Device_WateringD2_Limited                                   0.03
+g0_LinePBI17N013M0CM0NM0NM010NM8N:Device_WateringD2_Limited                                   0.04
+g0_LinePBI17N016M0CM0NM0NM010NM27N:Device_WateringD2_Limited                                  0.03
+g0_LinePBI19N007M0NM3N:Device_WateringD2_Limited                                              0.03
+g0_LinePBIC15034M0CM24NM010NM1NM0N:Device_WateringD2_Limited                                  0.07
+g0_LineROCKSTAR:Device_WateringD2_Limited                                                     0.03
+g0_LineSUNCHASER:Device_WateringD2_Limited                                                    0.07
+g0_LinePBI17N002M0CM0NM0NM010NM16N:Room_TemperatureCER8_Ambient                               0.04
+g0_LinePBI17N006M0NM0NM89N:Room_TemperatureCER8_Ambient                                       0.04
+g0_LinePBI17N007M0CM0NM0NM010NM8N:Room_TemperatureCER8_Ambient                                0.02
+g0_LinePBI17N013M0CM0NM0NM010NM8N:Room_TemperatureCER8_Ambient                                0.04
+g0_LinePBI17N016M0CM0NM0NM010NM27N:Room_TemperatureCER8_Ambient                               0.03
+g0_LinePBI19N007M0NM3N:Room_TemperatureCER8_Ambient                                           0.02
+g0_LinePBIC15034M0CM24NM010NM1NM0N:Room_TemperatureCER8_Ambient                               0.04
+g0_LineROCKSTAR:Room_TemperatureCER8_Ambient                                                  0.03
+g0_LineSUNCHASER:Room_TemperatureCER8_Ambient                                                 0.01
+g0_Device_WateringD2_Limited:Room_TemperatureCER8_Ambient                                     0.04
+g0_LinePBI17N002M0CM0NM0NM010NM16N:Device_WateringD2_Limited:Room_TemperatureCER8_Ambient     0.03
+g0_LinePBI17N006M0NM0NM89N:Device_WateringD2_Limited:Room_TemperatureCER8_Ambient             0.04
+g0_LinePBI17N007M0CM0NM0NM010NM8N:Device_WateringD2_Limited:Room_TemperatureCER8_Ambient      0.03
+g0_LinePBI17N013M0CM0NM0NM010NM8N:Device_WateringD2_Limited:Room_TemperatureCER8_Ambient      0.05
+g0_LinePBI17N016M0CM0NM0NM010NM27N:Device_WateringD2_Limited:Room_TemperatureCER8_Ambient     0.03
+g0_LinePBI19N007M0NM3N:Device_WateringD2_Limited:Room_TemperatureCER8_Ambient                 0.03
+g0_LinePBIC15034M0CM24NM010NM1NM0N:Device_WateringD2_Limited:Room_TemperatureCER8_Ambient     0.05
+g0_LineROCKSTAR:Device_WateringD2_Limited:Room_TemperatureCER8_Ambient                        0.03
+g0_LineSUNCHASER:Device_WateringD2_Limited:Room_TemperatureCER8_Ambient                       0.03
+g1_Intercept                                                                                  0.33
+g1_LinePBI17N002M0CM0NM0NM010NM16N                                                            0.09
+g1_LinePBI17N006M0NM0NM89N                                                                    0.18
+g1_LinePBI17N007M0CM0NM0NM010NM8N                                                             0.16
+g1_LinePBI17N013M0CM0NM0NM010NM8N                                                             0.13
+g1_LinePBI17N016M0CM0NM0NM010NM27N                                                            0.07
+g1_LinePBI19N007M0NM3N                                                                        0.21
+g1_LinePBIC15034M0CM24NM010NM1NM0N                                                            0.18
+g1_LineROCKSTAR                                                                               0.19
+g1_LineSUNCHASER                                                                              0.18
+g1_Device_WateringD2_Limited                                                                  0.00
+g1_Room_TemperatureCER8_Ambient                                                               0.15
+g1_LinePBI17N002M0CM0NM0NM010NM16N:Device_WateringD2_Limited                                  0.23
+g1_LinePBI17N006M0NM0NM89N:Device_WateringD2_Limited                                          0.34
+g1_LinePBI17N007M0CM0NM0NM010NM8N:Device_WateringD2_Limited                                   0.08
+g1_LinePBI17N013M0CM0NM0NM010NM8N:Device_WateringD2_Limited                                   0.30
+g1_LinePBI17N016M0CM0NM0NM010NM27N:Device_WateringD2_Limited                                  0.36
+g1_LinePBI19N007M0NM3N:Device_WateringD2_Limited                                              0.27
+g1_LinePBIC15034M0CM24NM010NM1NM0N:Device_WateringD2_Limited                                  0.19
+g1_LineROCKSTAR:Device_WateringD2_Limited                                                     0.27
+g1_LineSUNCHASER:Device_WateringD2_Limited                                                    0.29
+g1_Device_WateringD2_Limited:Room_TemperatureCER8_Ambient                                     0.20
+k_Intercept                                                                                   2.69
+k_LinePBI17N002M0CM0NM0NM010NM16N                                                             3.74
+k_LinePBI17N006M0NM0NM89N                                                                     1.92
+k_LinePBI17N007M0CM0NM0NM010NM8N                                                              1.28
+k_LinePBI17N013M0CM0NM0NM010NM8N                                                              0.53
+k_LinePBI17N016M0CM0NM0NM010NM27N                                                             3.28
+k_LinePBI19N007M0NM3N                                                                         5.96
+k_LinePBIC15034M0CM24NM010NM1NM0N                                                             7.20
+k_LineROCKSTAR                                                                                4.29
+k_LineSUNCHASER                                                                               5.79
+lambda_Intercept                                                                              6.32
+                                                                                          Rhat
+g0_Intercept                                                                              1.00
+g0_LinePBI17N002M0CM0NM0NM010NM16N                                                        1.00
+g0_LinePBI17N006M0NM0NM89N                                                                1.00
+g0_LinePBI17N007M0CM0NM0NM010NM8N                                                         1.00
+g0_LinePBI17N013M0CM0NM0NM010NM8N                                                         1.00
+g0_LinePBI17N016M0CM0NM0NM010NM27N                                                        1.00
+g0_LinePBI19N007M0NM3N                                                                    1.00
+g0_LinePBIC15034M0CM24NM010NM1NM0N                                                        1.00
+g0_LineROCKSTAR                                                                           1.00
+g0_LineSUNCHASER                                                                          1.00
+g0_Device_WateringD2_Limited                                                              1.00
+g0_Room_TemperatureCER8_Ambient                                                           1.00
+g0_LinePBI17N002M0CM0NM0NM010NM16N:Device_WateringD2_Limited                              1.00
+g0_LinePBI17N006M0NM0NM89N:Device_WateringD2_Limited                                      1.00
+g0_LinePBI17N007M0CM0NM0NM010NM8N:Device_WateringD2_Limited                               1.00
+g0_LinePBI17N013M0CM0NM0NM010NM8N:Device_WateringD2_Limited                               1.00
+g0_LinePBI17N016M0CM0NM0NM010NM27N:Device_WateringD2_Limited                              1.00
+g0_LinePBI19N007M0NM3N:Device_WateringD2_Limited                                          1.00
+g0_LinePBIC15034M0CM24NM010NM1NM0N:Device_WateringD2_Limited                              1.00
+g0_LineROCKSTAR:Device_WateringD2_Limited                                                 1.00
+g0_LineSUNCHASER:Device_WateringD2_Limited                                                1.00
+g0_LinePBI17N002M0CM0NM0NM010NM16N:Room_TemperatureCER8_Ambient                           1.00
+g0_LinePBI17N006M0NM0NM89N:Room_TemperatureCER8_Ambient                                   1.00
+g0_LinePBI17N007M0CM0NM0NM010NM8N:Room_TemperatureCER8_Ambient                            1.00
+g0_LinePBI17N013M0CM0NM0NM010NM8N:Room_TemperatureCER8_Ambient                            1.00
+g0_LinePBI17N016M0CM0NM0NM010NM27N:Room_TemperatureCER8_Ambient                           1.00
+g0_LinePBI19N007M0NM3N:Room_TemperatureCER8_Ambient                                       1.00
+g0_LinePBIC15034M0CM24NM010NM1NM0N:Room_TemperatureCER8_Ambient                           1.00
+g0_LineROCKSTAR:Room_TemperatureCER8_Ambient                                              1.00
+g0_LineSUNCHASER:Room_TemperatureCER8_Ambient                                             1.00
+g0_Device_WateringD2_Limited:Room_TemperatureCER8_Ambient                                 1.00
+g0_LinePBI17N002M0CM0NM0NM010NM16N:Device_WateringD2_Limited:Room_TemperatureCER8_Ambient 1.00
+g0_LinePBI17N006M0NM0NM89N:Device_WateringD2_Limited:Room_TemperatureCER8_Ambient         1.00
+g0_LinePBI17N007M0CM0NM0NM010NM8N:Device_WateringD2_Limited:Room_TemperatureCER8_Ambient  1.00
+g0_LinePBI17N013M0CM0NM0NM010NM8N:Device_WateringD2_Limited:Room_TemperatureCER8_Ambient  1.00
+g0_LinePBI17N016M0CM0NM0NM010NM27N:Device_WateringD2_Limited:Room_TemperatureCER8_Ambient 1.00
+g0_LinePBI19N007M0NM3N:Device_WateringD2_Limited:Room_TemperatureCER8_Ambient             1.00
+g0_LinePBIC15034M0CM24NM010NM1NM0N:Device_WateringD2_Limited:Room_TemperatureCER8_Ambient 1.00
+g0_LineROCKSTAR:Device_WateringD2_Limited:Room_TemperatureCER8_Ambient                    1.00
+g0_LineSUNCHASER:Device_WateringD2_Limited:Room_TemperatureCER8_Ambient                   1.00
+g1_Intercept                                                                              1.00
+g1_LinePBI17N002M0CM0NM0NM010NM16N                                                        1.00
+g1_LinePBI17N006M0NM0NM89N                                                                1.00
+g1_LinePBI17N007M0CM0NM0NM010NM8N                                                         1.00
+g1_LinePBI17N013M0CM0NM0NM010NM8N                                                         1.00
+g1_LinePBI17N016M0CM0NM0NM010NM27N                                                        1.00
+g1_LinePBI19N007M0NM3N                                                                    1.00
+g1_LinePBIC15034M0CM24NM010NM1NM0N                                                        1.00
+g1_LineROCKSTAR                                                                           1.00
+g1_LineSUNCHASER                                                                          1.00
+g1_Device_WateringD2_Limited                                                              1.00
+g1_Room_TemperatureCER8_Ambient                                                           1.00
+g1_LinePBI17N002M0CM0NM0NM010NM16N:Device_WateringD2_Limited                              1.00
+g1_LinePBI17N006M0NM0NM89N:Device_WateringD2_Limited                                      1.00
+g1_LinePBI17N007M0CM0NM0NM010NM8N:Device_WateringD2_Limited                               1.00
+g1_LinePBI17N013M0CM0NM0NM010NM8N:Device_WateringD2_Limited                               1.00
+g1_LinePBI17N016M0CM0NM0NM010NM27N:Device_WateringD2_Limited                              1.00
+g1_LinePBI19N007M0NM3N:Device_WateringD2_Limited                                          1.00
+g1_LinePBIC15034M0CM24NM010NM1NM0N:Device_WateringD2_Limited                              1.00
+g1_LineROCKSTAR:Device_WateringD2_Limited                                                 1.00
+g1_LineSUNCHASER:Device_WateringD2_Limited                                                1.00
+g1_Device_WateringD2_Limited:Room_TemperatureCER8_Ambient                                 1.00
+k_Intercept                                                                               1.00
+k_LinePBI17N002M0CM0NM0NM010NM16N                                                         1.00
+k_LinePBI17N006M0NM0NM89N                                                                 1.00
+k_LinePBI17N007M0CM0NM0NM010NM8N                                                          1.00
+k_LinePBI17N013M0CM0NM0NM010NM8N                                                          1.00
+k_LinePBI17N016M0CM0NM0NM010NM27N                                                         1.00
+k_LinePBI19N007M0NM3N                                                                     1.00
+k_LinePBIC15034M0CM24NM010NM1NM0N                                                         1.00
+k_LineROCKSTAR                                                                            1.00
+k_LineSUNCHASER                                                                           1.00
+lambda_Intercept                                                                          1.00
+                                                                                          Bulk_ESS
+g0_Intercept                                                                                 21374
+g0_LinePBI17N002M0CM0NM0NM010NM16N                                                           33359
+g0_LinePBI17N006M0NM0NM89N                                                                   34740
+g0_LinePBI17N007M0CM0NM0NM010NM8N                                                            34771
+g0_LinePBI17N013M0CM0NM0NM010NM8N                                                            35655
+g0_LinePBI17N016M0CM0NM0NM010NM27N                                                           32398
+g0_LinePBI19N007M0NM3N                                                                       32076
+g0_LinePBIC15034M0CM24NM010NM1NM0N                                                           32546
+g0_LineROCKSTAR                                                                              31874
+g0_LineSUNCHASER                                                                             32576
+g0_Device_WateringD2_Limited                                                                 14681
+g0_Room_TemperatureCER8_Ambient                                                              23363
+g0_LinePBI17N002M0CM0NM0NM010NM16N:Device_WateringD2_Limited                                 38994
+g0_LinePBI17N006M0NM0NM89N:Device_WateringD2_Limited                                         42742
+g0_LinePBI17N007M0CM0NM0NM010NM8N:Device_WateringD2_Limited                                  40578
+g0_LinePBI17N013M0CM0NM0NM010NM8N:Device_WateringD2_Limited                                  40674
+g0_LinePBI17N016M0CM0NM0NM010NM27N:Device_WateringD2_Limited                                 39445
+g0_LinePBI19N007M0NM3N:Device_WateringD2_Limited                                             36801
+g0_LinePBIC15034M0CM24NM010NM1NM0N:Device_WateringD2_Limited                                 37478
+g0_LineROCKSTAR:Device_WateringD2_Limited                                                    38905
+g0_LineSUNCHASER:Device_WateringD2_Limited                                                   35010
+g0_LinePBI17N002M0CM0NM0NM010NM16N:Room_TemperatureCER8_Ambient                              37793
+g0_LinePBI17N006M0NM0NM89N:Room_TemperatureCER8_Ambient                                      40907
+g0_LinePBI17N007M0CM0NM0NM010NM8N:Room_TemperatureCER8_Ambient                               38269
+g0_LinePBI17N013M0CM0NM0NM010NM8N:Room_TemperatureCER8_Ambient                               37654
+g0_LinePBI17N016M0CM0NM0NM010NM27N:Room_TemperatureCER8_Ambient                              37029
+g0_LinePBI19N007M0NM3N:Room_TemperatureCER8_Ambient                                          33867
+g0_LinePBIC15034M0CM24NM010NM1NM0N:Room_TemperatureCER8_Ambient                              34421
+g0_LineROCKSTAR:Room_TemperatureCER8_Ambient                                                 38740
+g0_LineSUNCHASER:Room_TemperatureCER8_Ambient                                                34969
+g0_Device_WateringD2_Limited:Room_TemperatureCER8_Ambient                                    27535
+g0_LinePBI17N002M0CM0NM0NM010NM16N:Device_WateringD2_Limited:Room_TemperatureCER8_Ambient    40641
+g0_LinePBI17N006M0NM0NM89N:Device_WateringD2_Limited:Room_TemperatureCER8_Ambient            41087
+g0_LinePBI17N007M0CM0NM0NM010NM8N:Device_WateringD2_Limited:Room_TemperatureCER8_Ambient     41760
+g0_LinePBI17N013M0CM0NM0NM010NM8N:Device_WateringD2_Limited:Room_TemperatureCER8_Ambient     38157
+g0_LinePBI17N016M0CM0NM0NM010NM27N:Device_WateringD2_Limited:Room_TemperatureCER8_Ambient    40082
+g0_LinePBI19N007M0NM3N:Device_WateringD2_Limited:Room_TemperatureCER8_Ambient                40014
+g0_LinePBIC15034M0CM24NM010NM1NM0N:Device_WateringD2_Limited:Room_TemperatureCER8_Ambient    40476
+g0_LineROCKSTAR:Device_WateringD2_Limited:Room_TemperatureCER8_Ambient                       40652
+g0_LineSUNCHASER:Device_WateringD2_Limited:Room_TemperatureCER8_Ambient                      38947
+g1_Intercept                                                                                  8691
+g1_LinePBI17N002M0CM0NM0NM010NM16N                                                            7446
+g1_LinePBI17N006M0NM0NM89N                                                                    7400
+g1_LinePBI17N007M0CM0NM0NM010NM8N                                                             6840
+g1_LinePBI17N013M0CM0NM0NM010NM8N                                                             7300
+g1_LinePBI17N016M0CM0NM0NM010NM27N                                                            7440
+g1_LinePBI19N007M0NM3N                                                                        7969
+g1_LinePBIC15034M0CM24NM010NM1NM0N                                                            7484
+g1_LineROCKSTAR                                                                               7247
+g1_LineSUNCHASER                                                                              7062
+g1_Device_WateringD2_Limited                                                                  8662
+g1_Room_TemperatureCER8_Ambient                                                              10108
+g1_LinePBI17N002M0CM0NM0NM010NM16N:Device_WateringD2_Limited                                  8697
+g1_LinePBI17N006M0NM0NM89N:Device_WateringD2_Limited                                          8407
+g1_LinePBI17N007M0CM0NM0NM010NM8N:Device_WateringD2_Limited                                   8494
+g1_LinePBI17N013M0CM0NM0NM010NM8N:Device_WateringD2_Limited                                   8925
+g1_LinePBI17N016M0CM0NM0NM010NM27N:Device_WateringD2_Limited                                  8555
+g1_LinePBI19N007M0NM3N:Device_WateringD2_Limited                                              8986
+g1_LinePBIC15034M0CM24NM010NM1NM0N:Device_WateringD2_Limited                                  8070
+g1_LineROCKSTAR:Device_WateringD2_Limited                                                     8785
+g1_LineSUNCHASER:Device_WateringD2_Limited                                                    8505
+g1_Device_WateringD2_Limited:Room_TemperatureCER8_Ambient                                    12646
+k_Intercept                                                                                  18670
+k_LinePBI17N002M0CM0NM0NM010NM16N                                                            29382
+k_LinePBI17N006M0NM0NM89N                                                                    21077
+k_LinePBI17N007M0CM0NM0NM010NM8N                                                             18562
+k_LinePBI17N013M0CM0NM0NM010NM8N                                                             24341
+k_LinePBI17N016M0CM0NM0NM010NM27N                                                            27715
+k_LinePBI19N007M0NM3N                                                                        29291
+k_LinePBIC15034M0CM24NM010NM1NM0N                                                            28533
+k_LineROCKSTAR                                                                               29309
+k_LineSUNCHASER                                                                              28394
+lambda_Intercept                                                                             24884
+                                                                                          Tail_ESS
+g0_Intercept                                                                                 18377
+g0_LinePBI17N002M0CM0NM0NM010NM16N                                                           19700
+g0_LinePBI17N006M0NM0NM89N                                                                   17875
+g0_LinePBI17N007M0CM0NM0NM010NM8N                                                            20434
+g0_LinePBI17N013M0CM0NM0NM010NM8N                                                            19229
+g0_LinePBI17N016M0CM0NM0NM010NM27N                                                           18345
+g0_LinePBI19N007M0NM3N                                                                       19680
+g0_LinePBIC15034M0CM24NM010NM1NM0N                                                           19343
+g0_LineROCKSTAR                                                                              18439
+g0_LineSUNCHASER                                                                             18932
+g0_Device_WateringD2_Limited                                                                 15747
+g0_Room_TemperatureCER8_Ambient                                                              17530
+g0_LinePBI17N002M0CM0NM0NM010NM16N:Device_WateringD2_Limited                                 18962
+g0_LinePBI17N006M0NM0NM89N:Device_WateringD2_Limited                                         18068
+g0_LinePBI17N007M0CM0NM0NM010NM8N:Device_WateringD2_Limited                                  18754
+g0_LinePBI17N013M0CM0NM0NM010NM8N:Device_WateringD2_Limited                                  17797
+g0_LinePBI17N016M0CM0NM0NM010NM27N:Device_WateringD2_Limited                                 17987
+g0_LinePBI19N007M0NM3N:Device_WateringD2_Limited                                             17772
+g0_LinePBIC15034M0CM24NM010NM1NM0N:Device_WateringD2_Limited                                 20138
+g0_LineROCKSTAR:Device_WateringD2_Limited                                                    18454
+g0_LineSUNCHASER:Device_WateringD2_Limited                                                   18616
+g0_LinePBI17N002M0CM0NM0NM010NM16N:Room_TemperatureCER8_Ambient                              19011
+g0_LinePBI17N006M0NM0NM89N:Room_TemperatureCER8_Ambient                                      18830
+g0_LinePBI17N007M0CM0NM0NM010NM8N:Room_TemperatureCER8_Ambient                               19380
+g0_LinePBI17N013M0CM0NM0NM010NM8N:Room_TemperatureCER8_Ambient                               19274
+g0_LinePBI17N016M0CM0NM0NM010NM27N:Room_TemperatureCER8_Ambient                              18582
+g0_LinePBI19N007M0NM3N:Room_TemperatureCER8_Ambient                                          19088
+g0_LinePBIC15034M0CM24NM010NM1NM0N:Room_TemperatureCER8_Ambient                              19926
+g0_LineROCKSTAR:Room_TemperatureCER8_Ambient                                                 18773
+g0_LineSUNCHASER:Room_TemperatureCER8_Ambient                                                18410
+g0_Device_WateringD2_Limited:Room_TemperatureCER8_Ambient                                    18239
+g0_LinePBI17N002M0CM0NM0NM010NM16N:Device_WateringD2_Limited:Room_TemperatureCER8_Ambient    17788
+g0_LinePBI17N006M0NM0NM89N:Device_WateringD2_Limited:Room_TemperatureCER8_Ambient            18352
+g0_LinePBI17N007M0CM0NM0NM010NM8N:Device_WateringD2_Limited:Room_TemperatureCER8_Ambient     18833
+g0_LinePBI17N013M0CM0NM0NM010NM8N:Device_WateringD2_Limited:Room_TemperatureCER8_Ambient     17839
+g0_LinePBI17N016M0CM0NM0NM010NM27N:Device_WateringD2_Limited:Room_TemperatureCER8_Ambient    17755
+g0_LinePBI19N007M0NM3N:Device_WateringD2_Limited:Room_TemperatureCER8_Ambient                17878
+g0_LinePBIC15034M0CM24NM010NM1NM0N:Device_WateringD2_Limited:Room_TemperatureCER8_Ambient    17933
+g0_LineROCKSTAR:Device_WateringD2_Limited:Room_TemperatureCER8_Ambient                       18475
+g0_LineSUNCHASER:Device_WateringD2_Limited:Room_TemperatureCER8_Ambient                      17616
+g1_Intercept                                                                                 12643
+g1_LinePBI17N002M0CM0NM0NM010NM16N                                                           12161
+g1_LinePBI17N006M0NM0NM89N                                                                   10983
+g1_LinePBI17N007M0CM0NM0NM010NM8N                                                            11112
+g1_LinePBI17N013M0CM0NM0NM010NM8N                                                            12307
+g1_LinePBI17N016M0CM0NM0NM010NM27N                                                           12301
+g1_LinePBI19N007M0NM3N                                                                       12614
+g1_LinePBIC15034M0CM24NM010NM1NM0N                                                           12195
+g1_LineROCKSTAR                                                                              12034
+g1_LineSUNCHASER                                                                             11638
+g1_Device_WateringD2_Limited                                                                 10798
+g1_Room_TemperatureCER8_Ambient                                                              13099
+g1_LinePBI17N002M0CM0NM0NM010NM16N:Device_WateringD2_Limited                                 13247
+g1_LinePBI17N006M0NM0NM89N:Device_WateringD2_Limited                                         12780
+g1_LinePBI17N007M0CM0NM0NM010NM8N:Device_WateringD2_Limited                                  13186
+g1_LinePBI17N013M0CM0NM0NM010NM8N:Device_WateringD2_Limited                                  13000
+g1_LinePBI17N016M0CM0NM0NM010NM27N:Device_WateringD2_Limited                                 11160
+g1_LinePBI19N007M0NM3N:Device_WateringD2_Limited                                             13450
+g1_LinePBIC15034M0CM24NM010NM1NM0N:Device_WateringD2_Limited                                 12506
+g1_LineROCKSTAR:Device_WateringD2_Limited                                                    13301
+g1_LineSUNCHASER:Device_WateringD2_Limited                                                   13111
+g1_Device_WateringD2_Limited:Room_TemperatureCER8_Ambient                                    14805
+k_Intercept                                                                                  17156
+k_LinePBI17N002M0CM0NM0NM010NM16N                                                            14264
+k_LinePBI17N006M0NM0NM89N                                                                    12115
+k_LinePBI17N007M0CM0NM0NM010NM8N                                                             11291
+k_LinePBI17N013M0CM0NM0NM010NM8N                                                             12762
+k_LinePBI17N016M0CM0NM0NM010NM27N                                                            14969
+k_LinePBI19N007M0NM3N                                                                        19257
+k_LinePBIC15034M0CM24NM010NM1NM0N                                                            17573
+k_LineROCKSTAR                                                                               16698
+k_LineSUNCHASER                                                                              17917
+lambda_Intercept                                                                             15710
+
+Further Distributional Parameters:
+      Estimate Est.Error l-95% CI u-95% CI Rhat Bulk_ESS Tail_ESS
+sigma     0.08      0.00     0.08     0.09 1.00    31612    18569
+
+Draws were sampled using sampling(NUTS). For each parameter, Bulk_ESS
+and Tail_ESS are effective sample size measures, and Rhat is the potential
+scale reduction factor on split chains (at convergence, Rhat = 1).
+```
+
+### Build a dataframe of model parameters
+
+
+``` r
+li600.i.param <- expand.grid(Room_Temperature = levels(li600.on.dat$Room_Temperature),
+                             Device_Watering = levels(li600.on.dat$Device_Watering),
+                             Line = levels(li600.on.dat$Line))
+```
+
+### Use the emmeans package to get out the expected parameter estimates, along with HPD (credible intervals)
+
+
+``` r
+g0.emmeans <- as.data.frame(emmeans(fit_on_final,
+                                    ~ Room_Temperature * Device_Watering * Line,
+                                    nlpar = "g0"))
+g0.emmeans <- g0.emmeans %>% rename_with(~paste0("g0_", .x), 
+                                         -all_of(c("Room_Temperature", 
+                                                   "Device_Watering",
+                                                   "Line")))
+g0.emmeans <- within(g0.emmeans, {
+  g0_tabquant <- paste0("'", round(g0_emmean, 3), "\n[", 
+                        round(g0_lower.HPD, 3), ", ", 
+                        round(g0_upper.HPD, 3), "]'")
+  
+})
+li600.i.param <- left_join(li600.i.param, g0.emmeans)
+```
+
+```
+Joining with `by = join_by(Room_Temperature, Device_Watering, Line)`
+```
+
+``` r
+g1.emmeans <- as.data.frame(emmeans(fit_on_final,
+                                    ~ Room_Temperature * Device_Watering * Line,
+                                    nlpar = "g1"))
+g1.emmeans <- g1.emmeans %>% rename_with(~paste0("g1_", .x), 
+                                         -all_of(c("Room_Temperature", 
+                                                   "Device_Watering",
+                                                   "Line")))
+g1.emmeans <- within(g1.emmeans, {
+  g1_tabquant <- paste0("'", round(g1_emmean, 3), "\n[", 
+                        round(g1_lower.HPD, 3), ", ", 
+                        round(g1_upper.HPD, 3), "]'")
+  
+})
+li600.i.param <- left_join(li600.i.param, g1.emmeans)
+```
+
+```
+Joining with `by = join_by(Room_Temperature, Device_Watering, Line)`
+```
+
+``` r
+k.emmeans <- as.data.frame(emmeans(fit_on_final,
+                                    ~ Line,
+                                    nlpar = "k"))
+k.emmeans <- k.emmeans %>% rename_with(~paste0("k_", .x), 
+                                       -all_of(c("Line")))
+k.emmeans <- within(k.emmeans, {
+  k_tabquant <- paste0("'", round(k_emmean, 3), "\n[", 
+                        round(k_lower.HPD, 3), ", ", 
+                        round(k_upper.HPD, 3), "]'")
+  
+})
+li600.i.param <- left_join(li600.i.param, k.emmeans)
+```
+
+```
+Joining with `by = join_by(Line)`
+```
+
+``` r
+lambda.emmeans <- as.data.frame(emmeans(fit_on_final,
+                                   ~ 1,
+                                   nlpar = "lambda"))
+lambda.emmeans <- lambda.emmeans %>% rename_with(~paste0("lambda_", .x))
+lambda.emmeans <- within(lambda.emmeans, {
+  lambda_tabquant <- paste0("'", round(lambda_emmean, 3), "\n[", 
+                       round(lambda_lower.HPD, 3), ", ", 
+                       round(lambda_upper.HPD, 3), "]'")
+  
+})
+li600.i.param <- cbind(li600.i.param, data.frame(lambda.emmeans[,2:5]))
+```
+
+```
+Warning in data.frame(..., check.names = FALSE): row names were found from a short
+variable and have been discarded
+```
+
+### Using these parameters, calculate Slmax
+* Slmax looks to be reported in the units mmol m^-2 s^-2
+* This involves multiplying g1 and g0 by 1000 and also k by 60
+* I can calculate this using the posterior draws for each parameter and then combine them together
+
+
+``` r
+g0_draws <- emmeans(fit_on_final,
+                    ~ Room_Temperature * Device_Watering * Line,
+                    nlpar = "g0") %>%
+  gather_emmeans_draws()
+
+g1_draws <- emmeans(fit_on_final,
+                    ~ Room_Temperature * Device_Watering * Line,
+                    nlpar = "g1") %>%
+  gather_emmeans_draws()
+
+k_draws <- emmeans(fit_on_final,
+                   ~ Line,
+                   nlpar = "k") %>%
+  gather_emmeans_draws()
+
+combined_draws <- g0_draws %>%
+  rename(g0 = .value) %>%
+  left_join(g1_draws %>% rename(g1 = .value),
+            by = c(".draw", "Room_Temperature", "Device_Watering", "Line")) %>%
+  left_join(k_draws %>% rename(k = .value),
+            by = c(".draw", "Line"))
+
+combined_draws <- combined_draws %>%
+  mutate(Slmax = (g1*1000 - g0*1000) / (exp(1) * k*60))
+
+summary_slopes <- combined_draws %>%
+  group_by(Room_Temperature, Device_Watering, Line) %>%
+  median_hdi(Slmax) %>%
+  rename(Slmax_emmean = Slmax) %>%
+  rename(Slmax_lower.HPD = .lower) %>%
+  rename(Slmax_upper.HPD = .upper)
+
+summary_slopes <- within(summary_slopes, {
+  Slmax_tabquant <- paste0("'",round(Slmax_emmean, 3), "\n[", 
+                           round(Slmax_lower.HPD, 3), ", ", 
+                           round(Slmax_upper.HPD, 3), "]'")
+  
+})
+
+li600.i.param <- left_join(li600.i.param,
+                            summary_slopes %>% select(Room_Temperature,
+                                                      Device_Watering,
+                                                      Line,
+                                                      Slmax_emmean,
+                                                      Slmax_lower.HPD,
+                                                      Slmax_upper.HPD,
+                                                      Slmax_tabquant))
+```
+
+```
+Joining with `by = join_by(Room_Temperature, Device_Watering, Line)`
+```
+
+``` r
+li600.i.param
+```
+
+```
+   Room_Temperature Device_Watering                        Line     g0_emmean
+1         CER7_Heat    D1_Unlimited PBI16C009-0C-0N-0N-010N-14N  5.845269e-03
+2      CER8_Ambient    D1_Unlimited PBI16C009-0C-0N-0N-010N-14N -4.207326e-03
+3         CER7_Heat      D2_Limited PBI16C009-0C-0N-0N-010N-14N  4.117321e-02
+4      CER8_Ambient      D2_Limited PBI16C009-0C-0N-0N-010N-14N  3.606240e-02
+5         CER7_Heat    D1_Unlimited PBI17N002-0C-0N-0N-010N-16N  5.147822e-03
+6      CER8_Ambient    D1_Unlimited PBI17N002-0C-0N-0N-010N-16N  4.373239e-05
+7         CER7_Heat      D2_Limited PBI17N002-0C-0N-0N-010N-16N  2.340287e-02
+8      CER8_Ambient      D2_Limited PBI17N002-0C-0N-0N-010N-16N  1.657850e-02
+9         CER7_Heat    D1_Unlimited         PBI17N006-0N-0N-89N  2.022159e-03
+10     CER8_Ambient    D1_Unlimited         PBI17N006-0N-0N-89N -4.254068e-03
+11        CER7_Heat      D2_Limited         PBI17N006-0N-0N-89N  3.065694e-02
+12     CER8_Ambient      D2_Limited         PBI17N006-0N-0N-89N  3.115375e-02
+13        CER7_Heat    D1_Unlimited  PBI17N007-0C-0N-0N-010N-8N  2.572967e-02
+14     CER8_Ambient    D1_Unlimited  PBI17N007-0C-0N-0N-010N-8N  5.142990e-03
+15        CER7_Heat      D2_Limited  PBI17N007-0C-0N-0N-010N-8N  5.508361e-02
+16     CER8_Ambient      D2_Limited  PBI17N007-0C-0N-0N-010N-8N  3.484254e-02
+17        CER7_Heat    D1_Unlimited  PBI17N013-0C-0N-0N-010N-8N  2.282354e-02
+18     CER8_Ambient    D1_Unlimited  PBI17N013-0C-0N-0N-010N-8N  2.350839e-02
+19        CER7_Heat      D2_Limited  PBI17N013-0C-0N-0N-010N-8N  6.633263e-02
+20     CER8_Ambient      D2_Limited  PBI17N013-0C-0N-0N-010N-8N  8.178226e-02
+21        CER7_Heat    D1_Unlimited PBI17N016-0C-0N-0N-010N-27N -2.719761e-03
+22     CER8_Ambient    D1_Unlimited PBI17N016-0C-0N-0N-010N-27N -1.338192e-02
+23        CER7_Heat      D2_Limited PBI17N016-0C-0N-0N-010N-27N  2.748097e-02
+24     CER8_Ambient      D2_Limited PBI17N016-0C-0N-0N-010N-27N  2.062143e-02
+25        CER7_Heat    D1_Unlimited             PBI19N007-0N-3N -6.744578e-03
+26     CER8_Ambient    D1_Unlimited             PBI19N007-0N-3N -3.008506e-02
+27        CER7_Heat      D2_Limited             PBI19N007-0N-3N  2.248882e-02
+28     CER8_Ambient      D2_Limited             PBI19N007-0N-3N  1.765976e-03
+29        CER7_Heat    D1_Unlimited PBIC15034-0C-24N-010N-1N-0N -7.120785e-04
+30     CER8_Ambient    D1_Unlimited PBIC15034-0C-24N-010N-1N-0N -2.327329e-03
+31        CER7_Heat      D2_Limited PBIC15034-0C-24N-010N-1N-0N  7.179241e-02
+32     CER8_Ambient      D2_Limited PBIC15034-0C-24N-010N-1N-0N  8.510869e-02
+33        CER7_Heat    D1_Unlimited                    ROCKSTAR  3.805325e-04
+34     CER8_Ambient    D1_Unlimited                    ROCKSTAR -8.347621e-03
+35        CER7_Heat      D2_Limited                    ROCKSTAR  2.812548e-02
+36     CER8_Ambient      D2_Limited                    ROCKSTAR  2.049069e-02
+37        CER7_Heat    D1_Unlimited                   SUNCHASER  1.788555e-02
+38     CER8_Ambient    D1_Unlimited                   SUNCHASER -1.007259e-02
+39        CER7_Heat      D2_Limited                   SUNCHASER  8.794347e-02
+40     CER8_Ambient      D2_Limited                   SUNCHASER  5.936952e-02
+    g0_lower.HPD g0_upper.HPD               g0_tabquant  g1_emmean g1_lower.HPD
+1  -2.349100e-02   0.03398052  '0.006\n[-0.023, 0.034]' 0.23069664   0.12439640
+2  -4.173488e-02   0.03364476 '-0.004\n[-0.042, 0.034]' 0.24178339   0.13190921
+3   5.255663e-04   0.07808176   '0.041\n[0.001, 0.078]' 0.09041874  -0.02305576
+4  -1.138631e-02   0.08239123  '0.036\n[-0.011, 0.082]' 0.14406481   0.02381930
+5  -3.391187e-02   0.04363406  '0.005\n[-0.034, 0.044]' 0.23736939   0.11936471
+6  -4.809777e-02   0.05128947      '0\n[-0.048, 0.051]' 0.24791451   0.13054914
+7  -2.878915e-02   0.07661506  '0.023\n[-0.029, 0.077]' 0.21808503   0.10433045
+8  -4.676033e-02   0.07926938  '0.017\n[-0.047, 0.079]' 0.27220020   0.14510005
+9  -3.524251e-02   0.03970295   '0.002\n[-0.035, 0.04]' 0.32551614   0.20526026
+10 -5.374443e-02   0.04439992 '-0.004\n[-0.054, 0.044]' 0.33589459   0.21953383
+11 -2.460914e-02   0.08197569  '0.031\n[-0.025, 0.082]' 0.41342218   0.29735062
+12 -3.193933e-02   0.09782705  '0.031\n[-0.032, 0.098]' 0.46730967   0.34032000
+13 -1.239220e-02   0.06535468  '0.026\n[-0.012, 0.065]' 0.30803139   0.18881669
+14 -4.439833e-02   0.05513988  '0.005\n[-0.044, 0.055]' 0.31897288   0.20449008
+15 -1.595874e-06   0.10674007       '0.055\n[0, 0.107]' 0.14159239   0.02305184
+16 -2.629857e-02   0.10024382    '0.035\n[-0.026, 0.1]' 0.19606630   0.07089107
+17 -1.546988e-02   0.06216641  '0.023\n[-0.015, 0.062]' 0.28234604   0.16317630
+18 -2.582076e-02   0.07419390  '0.024\n[-0.026, 0.074]' 0.29368799   0.17416791
+19  1.130917e-02   0.12173458   '0.066\n[0.011, 0.122]' 0.33471686   0.21179236
+20  1.258632e-02   0.14678616   '0.082\n[0.013, 0.147]' 0.38762588   0.26215061
+21 -4.096327e-02   0.03537650 '-0.003\n[-0.041, 0.035]' 0.21424728   0.09677978
+22 -6.337786e-02   0.03613112 '-0.013\n[-0.063, 0.036]' 0.22443066   0.11021841
+23 -2.389767e-02   0.08019123   '0.027\n[-0.024, 0.08]' 0.32851473   0.20981584
+24 -4.443384e-02   0.08136956  '0.021\n[-0.044, 0.081]' 0.38231111   0.25833180
+25 -4.639670e-02   0.02958770  '-0.007\n[-0.046, 0.03]' 0.36282795   0.24231178
+26 -7.766643e-02   0.01831867  '-0.03\n[-0.078, 0.018]' 0.37323929   0.25598155
+27 -3.230700e-02   0.07442298  '0.022\n[-0.032, 0.074]' 0.38549996   0.27182939
+28 -6.084581e-02   0.06489176  '0.002\n[-0.061, 0.065]' 0.43932797   0.31305294
+29 -3.931113e-02   0.03765950 '-0.001\n[-0.039, 0.038]' 0.33062216   0.21382542
+30 -4.831684e-02   0.04808639 '-0.002\n[-0.048, 0.048]' 0.34250026   0.22605040
+31  1.845538e-02   0.12701378   '0.072\n[0.018, 0.127]' 0.26972436   0.15330027
+32  1.960111e-02   0.14872348    '0.085\n[0.02, 0.149]' 0.32352553   0.20178298
+33 -3.867625e-02   0.03812314      '0\n[-0.039, 0.038]' 0.33946563   0.21700195
+34 -5.562973e-02   0.04170390 '-0.008\n[-0.056, 0.042]' 0.35075216   0.23247469
+35 -2.576963e-02   0.07796517  '0.028\n[-0.026, 0.078]' 0.36250003   0.24439649
+36 -4.216734e-02   0.08067039   '0.02\n[-0.042, 0.081]' 0.41604133   0.29384787
+37 -2.178779e-02   0.05643281  '0.018\n[-0.022, 0.056]' 0.32417062   0.20394943
+38 -5.943074e-02   0.03817372  '-0.01\n[-0.059, 0.038]' 0.33462691   0.21538627
+39  3.178168e-02   0.14284380   '0.088\n[0.032, 0.143]' 0.36222523   0.24715914
+40 -4.254305e-03   0.12263272  '0.059\n[-0.004, 0.123]' 0.41619740   0.29495841
+   g1_upper.HPD             g1_tabquant k_emmean k_lower.HPD k_upper.HPD
+1     0.3290268 '0.231\n[0.124, 0.329]' 2.018804    1.400275    2.670959
+2     0.3531951 '0.242\n[0.132, 0.353]' 2.018804    1.400275    2.670959
+3     0.2034583 '0.09\n[-0.023, 0.203]' 2.018804    1.400275    2.670959
+4     0.2753736 '0.144\n[0.024, 0.275]' 2.018804    1.400275    2.670959
+5     0.3497541  '0.237\n[0.119, 0.35]' 4.079593    2.771912    5.691556
+6     0.3659392 '0.248\n[0.131, 0.366]' 4.079593    2.771912    5.691556
+7     0.3442974 '0.218\n[0.104, 0.344]' 4.079593    2.771912    5.691556
+8     0.4064358 '0.272\n[0.145, 0.406]' 4.079593    2.771912    5.691556
+9     0.4336722 '0.326\n[0.205, 0.434]' 3.146440    2.379462    4.008405
+10    0.4570781  '0.336\n[0.22, 0.457]' 3.146440    2.379462    4.008405
+11    0.5331744 '0.413\n[0.297, 0.533]' 3.146440    2.379462    4.008405
+12    0.6008451  '0.467\n[0.34, 0.601]' 3.146440    2.379462    4.008405
+13    0.4164781 '0.308\n[0.189, 0.416]' 2.511566    1.798587    3.342049
+14    0.4388659 '0.319\n[0.204, 0.439]' 2.511566    1.798587    3.342049
+15    0.2601385  '0.142\n[0.023, 0.26]' 2.511566    1.798587    3.342049
+16    0.3285812 '0.196\n[0.071, 0.329]' 2.511566    1.798587    3.342049
+17    0.3891799 '0.282\n[0.163, 0.389]' 2.164836    1.524443    2.858363
+18    0.4090314 '0.294\n[0.174, 0.409]' 2.164836    1.524443    2.858363
+19    0.4571963 '0.335\n[0.212, 0.457]' 2.164836    1.524443    2.858363
+20    0.5268947 '0.388\n[0.262, 0.527]' 2.164836    1.524443    2.858363
+21    0.3273444 '0.214\n[0.097, 0.327]' 4.160179    3.094038    5.282430
+22    0.3451855  '0.224\n[0.11, 0.345]' 4.160179    3.094038    5.282430
+23    0.4467413  '0.329\n[0.21, 0.447]' 4.160179    3.094038    5.282430
+24    0.5223268 '0.382\n[0.258, 0.522]' 4.160179    3.094038    5.282430
+25    0.4738687 '0.363\n[0.242, 0.474]' 6.679399    5.488080    8.058489
+26    0.4950517 '0.373\n[0.256, 0.495]' 6.679399    5.488080    8.058489
+27    0.5110698 '0.385\n[0.272, 0.511]' 6.679399    5.488080    8.058489
+28    0.5768105 '0.439\n[0.313, 0.577]' 6.679399    5.488080    8.058489
+29    0.4471346 '0.331\n[0.214, 0.447]' 7.207846    5.311068    9.142559
+30    0.4651559 '0.343\n[0.226, 0.465]' 7.207846    5.311068    9.142559
+31    0.3955102  '0.27\n[0.153, 0.396]' 7.207846    5.311068    9.142559
+32    0.4677168 '0.324\n[0.202, 0.468]' 7.207846    5.311068    9.142559
+33    0.4475802 '0.339\n[0.217, 0.448]' 5.120474    3.988411    6.324647
+34    0.4688709 '0.351\n[0.232, 0.469]' 5.120474    3.988411    6.324647
+35    0.4828541 '0.363\n[0.244, 0.483]' 5.120474    3.988411    6.324647
+36    0.5553542 '0.416\n[0.294, 0.555]' 5.120474    3.988411    6.324647
+37    0.4374858 '0.324\n[0.204, 0.437]' 5.952203    4.272297    7.702272
+38    0.4525652 '0.335\n[0.215, 0.453]' 5.952203    4.272297    7.702272
+39    0.4841496 '0.362\n[0.247, 0.484]' 5.952203    4.272297    7.702272
+40    0.5586134 '0.416\n[0.295, 0.559]' 5.952203    4.272297    7.702272
+                k_tabquant lambda_emmean lambda_lower.HPD lambda_upper.HPD
+1    '2.019\n[1.4, 2.671]'      5.482128         4.544177         6.325284
+2    '2.019\n[1.4, 2.671]'      5.482128         4.544177         6.325284
+3    '2.019\n[1.4, 2.671]'      5.482128         4.544177         6.325284
+4    '2.019\n[1.4, 2.671]'      5.482128         4.544177         6.325284
+5   '4.08\n[2.772, 5.692]'      5.482128         4.544177         6.325284
+6   '4.08\n[2.772, 5.692]'      5.482128         4.544177         6.325284
+7   '4.08\n[2.772, 5.692]'      5.482128         4.544177         6.325284
+8   '4.08\n[2.772, 5.692]'      5.482128         4.544177         6.325284
+9  '3.146\n[2.379, 4.008]'      5.482128         4.544177         6.325284
+10 '3.146\n[2.379, 4.008]'      5.482128         4.544177         6.325284
+11 '3.146\n[2.379, 4.008]'      5.482128         4.544177         6.325284
+12 '3.146\n[2.379, 4.008]'      5.482128         4.544177         6.325284
+13 '2.512\n[1.799, 3.342]'      5.482128         4.544177         6.325284
+14 '2.512\n[1.799, 3.342]'      5.482128         4.544177         6.325284
+15 '2.512\n[1.799, 3.342]'      5.482128         4.544177         6.325284
+16 '2.512\n[1.799, 3.342]'      5.482128         4.544177         6.325284
+17 '2.165\n[1.524, 2.858]'      5.482128         4.544177         6.325284
+18 '2.165\n[1.524, 2.858]'      5.482128         4.544177         6.325284
+19 '2.165\n[1.524, 2.858]'      5.482128         4.544177         6.325284
+20 '2.165\n[1.524, 2.858]'      5.482128         4.544177         6.325284
+21  '4.16\n[3.094, 5.282]'      5.482128         4.544177         6.325284
+22  '4.16\n[3.094, 5.282]'      5.482128         4.544177         6.325284
+23  '4.16\n[3.094, 5.282]'      5.482128         4.544177         6.325284
+24  '4.16\n[3.094, 5.282]'      5.482128         4.544177         6.325284
+25 '6.679\n[5.488, 8.058]'      5.482128         4.544177         6.325284
+26 '6.679\n[5.488, 8.058]'      5.482128         4.544177         6.325284
+27 '6.679\n[5.488, 8.058]'      5.482128         4.544177         6.325284
+28 '6.679\n[5.488, 8.058]'      5.482128         4.544177         6.325284
+29 '7.208\n[5.311, 9.143]'      5.482128         4.544177         6.325284
+30 '7.208\n[5.311, 9.143]'      5.482128         4.544177         6.325284
+31 '7.208\n[5.311, 9.143]'      5.482128         4.544177         6.325284
+32 '7.208\n[5.311, 9.143]'      5.482128         4.544177         6.325284
+33  '5.12\n[3.988, 6.325]'      5.482128         4.544177         6.325284
+34  '5.12\n[3.988, 6.325]'      5.482128         4.544177         6.325284
+35  '5.12\n[3.988, 6.325]'      5.482128         4.544177         6.325284
+36  '5.12\n[3.988, 6.325]'      5.482128         4.544177         6.325284
+37 '5.952\n[4.272, 7.702]'      5.482128         4.544177         6.325284
+38 '5.952\n[4.272, 7.702]'      5.482128         4.544177         6.325284
+39 '5.952\n[4.272, 7.702]'      5.482128         4.544177         6.325284
+40 '5.952\n[4.272, 7.702]'      5.482128         4.544177         6.325284
+           lambda_tabquant Slmax_emmean Slmax_lower.HPD Slmax_upper.HPD
+1  '5.482\n[4.544, 6.325]'    0.6794290      0.32013555       1.1074882
+2  '5.482\n[4.544, 6.325]'    0.7452611      0.35924306       1.2146830
+3  '5.482\n[4.544, 6.325]'    0.1505521     -0.22606947       0.5404211
+4  '5.482\n[4.544, 6.325]'    0.3284195     -0.07554399       0.7868139
+5  '5.482\n[4.544, 6.325]'    0.3447834      0.13101305       0.5735646
+6  '5.482\n[4.544, 6.325]'    0.3690321      0.15469209       0.6236939
+7  '5.482\n[4.544, 6.325]'    0.2894785      0.07440144       0.5307413
+8  '5.482\n[4.544, 6.325]'    0.3827931      0.14779160       0.6709269
+9  '5.482\n[4.544, 6.325]'    0.6270795      0.36332950       0.9346753
+10 '5.482\n[4.544, 6.325]'    0.6617134      0.38993857       0.9923271
+11 '5.482\n[4.544, 6.325]'    0.7455489      0.44921291       1.0898885
+12 '5.482\n[4.544, 6.325]'    0.8518269      0.50281490       1.2366796
+13 '5.482\n[4.544, 6.325]'    0.6863542      0.34133341       1.0704760
+14 '5.482\n[4.544, 6.325]'    0.7635721      0.40673643       1.1958894
+15 '5.482\n[4.544, 6.325]'    0.2122103     -0.10707243       0.5656989
+16 '5.482\n[4.544, 6.325]'    0.3937714      0.03854535       0.8049402
+17 '5.482\n[4.544, 6.325]'    0.7311242      0.34291114       1.1641792
+18 '5.482\n[4.544, 6.325]'    0.7623979      0.36904616       1.2409219
+19 '5.482\n[4.544, 6.325]'    0.7588531      0.34439446       1.2601294
+20 '5.482\n[4.544, 6.325]'    0.8711278      0.40579368       1.4361795
+21 '5.482\n[4.544, 6.325]'    0.3178259      0.13194818       0.5301781
+22 '5.482\n[4.544, 6.325]'    0.3496598      0.15086865       0.5708337
+23 '5.482\n[4.544, 6.325]'    0.4428561      0.22741155       0.6942774
+24 '5.482\n[4.544, 6.325]'    0.5356363      0.28900797       0.8186545
+25 '5.482\n[4.544, 6.325]'    0.3374271      0.21658260       0.4676256
+26 '5.482\n[4.544, 6.325]'    0.3694043      0.24409359       0.5063941
+27 '5.482\n[4.544, 6.325]'    0.3322649      0.20324054       0.4783026
+28 '5.482\n[4.544, 6.325]'    0.4026440      0.25979091       0.5716286
+29 '5.482\n[4.544, 6.325]'    0.2810495      0.16731590       0.4092626
+30 '5.482\n[4.544, 6.325]'    0.2917251      0.17295057       0.4302249
+31 '5.482\n[4.544, 6.325]'    0.1677780      0.04950134       0.3073544
+32 '5.482\n[4.544, 6.325]'    0.2035237      0.06583826       0.3564380
+33 '5.482\n[4.544, 6.325]'    0.4041522      0.24227871       0.5795692
+34 '5.482\n[4.544, 6.325]'    0.4284562      0.25798551       0.6157156
+35 '5.482\n[4.544, 6.325]'    0.3996154      0.23059252       0.5957849
+36 '5.482\n[4.544, 6.325]'    0.4755147      0.28110286       0.6957406
+37 '5.482\n[4.544, 6.325]'    0.3121895      0.16587219       0.4724046
+38 '5.482\n[4.544, 6.325]'    0.3529429      0.20278300       0.5289223
+39 '5.482\n[4.544, 6.325]'    0.2815461      0.12545637       0.4598956
+40 '5.482\n[4.544, 6.325]'    0.3669438      0.19703207       0.5855615
+             Slmax_tabquant
+1    '0.679\n[0.32, 1.107]'
+2   '0.745\n[0.359, 1.215]'
+3   '0.151\n[-0.226, 0.54]'
+4  '0.328\n[-0.076, 0.787]'
+5   '0.345\n[0.131, 0.574]'
+6   '0.369\n[0.155, 0.624]'
+7   '0.289\n[0.074, 0.531]'
+8   '0.383\n[0.148, 0.671]'
+9   '0.627\n[0.363, 0.935]'
+10   '0.662\n[0.39, 0.992]'
+11   '0.746\n[0.449, 1.09]'
+12  '0.852\n[0.503, 1.237]'
+13   '0.686\n[0.341, 1.07]'
+14  '0.764\n[0.407, 1.196]'
+15 '0.212\n[-0.107, 0.566]'
+16  '0.394\n[0.039, 0.805]'
+17  '0.731\n[0.343, 1.164]'
+18  '0.762\n[0.369, 1.241]'
+19   '0.759\n[0.344, 1.26]'
+20  '0.871\n[0.406, 1.436]'
+21   '0.318\n[0.132, 0.53]'
+22   '0.35\n[0.151, 0.571]'
+23  '0.443\n[0.227, 0.694]'
+24  '0.536\n[0.289, 0.819]'
+25  '0.337\n[0.217, 0.468]'
+26  '0.369\n[0.244, 0.506]'
+27  '0.332\n[0.203, 0.478]'
+28   '0.403\n[0.26, 0.572]'
+29  '0.281\n[0.167, 0.409]'
+30   '0.292\n[0.173, 0.43]'
+31   '0.168\n[0.05, 0.307]'
+32  '0.204\n[0.066, 0.356]'
+33   '0.404\n[0.242, 0.58]'
+34  '0.428\n[0.258, 0.616]'
+35    '0.4\n[0.231, 0.596]'
+36  '0.476\n[0.281, 0.696]'
+37  '0.312\n[0.166, 0.472]'
+38  '0.353\n[0.203, 0.529]'
+39   '0.282\n[0.125, 0.46]'
+40  '0.367\n[0.197, 0.586]'
+```
+
+### Format this in a nicer way for export to Excel
+Keep the columns in the same order as Li6800 results and order first by parameter and then Line
+
+
+``` r
+li600.i.export <- li600.i.param %>% select(Room_Temperature, Device_Watering, Line, 
+                                             grep("tabquant", colnames(.))) %>%
+  pivot_longer(cols = 4:ncol(.),
+               names_to = "params",
+               values_to = "values") %>%
+  pivot_wider(names_from = c("Room_Temperature", "Device_Watering"),
+              values_from = "values")
+li600.i.export$params <- factor(li600.i.export$params, levels = c("g0_tabquant",
+                                                                  "g1_tabquant",
+                                                                  "k_tabquant",
+                                                                  "lambda_tabquant",
+                                                                  "Slmax_tabquant"))
+li600.i.export <- li600.i.export %>% arrange(params, Line) %>%
+  select("params", "Line", "CER7_Heat_D2_Limited", "CER8_Ambient_D2_Limited", 
+         "CER7_Heat_D1_Unlimited", "CER8_Ambient_D1_Unlimited")
+li600.i.export
+```
+
+```
+# A tibble: 50 × 6
+   params      Line     CER7_Heat_D2_Limited CER8_Ambient_D2_Limi…¹ CER7_Heat_D1_Unlimited
+   <fct>       <fct>    <chr>                <chr>                  <chr>                 
+ 1 g0_tabquant PBI16C0… "'0.041\n[0.001, 0.… "'0.036\n[-0.011, 0.0… "'0.006\n[-0.023, 0.0…
+ 2 g0_tabquant PBI17N0… "'0.023\n[-0.029, 0… "'0.017\n[-0.047, 0.0… "'0.005\n[-0.034, 0.0…
+ 3 g0_tabquant PBI17N0… "'0.031\n[-0.025, 0… "'0.031\n[-0.032, 0.0… "'0.002\n[-0.035, 0.0…
+ 4 g0_tabquant PBI17N0… "'0.055\n[0, 0.107]… "'0.035\n[-0.026, 0.1… "'0.026\n[-0.012, 0.0…
+ 5 g0_tabquant PBI17N0… "'0.066\n[0.011, 0.… "'0.082\n[0.013, 0.14… "'0.023\n[-0.015, 0.0…
+ 6 g0_tabquant PBI17N0… "'0.027\n[-0.024, 0… "'0.021\n[-0.044, 0.0… "'-0.003\n[-0.041, 0.…
+ 7 g0_tabquant PBI19N0… "'0.022\n[-0.032, 0… "'0.002\n[-0.061, 0.0… "'-0.007\n[-0.046, 0.…
+ 8 g0_tabquant PBIC150… "'0.072\n[0.018, 0.… "'0.085\n[0.02, 0.149… "'-0.001\n[-0.039, 0.…
+ 9 g0_tabquant ROCKSTAR "'0.028\n[-0.026, 0… "'0.02\n[-0.042, 0.08… "'0\n[-0.039, 0.038]'"
+10 g0_tabquant SUNCHAS… "'0.088\n[0.032, 0.… "'0.059\n[-0.004, 0.1… "'0.018\n[-0.022, 0.0…
+#  40 more rows
+#  abbreviated name:CER8_Ambient_D2_Limited
+#  1 more variable: CER8_Ambient_D1_Unlimited <chr>
+```
+
+### Save data and export
+
+
+``` r
+save.image(saveFile)
+write.csv(li600.i.export, "../data/li600.i.param.export.csv", row.names = FALSE,
+          quote = TRUE)
+```
+

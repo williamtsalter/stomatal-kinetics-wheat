@@ -1,0 +1,17 @@
+Day,Line,Rep,Watering,Room,Date,Location,Done?,Data Used for Analyses?
+0,1,3,Unlimited,Ambient,20250611,C14,Yes,Yes
+1,1,1,Unlimited,Ambient,20250612,D4,Yes,Yes
+2,1,4,Limited,Heat,20250613,E7,Yes,No
+3,1,1,Limited,Ambient,20250616,D13,Yes,Yes
+4,1,1,Limited,Heat,20250617,B3,Yes,Yes
+5,1,3,Limited,Ambient,20250618,C4,Yes,Yes
+6,1,2,Unlimited,Ambient,20250619,F11,Yes,Yes
+7,1,3,Unlimited,Heat,20250620,D13,Yes,Yes
+8,1,2,Unlimited,Heat,20250623,B6,Yes,Yes
+9,1,3,Limited,Heat,20250624,D3,Yes,Yes
+10,1,1,Unlimited,Heat,20250625,B8,Yes,Yes
+11,1,2,Limited,Ambient,20250626,F4,Yes,Yes
+13,1,2,Limited,Heat,20250627,B13,Yes,Yes
+14,1,4,Unlimited,Heat,20250630,E13,Yes,No
+15,1,4,Limited,Ambient,20250701,A1,No,No
+16,1,4,Unlimited,Ambient,20250702,A9,No,No
