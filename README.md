@@ -64,9 +64,7 @@ experimental designs for both phases were generated and randomised with the `dae
 water use was derived from the DroughtSpotter load-cell logs with `growthPheno`. Gas-exchange
 measurements followed a three-stage light protocol (1 h dark at 0 µmol m⁻² s⁻¹ → 1 h at 1000 µmol m⁻² s⁻¹ → 1 h
 dark at 0 µmol m⁻² s⁻¹), captured at high throughput on the LI-600 porometer and, for validation on the check
-cultivar Sunchaser, in detail on the LI-6800 IRGA. Stomatal anatomy was measured in situ from
-microscopy images analysed with a deep-learning pipeline (Chaplin et al., 2025; separate
-repository).
+cultivar Sunchaser, in detail on the LI-6800 IRGA. The settings and program used for Li-6800 measurements is available in the 'li-6800-settings-program' folder. Stomatal anatomy was measured in situ from microscopy images analysed with a deep-learning pipeline (Chaplin et al., 2025; separate repository).
 
 ### 2.2 Stomatal anatomy — linear mixed models (`stomatal-anatomy/`)
 
@@ -181,6 +179,7 @@ README:
 ├── README.md                         <- this file
 ├── .gitignore
 ├── figures/                          <- protocol / parameter schematic (manuscript Figure 1)
+├── raw-experimental-data/            <- raw experimental data (Li-600, Li-6800 and Stomatal Anatomy)
 │
 ├── stomatal-anatomy/                 <- stomatal anatomy LMM analysis (ASReml-R)
 │   ├── README.md
@@ -194,6 +193,7 @@ README:
     │   └── src/
     ├── irga-li6800/                  <- LI-6800 IRGA (cv. Sunchaser; gs, A, Wi)
     │   ├── data/
+    │   ├── li6800-settings-program/  <- LI-6800 IRGA Settings and Programs
     │   └── src/
     └── reference-material/           <- Vialet-Chabrand gs_fit reference code + REFERENCES.md
 ```
