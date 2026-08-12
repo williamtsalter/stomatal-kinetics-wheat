@@ -330,6 +330,5 @@ acceptance). Key methods/software to cite alongside it:
 - Woning N, Al-Salman Y, Kaiser E, et al. 2026. *New Phytologist* 249, 2338–2354; Franks PJ,
   Beerling DJ. 2009. *PNAS* 106, 10343–10347 — derived-trait definitions.
 
-**Licence:** _to be selected._ A common choice is a permissive code licence (e.g. MIT) for the
-scripts together with a data licence (e.g. CC-BY 4.0) for any data deposited here; add a
-`LICENSE` file before making the repository public.
+
+Note that Claude AI was used to assist in the formatting of this GitHub repository. All outputs were checked and refined by the authors.
