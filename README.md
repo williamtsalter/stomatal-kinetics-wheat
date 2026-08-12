@@ -5,7 +5,6 @@ Analysis code accompanying the manuscript:
 > **Heat accelerates stomatal responsiveness and photosynthetic induction in wheat under
 > fluctuating light.**
 > Chaplin E., Forknall C., Brien C., Merchant A., Trethowan R., Salter W.
-> *(submitted to* New Phytologist*).*
 
 This repository contains the R code used to import, model, summarise and visualise the physiological and anatomical data from the **wheat heat-and-drought stomatal-kinetics experiment** outlined in the above study. The analyses quantify how heat and water limitation reshape the *dynamic* responses of stomatal conductance (*g*s) and photosynthesis (*A*) to step changes in irradiance in a diverse panel of heat-tolerant wheat, and test whether stomatal anatomy explains the observed kinetic variation.
 
@@ -20,6 +19,7 @@ This repository contains the R code used to import, model, summarise and visuali
 5. [Reproduction](#5-reproduction)
 6. [Data provenance and availability](#6-data-provenance-and-availability)
 7. [Attribution, contact and citation](#7-attribution-contact-and-citation)
+8. [Acknowledgements](#8-acknowledgements) 
 
 ---
 
@@ -330,5 +330,10 @@ acceptance). Key methods/software to cite alongside it:
 - Woning N, Al-Salman Y, Kaiser E, et al. 2026. *New Phytologist* 249, 2338–2354; Franks PJ,
   Beerling DJ. 2009. *PNAS* 106, 10343–10347 — derived-trait definitions.
 
+---
 
-Note that Claude AI was used to assist in the formatting of this GitHub repository. All outputs were checked and refined by the authors.
+## 8. Acknowledgements
+
+We acknowledge the use of the facilities, and scientific and technical assistance of the Australian Plant Phenomics Network (APPN), which is supported by the Australian Government’s National Collaborative Research Infrastructure Strategy (NCRIS).
+
+Claude AI was used to assist in the formatting of this GitHub repository. All outputs were checked and refined by the authors before publication.
