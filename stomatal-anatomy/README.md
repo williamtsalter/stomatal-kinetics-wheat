@@ -19,10 +19,11 @@ stomatal-anatomy/
 ├── data/
 │   ├── Stomatal Anatomy Data.xlsx        <- raw input (2 sheets: pot-level + stoma-level)
 │   ├── indv.design.csv                   <- bundled design factors (see "Design data" below)
+│   ├── NewGenotypeLabels.csv             <- genotype labels assigned in manuscript
 │   ├── anat.dat.v1.Rdata / v2            <- imported, tidied data (v2 = outliers removed)
 │   ├── anat.stoma.dat.* / anat.pot.dat.* <- stoma- and pot-level frames
 │   ├── anat.Analyses.v1.RData / v2       <- fitted models (list, one per trait)
-│   ├── anat.Preds.v1.Rdata               <- predictions for plotting
+│   ├── anat.Preds.v1.Rdata / v2          <- predictions for plotting (v2 = new genotype labels)
 │   └── anat.diffs.full.rda               <- full-model predictions exported for correlations
 └── src/
     ├── anat.import.v1.r / v2.r    <- 1. import & tidy
@@ -31,7 +32,7 @@ stomatal-anatomy/
     ├── anat.anal.v1.stub.r        <-    shared setup + showIndvModelResults()
     ├── anal.stub.funcs.r                 <-    reusable model/diagnostic functions (do not edit*)
     ├── anat.anout.v1.r / v2.r     <- 3. render results (Wald tables, variances, outliers)
-    ├── anat.pred.v1.r             <- 4. predictions + publication plots
+    ├── anat.pred.v1.r / v2.r      <- 4. predictions + publication plots
     ├── utilities.R                       <-    plotting helpers (grid layout etc.)
     └── figures/                          <-    generated figures (regenerable)
 ```
@@ -54,7 +55,7 @@ script to its report with `knitr::spin("<script>.r")`.
 3. **`anat.anout.v2.r`** — loads the fitted models and renders results: per-trait
    summaries, Wald F-test tables, chosen terms, residual variances, and extremal-residual
    (outlier) diagnostics.
-4. **`anat.pred.v1.r`** — loads `anat.Analyses.v2.RData`, produces EMM predictions and the
+4. **`anat.pred.v2.r`** — loads `anat.Analyses.v2.RData`, produces EMM predictions and the
    publication figure (`figures/AnatomicalTraitPredictions.*`), and exports
    `data/anat.diffs.full.rda` **which the conductance-vs-anatomy correlation script consumes.**
 

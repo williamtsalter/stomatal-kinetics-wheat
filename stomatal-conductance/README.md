@@ -45,8 +45,8 @@ Set the working directory to `porometer-li600/src/`; scripts use relative paths 
 | 2b. Fit light-off | `porometer.anal_d.v1.r` | `porometer.v1.Rdata` | `porometer.anal_d.v1.Rdata` |
 | 3a. Parameters (on) | `porometer.stomatalCondParamEstimation_i.v1.r` | `porometer.anal_i.v1.Rdata` | `stomatalCondParamEstimation_porometer_i.v1.Rdata` |
 | 3b. Parameters (off) | `porometer.stomatalCondParamEstimation_d.v1.r` | `porometer.anal_d.v1.Rdata` | `stomatalCondParamEstimation_porometer_d.v1.Rdata` |
-| 4. Plot parameters | `porometer.stomatalCondParamPlotting.v1.r` | both param files | `stomatalCondParamPlotting_porometer.v1.Rdata` |
-| 5. *g*s vs. anatomy | `porometer.stomatalCondvsAnatomicalTraits.v1.r` | both param files + `../../../stomatal-anatomy/data/anat.diffs.full.rda` | `stomatalCondvsAnatTraits.v1.Rdata` |
+| 4. Plot parameters | `porometer.stomatalCondParamPlotting.v2.r` | both param files | `stomatalCondParamPlotting_porometer.v2.Rdata` |
+| 5. *g*s vs. anatomy | `porometer.stomatalCondvsAnatomicalTraits.v2.r` | both param files + `../../../stomatal-anatomy/data/anat.diffs.full.rda` | `stomatalCondvsAnatTraits.v1.Rdata` |
 
 Step 5 requires the anatomy export `anat.diffs.full.rda` — **run the stomatal-anatomy stream
 first** (its step 4). The parameter-estimation scripts extract EMMs and posterior draws per
@@ -71,9 +71,6 @@ Set the working directory to `irga-li6800/src/`.
 | 3c. Parameters (*A*) | `li6800.stomatalCondParamEstimation_A_i.v1.r` | `stomatalCondModel_A_i.v1.Rdata` | `stomatalCondParamEstimation_A_i.v1.Rdata` |
 | 4. Intrinsic WUE | `li6800.iWUE_i.v1.r` | `stomatalCondParamEstimation_A_i.v1.Rdata` + `..._i.v1.Rdata` | `iWUE.v1.Rdata` |
 | 5. Plot parameters | `li6800.stomatalCondParamPlotting.v1.r` | the three param files | `stomatalCondParamPlotting.v1.Rdata` |
-
-`li6800.stomatalCondModel.v1.r` is an earlier/exploratory combined fit retained for
-provenance; the manuscript models are the **`_i.v2`, `_d.v2` and `_A_i.v1`** scripts.
 
 **Model notes.** The IRGA *g*s models (`_i`, `_d`) use the lagged McAusland form; the *A* model
 (`_A_i`) uses the same form **without the lag** (induction shows little lag). Fixed effects are in

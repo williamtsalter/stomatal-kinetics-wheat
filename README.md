@@ -59,7 +59,7 @@ engineering applied when preparing the repository. The work was carried out by A
 ### 2.1 Design and measurement context
 
 The experiment ran in two phases: a glasshouse establishment phase and a controlled-environment
-(DroughtSpotter) phase in which the temperature and watering treatments were imposed. The
+(DroughtSpotter) phase in which the Temperature and Watering treatments were imposed. The
 experimental designs for both phases were generated and randomised with the `dae` package, and
 water use was derived from the DroughtSpotter load-cell logs with `growthPheno`. Gas-exchange
 measurements followed a three-stage light protocol (1 h dark at 0 µmol m⁻² s⁻¹ → 1 h at 1000 µmol m⁻² s⁻¹ → 1 h
@@ -157,7 +157,7 @@ McAusland et al. (2016). **Intrinsic water-use efficiency** is derived per time 
 ### 2.5 Linking kinetics to anatomy
 
 Finally, the full-model anatomy EMMs are plotted against the estimated *g*s parameters and the
-strength of each relationship is quantified with **Pearson correlations**, computed within
+strength of each association is quantified with **Pearson correlations**, computed within
 environment (`Room_Temperature × Device_Watering`). This is the only place the two streams meet:
 the porometer correlation script reads the anatomy export `anat.diffs.full.rda`.
 
@@ -310,7 +310,7 @@ Australian Plant Phenomics Network / Adelaide University).
 Vialet-Chabrand (Wageningen University & Research), implementing the McAusland et al. (2016)
 model.
 
-**Please credit:** *Clayton Forknall, Edward Chaplin and William Salter.*
+**Please credit:** *Clayton Forknall, Chris Brien, Edward Chaplin and William Salter.*
 
 **Contact / repository maintainer:** William Salter — william.salter@sydney.edu.au
 (corresponding author for the manuscript: Edward Chaplin — edward.chaplin@sydney.edu.au).
